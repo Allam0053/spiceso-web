@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTrolleyProductTable extends Migration
 {
-  /**
-   * Run the migrations.
-   *
-   * @return void
-   */
   public function up()
   {
     Schema::create('trolley_product', function (Blueprint $table) {
@@ -18,16 +13,11 @@ class CreateTrolleyProductTable extends Migration
       $table->unsignedBigInteger('product_id')->nullable();
       $table->timestamps();
 
-      $table->foreign('trolley_id')->references('trolley_id')->on('oder')->onDelete('cascade');
+      $table->foreign('trolley_id')->references('trolley_id')->on('trolley')->onDelete('cascade');
       $table->foreign('product_id')->references('product_id')->on('product')->onDelete('cascade');
     });
   }
 
-  /**
-   * Reverse the migrations.
-   *
-   * @return void
-   */
   public function down()
   {
     Schema::dropIfExists('trolley_product');
