@@ -24,6 +24,8 @@ Use a better box model (opinionated).
   color: #f1ffdf !important;
 }
 
+.border-sp-primary-100 { border-color: #A4D961; }
+
 .bg-sp-primary-50 {
   background-color: #f1ffdf !important;
 }

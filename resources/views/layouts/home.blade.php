@@ -606,10 +606,10 @@
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
               <div class="sm:max-w-lg">
                 <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                  Summer styles are finally here
+                  Temukan Bumbu Masakan Rahasia Terbaikmu
                 </h1>
-                <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the
-                  harsh elements of a world that doesn't care if you live or die.</p>
+                <p class="mt-4 text-xl text-gray-500">Dari bumbu kuliner hingga rempah-rempah dan rempah-rempah, 
+                  Spiceso memiliki bahan-bahan organik tanpa pengawet untuk meningkatkan cita rasa masakan Anda.</p>
               </div>
               <div>
                 <div class="mt-10">
@@ -621,35 +621,35 @@
                       <div class="flex items-center space-x-6 lg:space-x-8">
                         <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                           <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                            <img src="{{ asset('/img/sp/1.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                            <img src="{{ asset('/img/sp/2.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                         </div>
                         <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                            <img src="{{ asset('/img/sp/3.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                            <img src="{{ asset('/img/sp/4.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/5.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                        </div>
+                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/6.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/7.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                         </div>
@@ -658,79 +658,59 @@
                   </div>
 
                   <a href="#"
-                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Shop
-                    Collection</a>
+                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja Sekarang
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Logo Cloud -->
+        {{-- Category Product Section --}}
         <div class="bg-gray-100">
-          <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p class="
-                  text-center text-sm
-                  font-semibold
-                  uppercase
-                  text-gray-500
-                  tracking-wide
-                ">
-              Trusted by over 5 very average small businesses
-            </p>
-            <div class="
-                  mt-6
-                  grid grid-cols-2
-                  gap-8
-                  md:grid-cols-6
-                  lg:grid-cols-5
-                ">
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2 md:col-start-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor" />
-              </div>
-              <div class="
-                    col-span-2
-                    flex
-                    justify-center
-                    md:col-span-2 md:col-start-4
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation" />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+              <h2 class="text-3xl font-extrabold text-gray-900">Temukan Produk dari Kategori</h2>
+        
+              <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-1.png') }}" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan < 1 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Rempah-Rempah</p>
+                </div>
+        
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-2.png') }}" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan 1-2 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Penyedap</p>
+                </div>
+        
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-3.png') }}" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan > 2 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Bumbu Masakan</p>
+                </div>
               </div>
             </div>
           </div>
@@ -738,14 +718,14 @@
 
         <!-- Product Section -->
         <div class="bg-white">
-          <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
+          <div class="max-w-3xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Produk Terlaris</h2>
 
             <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               <div class="group relative">
                 <div
                   class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  <img src="{{ asset('/img/sp/category-3.png') }}"
                     alt="Front of men&#039;s Basic Tee in black."
                     class="w-full h-full object-center object-cover lg:w-full lg:h-full">
                 </div>
@@ -754,13 +734,36 @@
                     <h3 class="text-sm text-gray-700">
                       <a href="#">
                         <span aria-hidden="true" class="absolute inset-0"></span>
-                        Basic Tee
+                        Rempah-Rempah
                       </a>
                     </h3>
-                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                    <p class="mt-1 text-sm text-gray-500">Spicy Chilly</p>
                   </div>
-                  <p class="text-sm font-medium text-gray-900">$35</p>
+                  <p class="text-sm font-medium text-gray-900">Rp 25.000</p>
                 </div>
+                <a
+                href="#"
+                class="
+                  mt-4
+                  w-full
+                  bg-transparent
+                  border border-sp-primary-100
+                  rounded-md
+                  py-3
+                  px-8
+                  flex
+                  items-center
+                  justify-center
+                  text-lg
+                  leading-6
+                  font-medium
+                  text-sp-primary-100
+                  hover:bg-sp-primary-50
+                  md:px-10
+                "
+              >
+                Beli
+              </a>
               </div>
 
               <!-- More products... -->
@@ -929,7 +932,7 @@
                         shadow-xl
                         ring-1 ring-black ring-opacity-5
                         lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
-                      " src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                      " src="{{ asset('/img/bg-banner.png') }}"
                     alt="Customer profile user interface" />
                 </div>
               </div>
@@ -937,278 +940,496 @@
           </div>
         </div>
 
-        <!-- Gradient Feature Section -->
-        <div class="bg-gradient-to-r from-sp-primary-200 to-sp-primary-400">
-          <div class="
-                max-w-4xl
-                mx-auto
-                px-4
-                py-16
-                sm:px-6 sm:pt-20 sm:pb-24
-                lg:max-w-7xl lg:pt-24 lg:px-8
-              ">
-            <h2 class="text-3xl font-extrabold text-white tracking-tight">
-              Inbox support built for efficiency
-            </h2>
-            <p class="mt-4 max-w-3xl text-lg text-sp-primary-50">
-              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-              Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod
-              mattis in.
-            </p>
-            <div class="
-                  mt-12
-                  grid grid-cols-1
-                  gap-x-6 gap-y-12
-                  sm:grid-cols-2
-                  lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16
-                ">
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/inbox"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">
-                      </path>
+        <!-- Split brand panel -->
+      <div class="relative bg-white">
+        <div class="absolute inset-0" aria-hidden="true">
+          <div
+            class="
+              absolute
+              inset-y-0
+              right-0
+              w-1/2
+              bg-gradient-to-r
+              from-sp-primary-200
+              to-sp-primary-300
+            "
+          ></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:px-8">
+          <div class="bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-0 lg:pr-8">
+            <div class="max-w-lg mx-auto lg:mx-0">
+              <h2
+                class="
+                  text-base
+                  font-semibold
+                  tracking-wide
+                  text-sp-primary-300
+                  uppercase
+                "
+              >
+                Full-featured
+              </h2>
+              <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                Everything you need to talk with your customers
+              </p>
+              <dl class="mt-12 space-y-10">
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-6 w-6 text-white"
+                      x-description="Heroicon name: outline/view-list"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-lg leading-6 font-medium text-gray-900">
+                      List view
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                      Nunc a, lacinia sed risus neque, arcu, rhoncus. Id mauris
+                      justo facilisis aliquam platea vestibulum condimentum
+                      morbi.
+                    </dd>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Unlimited Inboxes
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/users"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
-                      </path>
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-6 w-6 text-white"
+                      x-description="Heroicon name: outline/view-boards"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-lg leading-6 font-medium text-gray-900">
+                      Boards
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                      Purus lobortis volutpat posuere id integer nunc tellus.
+                      Non mauris malesuada feugiat massa mi pellentesque cum
+                      est. Pharetra a varius urna rhoncus, tempor rutrum.
+                    </dd>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Manage Team Members
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/trash"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
-                      </path>
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-6 w-6 text-white"
+                      x-description="Heroicon name: outline/calendar"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-lg leading-6 font-medium text-gray-900">
+                      Calendar
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                      Purus lobortis volutpat posuere id integer nunc tellus.
+                      Non mauris malesuada feugiat massa mi pellentesque cum
+                      est. Pharetra a varius urna rhoncus, tempor rutrum.
+                    </dd>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">Spam Report</h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-6 w-6 text-white"
+                      x-description="Heroicon name: outline/users"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-lg leading-6 font-medium text-gray-900">
+                      Teams
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                      Tincidunt sollicitudin interdum nunc sit risus at bibendum
+                      vitae. Urna, quam ut sit justo non, consectetur et varius.
+                    </dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="
+              bg-gradient-to-r
+              from-sp-primary-200
+              to-sp-primary-300
+              py-16
+              px-4
+              sm:py-24 sm:px-6
+              lg:bg-none lg:flex lg:items-center lg:justify-end lg:px-0 lg:pl-8
+            "
+          >
+            <div class="max-w-lg mx-auto w-full space-y-8 lg:mx-0">
               <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/pencil-alt"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
-                      </path>
+                <h2 class="sr-only">Price</h2>
+                <p class="relative grid grid-cols-2">
+                  <span class="flex flex-col text-center">
+                    <span
+                      class="text-5xl font-extrabold text-white tracking-tight"
+                      >$99</span
+                    >
+                    <span class="mt-2 text-base font-medium text-sp-primary-50"
+                      >Setup fee</span
+                    >
+                    <span class="sr-only">plus</span>
+                  </span>
+                  <span
+                    class="
+                      pointer-events-none
+                      absolute
+                      h-12
+                      w-full
+                      flex
+                      items-center
+                      justify-center
+                    "
+                    aria-hidden="true"
+                  >
+                    <svg
+                      class="h-6 w-6 text-sp-primary-200"
+                      x-description="Heroicon name: outline/plus"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      ></path>
                     </svg>
                   </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Compose in Markdown
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/document-report"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                      </path>
-                    </svg>
+                  <span>
+                    <span class="flex flex-col text-center">
+                      <span
+                        class="
+                          text-5xl
+                          font-extrabold
+                          text-white
+                          tracking-tight
+                        "
+                        >$4</span
+                      >
+                      <span class="mt-2 text-base font-medium text-sp-primary-50"
+                        >Per month</span
+                      >
+                    </span>
                   </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Team Reporting
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
+                </p>
               </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/reply"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Saved Replies
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/chat-alt"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
-                      </path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Email Commenting
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/heart"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                      </path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Connect with Customers
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
+              <ul
+                class="
+                  bg-sp-primary-400 bg-opacity-50
+                  rounded
+                  sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col
+                "
+              >
+                <li class="py-4 px-4 flex items-center text-base text-white">
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">Unlimited Projects</span>
+                </li>
+                <li
+                  class="
+                    border-t border-cyan-300 border-opacity-25
+                    py-4
+                    px-4
+                    flex
+                    items-center
+                    text-base text-white
+                  "
+                >
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">Unlimited storage</span>
+                </li>
+                <li
+                  class="
+                    border-t border-cyan-300 border-opacity-25
+                    py-4
+                    px-4
+                    flex
+                    items-center
+                    text-base text-white
+                  "
+                >
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">Cancel anytime</span>
+                </li>
+                <li
+                  class="
+                    border-t border-cyan-300 border-opacity-25
+                    py-4
+                    px-4
+                    flex
+                    items-center
+                    text-base text-white
+                    sm:border-t-0 sm:border-l
+                  "
+                >
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">No per user fees</span>
+                </li>
+                <li
+                  class="
+                    border-t border-cyan-300 border-opacity-25
+                    py-4
+                    px-4
+                    flex
+                    items-center
+                    text-base text-white
+                    sm:border-l
+                  "
+                >
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">24/7 support</span>
+                </li>
+                <li
+                  class="
+                    border-t border-cyan-300 border-opacity-25
+                    py-4
+                    px-4
+                    flex
+                    items-center
+                    text-base text-white
+                    sm:border-l
+                  "
+                >
+                  <svg
+                    class="h-6 w-6 text-sp-primary-200"
+                    x-description="Heroicon name: outline/check"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="ml-3">Cancel anytime</span>
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="
+                  w-full
+                  bg-white
+                  border border-transparent
+                  rounded-md
+                  py-4
+                  px-8
+                  flex
+                  items-center
+                  justify-center
+                  text-lg
+                  leading-6
+                  font-medium
+                  text-sp-primary-400
+                  hover:bg-sp-primary-50
+                  md:px-10
+                "
+              >
+                Get started today
+              </a>
+              <a
+                href="#"
+                class="
+                  block
+                  text-center text-base
+                  font-medium
+                  text-sp-primary-50
+                  hover:text-white
+                "
+              >
+                Try Workflow Lite for free
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
         <!-- CTA Section -->
         <div class="bg-white">
