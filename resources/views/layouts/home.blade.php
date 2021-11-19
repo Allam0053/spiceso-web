@@ -5,13 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://tailwindui.com/css/components-v2.css" />
+  <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
 </head>
 
 <body>
   <div _style="max-height: 800px;" _class="overflow-y-auto">
     <div class="bg-white">
       <header>
-        <div x-data="{ mobileMenuOpen: false }" class="relative bg-white">
+        <div x-data="{ mobileMenuOpen: false }" class="bg-white">
           <div class="
                 flex
                 justify-between
@@ -27,8 +28,8 @@
             <div class="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
                 <span class="sr-only">Workflow</span>
-                <img class="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="" />
+                <img class="h-14 w-auto sm:h-16"
+                  src="{{ asset('/img/logo-sp.png') }}" alt="" />
               </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden">
@@ -135,8 +136,8 @@
                                 w-10
                                 rounded-md
                                 bg-gradient-to-r
-                                from-purple-600
-                                to-indigo-600
+                                from-sp-primary-100
+                                to-sp-primary-200
                                 text-white
                                 sm:h-12 sm:w-12
                               ">
@@ -175,8 +176,8 @@
                                 w-10
                                 rounded-md
                                 bg-gradient-to-r
-                                from-purple-600
-                                to-indigo-600
+                                from-sp-primary-100
+                                to-sp-primary-200
                                 text-white
                                 sm:h-12 sm:w-12
                               ">
@@ -215,8 +216,8 @@
                                 w-10
                                 rounded-md
                                 bg-gradient-to-r
-                                from-purple-600
-                                to-indigo-600
+                                from-sp-primary-100
+                                to-sp-primary-200
                                 text-white
                                 sm:h-12 sm:w-12
                               ">
@@ -254,8 +255,8 @@
                                 w-10
                                 rounded-md
                                 bg-gradient-to-r
-                                from-purple-600
-                                to-indigo-600
+                                from-sp-primary-100
+                                to-sp-primary-200
                                 text-white
                                 sm:h-12 sm:w-12
                               ">
@@ -333,9 +334,9 @@
                     font-medium
                     text-white
                     bg-gradient-to-r
-                    from-purple-600
-                    to-indigo-600
-                    hover:from-purple-700 hover:to-indigo-700
+                    from-sp-primary-100
+                    to-sp-primary-200
+                    hover:from-sp-primary-300 hover:to-sp-primary-400
                   ">
                 Sign up
               </a>
@@ -366,8 +367,8 @@
                 <div class="pt-5 pb-6 px-5">
                   <div class="flex items-center justify-between">
                     <div>
-                      <img class="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                      <img class="h-14 w-auto"
+                        src="{{ asset('/img/logo-sp.png') }}"
                         alt="Workflow" />
                     </div>
                     <div class="-mr-2">
@@ -412,8 +413,8 @@
                               w-10
                               rounded-md
                               bg-gradient-to-r
-                              from-purple-600
-                              to-indigo-600
+                              from-sp-primary-100
+                              to-sp-primary-200
                               text-white
                             ">
                           <svg class="h-6 w-6" x-description="Heroicon name: outline/inbox"
@@ -445,8 +446,8 @@
                               w-10
                               rounded-md
                               bg-gradient-to-r
-                              from-purple-600
-                              to-indigo-600
+                              from-sp-primary-100
+                              to-sp-primary-200
                               text-white
                             ">
                           <svg class="h-6 w-6" x-description="Heroicon name: outline/annotation"
@@ -478,8 +479,8 @@
                               w-10
                               rounded-md
                               bg-gradient-to-r
-                              from-purple-600
-                              to-indigo-600
+                              from-sp-primary-100
+                              to-sp-primary-200
                               text-white
                             ">
                           <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2"
@@ -511,8 +512,8 @@
                               w-10
                               rounded-md
                               bg-gradient-to-r
-                              from-purple-600
-                              to-indigo-600
+                              from-sp-primary-100
+                              to-sp-primary-200
                               text-white
                             ">
                           <svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle"
@@ -574,9 +575,9 @@
                           font-medium
                           text-white
                           bg-gradient-to-r
-                          from-purple-600
-                          to-indigo-600
-                          hover:from-purple-700 hover:to-indigo-700
+                          from-sp-primary-100
+                          to-sp-primary-200
+                          hover:from-sp-primary-300 hover:to-sp-primary-400
                         ">
                       Sign up
                     </a>
@@ -657,7 +658,7 @@
                   </div>
 
                   <a href="#"
-                    class="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Shop
+                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Shop
                     Collection</a>
                 </div>
               </div>
@@ -864,8 +865,8 @@
                           items-center
                           justify-center
                           bg-gradient-to-r
-                          from-purple-600
-                          to-indigo-600
+                          from-sp-primary-100
+                          to-sp-primary-200
                         ">
                       <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/sparkles"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -904,9 +905,9 @@
                             shadow-sm
                             text-white
                             bg-gradient-to-r
-                            from-purple-600
-                            to-indigo-600
-                            hover:from-purple-700 hover:to-indigo-700
+                            from-sp-primary-100
+                            to-sp-primary-200
+                            hover:from-sp-primary-300 hover:to-sp-primary-400
                           ">
                         Get started
                       </a>
@@ -937,7 +938,7 @@
         </div>
 
         <!-- Gradient Feature Section -->
-        <div class="bg-gradient-to-r from-purple-800 to-indigo-700">
+        <div class="bg-gradient-to-r from-sp-primary-200 to-sp-primary-400">
           <div class="
                 max-w-4xl
                 mx-auto
@@ -949,7 +950,7 @@
             <h2 class="text-3xl font-extrabold text-white tracking-tight">
               Inbox support built for efficiency
             </h2>
-            <p class="mt-4 max-w-3xl text-lg text-purple-200">
+            <p class="mt-4 max-w-3xl text-lg text-sp-primary-50">
               Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
               Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod
               mattis in.
@@ -985,7 +986,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Unlimited Inboxes
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1016,7 +1017,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Manage Team Members
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1045,7 +1046,7 @@
                 </div>
                 <div class="mt-6">
                   <h3 class="text-lg font-medium text-white">Spam Report</h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1076,7 +1077,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Compose in Markdown
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1107,7 +1108,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Team Reporting
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1137,7 +1138,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Saved Replies
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1168,7 +1169,7 @@
                   <h3 class="text-lg font-medium text-white">
                     Email Commenting
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
@@ -1199,107 +1200,11 @@
                   <h3 class="text-lg font-medium text-white">
                     Connect with Customers
                   </h3>
-                  <p class="mt-2 text-base text-purple-200">
+                  <p class="mt-2 text-base text-sp-primary-50">
                     Ac tincidunt sapien vehicula erat auctor pellentesque
                     rhoncus. Et magna sit morbi lobortis.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Stats section -->
-        <div class="relative bg-gray-900">
-          <div class="
-                h-80
-                absolute
-                bottom-0
-                xl:inset-0 xl:h-auto xl:grid xl:grid-cols-2
-              ">
-            <div class="h-full xl:relative xl:col-start-2">
-              <img class="
-                    h-full
-                    w-full
-                    object-cover
-                    opacity-25
-                    xl:absolute xl:inset-0
-                  "
-                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2830&amp;q=80&amp;sat=-100"
-                alt="People working on laptops" />
-              <div aria-hidden="true" class="
-                    absolute
-                    inset-x-0
-                    top-0
-                    h-32
-                    bg-gradient-to-b
-                    from-gray-900
-                    xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r
-                  "></div>
-            </div>
-          </div>
-          <div class="
-                max-w-4xl
-                mx-auto
-                px-4
-                sm:px-6
-                lg:max-w-7xl lg:px-8
-                xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8
-              ">
-            <div class="
-                  relative
-                  pt-12
-                  pb-64
-                  sm:pt-24 sm:pb-64
-                  xl:col-start-1 xl:pb-24
-                ">
-              <h2 class="text-sm font-semibold tracking-wide uppercase">
-                <span class="
-                      bg-gradient-to-r
-                      from-purple-300
-                      to-indigo-300
-                      bg-clip-text
-                      text-transparent
-                    ">Valuable Metrics</span>
-              </h2>
-              <p class="mt-3 text-3xl font-extrabold text-white">
-                Get actionable data that will help grow your business
-              </p>
-              <p class="mt-5 text-lg text-gray-300">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                adipiscing quis in viverra tristique sem. Ornare feugiat
-                viverra eleifend fusce orci in quis amet. Sit in et vitae
-                tortor, massa. Dapibus laoreet amet lacus nibh integer quis.
-                Eu vulputate diam sit tellus quis at.
-              </p>
-              <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
-                <p>
-                  <span class="block text-2xl font-bold text-white">8K+</span>
-                  <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Companies</span>
-                    use
-                    laoreet amet lacus nibh integer quis.</span>
-                </p>
-
-                <p>
-                  <span class="block text-2xl font-bold text-white">25K+</span>
-                  <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Countries around
-                      the globe</span>
-                    lacus nibh integer quis.</span>
-                </p>
-
-                <p>
-                  <span class="block text-2xl font-bold text-white">98%</span>
-                  <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Customer
-                      satisfaction</span>
-                    laoreet amet lacus nibh integer quis.</span>
-                </p>
-
-                <p>
-                  <span class="block text-2xl font-bold text-white">12M+</span>
-                  <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Issues
-                      resolved</span>
-                    lacus nibh integer quis.</span>
-                </p>
               </div>
             </div>
           </div>
@@ -1326,8 +1231,8 @@
               <span class="
                     block
                     bg-gradient-to-r
-                    from-purple-600
-                    to-indigo-600
+                    from-sp-primary-100
+                    to-sp-primary-200
                     bg-clip-text
                     text-transparent
                   ">Get in touch or create an account.</span>
@@ -1346,9 +1251,9 @@
                     shadow-sm
                     text-white
                     bg-gradient-to-r
-                    from-purple-600
-                    to-indigo-600
-                    hover:from-purple-700 hover:to-indigo-700
+                    from-sp-primary-100
+                    to-sp-primary-200
+                    hover:from-sp-primary-300 hover:to-sp-primary-400
                   ">
                 Learn more
               </a>
@@ -1363,9 +1268,9 @@
                     font-medium
                     rounded-md
                     shadow-sm
-                    text-indigo-800
-                    bg-indigo-50
-                    hover:bg-indigo-100
+                    text-sp-primary-400 
+                    bg-sp-primary-50
+                    hover:bg-sp-primary-70
                   ">
                 Get started
               </a>
@@ -1576,9 +1481,9 @@
                         shadow-sm
                         text-white
                         bg-gradient-to-r
-                        from-purple-600
-                        to-indigo-600
-                        hover:from-purple-700 hover:to-indigo-700
+                        from-sp-primary-100
+                        to-sp-primary-200
+                        hover:from-sp-primary-300 hover:to-sp-primary-400
                       ">
                     Subscribe
                   </button>
