@@ -10,7 +10,7 @@ class CreateAdminTable extends Migration
   {
     Schema::create('admin', function (Blueprint $table) {
       $table->id('admin_id');
-      $table->unsignedBigInteger('account_id');
+      $table->unsignedBigInteger('account_id')->nullable();
       $table->string('nama');
       $table->string('no_hp')->nullable();
       $table->char('jenis_kelamin', 2)->nullable();

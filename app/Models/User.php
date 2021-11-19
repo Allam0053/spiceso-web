@@ -25,4 +25,14 @@ class User extends Model
   {
     return $this->belongsTo(Account::class);
   }
+
+  public function orders()
+  {
+    return $this->hasMany(Product::class);
+  }
+
+  public function trolley()
+  {
+    return $this->hasOne(Trolley::class);
+  }
 }

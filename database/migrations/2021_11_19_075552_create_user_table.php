@@ -10,7 +10,7 @@ class CreateUserTable extends Migration
   {
     Schema::create('user', function (Blueprint $table) {
       $table->id('user_id');
-      $table->unsignedBigInteger('account_id');
+      $table->unsignedBigInteger('account_id')->nullable();
       $table->string('nama');
       $table->string('no_hp')->nullable();
       $table->char('jenis_kelamin', 2)->nullable();
