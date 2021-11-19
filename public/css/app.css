@@ -11,6 +11,83 @@ Document
 Use a better box model (opinionated).
 */
 
+/* Spiceso Color */
+.text-sp-primary-100 {
+  color: #A4D961 !important;
+}
+
+.text-sp-primary-400 {
+  color: #7BA14B !important;
+}
+
+.text-sp-primary-50 {
+  color: #f1ffdf !important;
+}
+
+.bg-sp-primary-50 {
+  background-color: #f1ffdf !important;
+}
+
+.bg-sp-primary-70 {
+  background-color: #CEF49D !important;
+}
+
+.bg-sp-primary-100 {
+  background-color: #A4D961 !important;
+}
+
+.bg-sp-primary-200 {
+  background-color: #9BCD5C !important;
+}
+
+.bg-sp-primary-300 {
+  background-color: #8CB856 !important;
+}
+
+.bg-sp-primary-400 {
+  background-color: #7BA14B !important;
+}
+
+.from-sp-primary-100 {
+  --tw-gradient-from: #A4D961;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #A4D961); 
+}
+
+.from-sp-primary-200 {
+  --tw-gradient-from: #9BCD5C;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #9BCD5C); 
+}
+
+.from-sp-primary-300 {
+  --tw-gradient-from: #8CB856;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #8CB856); 
+}
+
+.from-sp-primary-400 {
+  --tw-gradient-from: #7BA14B;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #7BA14B); 
+}
+
+.to-sp-primary-100 {
+  --tw-gradient-to: #A4D961;
+}
+
+.to-sp-primary-200 {
+  --tw-gradient-to: #9BCD5C;
+}
+
+.to-sp-primary-300 {
+  --tw-gradient-to: #8CB856;
+}
+
+.to-sp-primary-400 {
+  --tw-gradient-to: #7BA14B;
+}
+
+.bg-sp-contrast {
+  color: #E9982F !important;
+}
+
 *,
 ::before,
 ::after {
