@@ -27,7 +27,7 @@
               ">
             <div class="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span class="sr-only">Workflow</span>
+                <span class="sr-only">Spiceso</span>
                 <img class="h-14 w-auto sm:h-16"
                   src="{{ asset('/img/logo-sp.png') }}" alt="" />
               </a>
@@ -56,7 +56,7 @@
               </button>
             </div>
             <nav class="hidden md:flex space-x-10">
-              <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
+              {{-- <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
                 <button type="button" @click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active"
                   x-state:off="Item inactive"
                   :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }" class="
@@ -151,11 +151,10 @@
                           </div>
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
-                              Inbox
+                              List Pemesanan
                             </p>
                             <p class="mt-1 text-sm text-gray-500">
-                              Get a better understanding of where your traffic
-                              is coming from.
+                              Daftar pesanan Anda yang sedang dibeli, diproses, dikirim, dan selesai.
                             </p>
                           </div>
                         </a>
@@ -191,90 +190,10 @@
                           </div>
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
-                              Messaging
+                              Daftar Produk
                             </p>
                             <p class="mt-1 text-sm text-gray-500">
-                              Speak directly to your customers in a more
-                              meaningful way.
-                            </p>
-                          </div>
-                        </a>
-
-                        <a href="#" class="
-                              -m-3
-                              p-3
-                              flex
-                              items-start
-                              rounded-lg
-                              hover:bg-gray-50
-                            ">
-                          <div class="
-                                flex-shrink-0 flex
-                                items-center
-                                justify-center
-                                h-10
-                                w-10
-                                rounded-md
-                                bg-gradient-to-r
-                                from-sp-primary-100
-                                to-sp-primary-200
-                                text-white
-                                sm:h-12 sm:w-12
-                              ">
-                            <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2"
-                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                              aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div class="ml-4">
-                            <p class="text-base font-medium text-gray-900">
-                              Live Chat
-                            </p>
-                            <p class="mt-1 text-sm text-gray-500">
-                              Your customers' data will be safe and secure.
-                            </p>
-                          </div>
-                        </a>
-
-                        <a href="#" class="
-                              -m-3
-                              p-3
-                              flex
-                              items-start
-                              rounded-lg
-                              hover:bg-gray-50
-                            ">
-                          <div class="
-                                flex-shrink-0 flex
-                                items-center
-                                justify-center
-                                h-10
-                                w-10
-                                rounded-md
-                                bg-gradient-to-r
-                                from-sp-primary-100
-                                to-sp-primary-200
-                                text-white
-                                sm:h-12 sm:w-12
-                              ">
-                            <svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle"
-                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                              aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div class="ml-4">
-                            <p class="text-base font-medium text-gray-900">
-                              Knowledge Base
-                            </p>
-                            <p class="mt-1 text-sm text-gray-500">
-                              Connect with third-party tools that you're
-                              already using.
+                              Berbagai macam produk Spiceso terdapat di sini
                             </p>
                           </div>
                         </a>
@@ -282,7 +201,7 @@
                     </div>
                   </div>
                 </transition>
-              </div>
+              </div> --}}
 
               <a href="#" class="
                     text-base
@@ -290,7 +209,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Pricing
+                FAQs
               </a>
               <a href="#" class="
                     text-base
@@ -298,7 +217,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Partners
+                Kontak Kami
               </a>
               <a href="#" class="
                     text-base
@@ -306,7 +225,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Company
+                Tentang
               </a>
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -317,7 +236,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Sign in
+                Masuk
               </a>
               <a href="#" class="
                     ml-8
@@ -338,7 +257,7 @@
                     to-sp-primary-200
                     hover:from-sp-primary-300 hover:to-sp-primary-400
                   ">
-                Sign up
+                Daftar
               </a>
             </div>
           </div>
@@ -386,7 +305,7 @@
                             focus:ring-inset
                             focus:ring-indigo-500
                           ">
-                        <span class="sr-only">Close menu</span>
+                        <span class="sr-only">Tutup menu</span>
                         <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -426,7 +345,7 @@
                           </svg>
                         </div>
                         <div class="ml-4 text-base font-medium text-gray-900">
-                          Inbox
+                          List Pemesanan
                         </div>
                       </a>
 
@@ -459,73 +378,7 @@
                           </svg>
                         </div>
                         <div class="ml-4 text-base font-medium text-gray-900">
-                          Messaging
-                        </div>
-                      </a>
-
-                      <a href="#" class="
-                            -m-3
-                            p-3
-                            flex
-                            items-center
-                            rounded-lg
-                            hover:bg-gray-50
-                          ">
-                        <div class="
-                              flex-shrink-0 flex
-                              items-center
-                              justify-center
-                              h-10
-                              w-10
-                              rounded-md
-                              bg-gradient-to-r
-                              from-sp-primary-100
-                              to-sp-primary-200
-                              text-white
-                            ">
-                          <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="ml-4 text-base font-medium text-gray-900">
-                          Live Chat
-                        </div>
-                      </a>
-
-                      <a href="#" class="
-                            -m-3
-                            p-3
-                            flex
-                            items-center
-                            rounded-lg
-                            hover:bg-gray-50
-                          ">
-                        <div class="
-                              flex-shrink-0 flex
-                              items-center
-                              justify-center
-                              h-10
-                              w-10
-                              rounded-md
-                              bg-gradient-to-r
-                              from-sp-primary-100
-                              to-sp-primary-200
-                              text-white
-                            ">
-                          <svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="ml-4 text-base font-medium text-gray-900">
-                          Knowledge Base
+                          Daftar Produk
                         </div>
                       </a>
                     </nav>
@@ -539,7 +392,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Pricing
+                      FAQs
                     </a>
 
                     <a href="#" class="
@@ -548,7 +401,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Partners
+                      Kontak Kami
                     </a>
 
                     <a href="#" class="
@@ -557,7 +410,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Company
+                      Tentang
                     </a>
                   </div>
                   <div class="mt-6">
@@ -579,7 +432,7 @@
                           to-sp-primary-200
                           hover:from-sp-primary-300 hover:to-sp-primary-400
                         ">
-                      Sign up
+                      Daftar
                     </a>
                     <p class="
                           mt-6
@@ -587,8 +440,8 @@
                           font-medium
                           text-gray-500
                         ">
-                      Existing customer?
-                      <a href="#" class="text-gray-900"> Sign in </a>
+                      Sudah pernah daftar?
+                      <a href="#" class="text-gray-900"> Masuk </a>
                     </p>
                   </div>
                 </div>
@@ -719,7 +572,7 @@
         <!-- Product Section -->
         <div class="bg-white">
           <div class="max-w-3xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Produk Terlaris</h2>
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Jelajahi Produk Kami</h2>
 
             <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               <div class="group relative">
@@ -767,79 +620,19 @@
               </div>
 
               <!-- More products... -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Feature Product Sections -->
-        <div class="bg-gray-100">
-          <div
-            class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
-            <div>
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
-              <p class="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of
-                Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to
-                archive important task lists.</p>
-
-              <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Origin</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Designed by Good Goods, Inc.</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Material</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder coated
-                    steel card cover</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Dimensions</dt>
-                  <dd class="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Finish</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Includes</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Considerations</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each
-                    item.</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
-                alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
-                alt="Top down view of walnut card tray with embedded magnets and card groove."
-                class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
-                alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-                alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                class="bg-gray-100 rounded-lg">
-            </div>
+            </div> 
           </div>
         </div>
 
         <!-- Alternating Feature Sections -->
-        <div class="relative pt-16 pb-32 lg:overflow-hidden">
+        <div class="bg-white relative pt-16 pb-32 lg:overflow-hidden">
           <div aria-hidden="true" class="
                 absolute
                 inset-x-0
                 top-0
                 h-48
                 bg-gradient-to-b
-                from-gray-100
+                to-gray-100
               "></div>
           <div class="relative">
             <div class="
@@ -887,14 +680,11 @@
                           tracking-tight
                           text-gray-900
                         ">
-                      Better understand your customers
+                        Pilihan untuk Kebutuhanmu
                     </h2>
                     <p class="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus
-                      ornare pharetra.
+                      Bumbu dan rempah pilihan yang diolah dengan sepenuh hati serta 
+                      dijamin enak, praktis dan tanpa 3P (Pengawet, Pewarna dan Perasa Buatan)
                     </p>
                     <div class="mt-6">
                       <a href="#" class="
@@ -912,7 +702,7 @@
                             to-sp-primary-200
                             hover:from-sp-primary-300 hover:to-sp-primary-400
                           ">
-                        Get started
+                        Belanja Sekarang
                       </a>
                     </div>
                   </div>
@@ -967,10 +757,10 @@
                   uppercase
                 "
               >
-                Full-featured
+                Mengapa Membeli Spiceso?
               </h2>
               <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                Everything you need to talk with your customers
+                Penuhi kebutuhan tanpa khawatir terkait rasa dan kesehatan tubuh mu.
               </p>
               <dl class="mt-12 space-y-10">
                 <div class="flex">
@@ -989,7 +779,7 @@
                     "
                   >
                     <svg
-                      class="h-6 w-6 text-white"
+                      class="h-4 w-4 text-white"
                       x-description="Heroicon name: outline/view-list"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -1006,14 +796,9 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <dt class="text-lg leading-6 font-medium text-gray-900">
-                      List view
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Halal MUI & Tersertifikasi BPOM
                     </dt>
-                    <dd class="mt-2 text-base text-gray-500">
-                      Nunc a, lacinia sed risus neque, arcu, rhoncus. Id mauris
-                      justo facilisis aliquam platea vestibulum condimentum
-                      morbi.
-                    </dd>
                   </div>
                 </div>
 
@@ -1033,7 +818,7 @@
                     "
                   >
                     <svg
-                      class="h-6 w-6 text-white"
+                      class="h-4 w-4 text-white"
                       x-description="Heroicon name: outline/view-boards"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -1050,14 +835,9 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <dt class="text-lg leading-6 font-medium text-gray-900">
-                      Boards
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Tanpa 3P (Pengawet, Penguat Rasa, Pewarna Sintesis)
                     </dt>
-                    <dd class="mt-2 text-base text-gray-500">
-                      Purus lobortis volutpat posuere id integer nunc tellus.
-                      Non mauris malesuada feugiat massa mi pellentesque cum
-                      est. Pharetra a varius urna rhoncus, tempor rutrum.
-                    </dd>
                   </div>
                 </div>
 
@@ -1077,7 +857,7 @@
                     "
                   >
                     <svg
-                      class="h-6 w-6 text-white"
+                      class="h-4 w-4 text-white"
                       x-description="Heroicon name: outline/calendar"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -1094,14 +874,9 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <dt class="text-lg leading-6 font-medium text-gray-900">
-                      Calendar
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Bervariasi dengan Masa Ketahanan 
                     </dt>
-                    <dd class="mt-2 text-base text-gray-500">
-                      Purus lobortis volutpat posuere id integer nunc tellus.
-                      Non mauris malesuada feugiat massa mi pellentesque cum
-                      est. Pharetra a varius urna rhoncus, tempor rutrum.
-                    </dd>
                   </div>
                 </div>
 
@@ -1121,7 +896,7 @@
                     "
                   >
                     <svg
-                      class="h-6 w-6 text-white"
+                      class="h-4 w-4 text-white"
                       x-description="Heroicon name: outline/users"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -1138,13 +913,9 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <dt class="text-lg leading-6 font-medium text-gray-900">
-                      Teams
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Buatan Lokal
                     </dt>
-                    <dd class="mt-2 text-base text-gray-500">
-                      Tincidunt sollicitudin interdum nunc sit risus at bibendum
-                      vitae. Urna, quam ut sit justo non, consectetur et varius.
-                    </dd>
                   </div>
                 </div>
               </dl>
@@ -1163,235 +934,20 @@
           >
             <div class="max-w-lg mx-auto w-full space-y-8 lg:mx-0">
               <div>
-                <h2 class="sr-only">Price</h2>
-                <p class="relative grid grid-cols-2">
+                <h2 class="sr-only">Harga</h2>
+                <p class="relative grid grid-cols-1">
                   <span class="flex flex-col text-center">
                     <span
                       class="text-5xl font-extrabold text-white tracking-tight"
-                      >$99</span
+                      >Hanya Rp 125.000</span
                     >
-                    <span class="mt-2 text-base font-medium text-sp-primary-50"
-                      >Setup fee</span
-                    >
-                    <span class="sr-only">plus</span>
-                  </span>
-                  <span
-                    class="
-                      pointer-events-none
-                      absolute
-                      h-12
-                      w-full
-                      flex
-                      items-center
-                      justify-center
-                    "
-                    aria-hidden="true"
-                  >
-                    <svg
-                      class="h-6 w-6 text-sp-primary-200"
-                      x-description="Heroicon name: outline/plus"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span>
-                    <span class="flex flex-col text-center">
-                      <span
-                        class="
-                          text-5xl
-                          font-extrabold
-                          text-white
-                          tracking-tight
-                        "
-                        >$4</span
-                      >
-                      <span class="mt-2 text-base font-medium text-sp-primary-50"
-                        >Per month</span
-                      >
-                    </span>
                   </span>
                 </p>
               </div>
-              <ul
-                class="
-                  bg-sp-primary-400 bg-opacity-50
-                  rounded
-                  sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col
-                "
-              >
-                <li class="py-4 px-4 flex items-center text-base text-white">
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">Unlimited Projects</span>
-                </li>
-                <li
-                  class="
-                    border-t border-cyan-300 border-opacity-25
-                    py-4
-                    px-4
-                    flex
-                    items-center
-                    text-base text-white
-                  "
-                >
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">Unlimited storage</span>
-                </li>
-                <li
-                  class="
-                    border-t border-cyan-300 border-opacity-25
-                    py-4
-                    px-4
-                    flex
-                    items-center
-                    text-base text-white
-                  "
-                >
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">Cancel anytime</span>
-                </li>
-                <li
-                  class="
-                    border-t border-cyan-300 border-opacity-25
-                    py-4
-                    px-4
-                    flex
-                    items-center
-                    text-base text-white
-                    sm:border-t-0 sm:border-l
-                  "
-                >
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">No per user fees</span>
-                </li>
-                <li
-                  class="
-                    border-t border-cyan-300 border-opacity-25
-                    py-4
-                    px-4
-                    flex
-                    items-center
-                    text-base text-white
-                    sm:border-l
-                  "
-                >
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">24/7 support</span>
-                </li>
-                <li
-                  class="
-                    border-t border-cyan-300 border-opacity-25
-                    py-4
-                    px-4
-                    flex
-                    items-center
-                    text-base text-white
-                    sm:border-l
-                  "
-                >
-                  <svg
-                    class="h-6 w-6 text-sp-primary-200"
-                    x-description="Heroicon name: outline/check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span class="ml-3">Cancel anytime</span>
-                </li>
-              </ul>
+              <a href="#">
+                <img class="w-full mt-2"
+                  src="{{ asset('/img/sp/pack.png') }}" alt="" />
+              </a>
               <a
                 href="#"
                 class="
@@ -1412,7 +968,7 @@
                   md:px-10
                 "
               >
-                Get started today
+                Mulai Belanja
               </a>
               <a
                 href="#"
@@ -1424,80 +980,12 @@
                   hover:text-white
                 "
               >
-                Try Workflow Lite for free
+                Paket Lengkap Masakan Enak & Sehat
               </a>
             </div>
           </div>
         </div>
       </div>
-
-        <!-- CTA Section -->
-        <div class="bg-white">
-          <div class="
-                max-w-4xl
-                mx-auto
-                py-16
-                px-4
-                sm:px-6 sm:py-24
-                lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between
-              ">
-            <h2 class="
-                  text-4xl
-                  font-extrabold
-                  tracking-tight
-                  text-gray-900
-                  sm:text-4xl
-                ">
-              <span class="block">Ready to get started?</span>
-              <span class="
-                    block
-                    bg-gradient-to-r
-                    from-sp-primary-100
-                    to-sp-primary-200
-                    bg-clip-text
-                    text-transparent
-                  ">Get in touch or create an account.</span>
-            </h2>
-            <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-              <a href="#" class="
-                    flex
-                    items-center
-                    justify-center
-                    px-4
-                    py-3
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-md
-                    shadow-sm
-                    text-white
-                    bg-gradient-to-r
-                    from-sp-primary-100
-                    to-sp-primary-200
-                    hover:from-sp-primary-300 hover:to-sp-primary-400
-                  ">
-                Learn more
-              </a>
-              <a href="#" class="
-                    flex
-                    items-center
-                    justify-center
-                    px-4
-                    py-3
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-md
-                    shadow-sm
-                    text-sp-primary-400 
-                    bg-sp-primary-50
-                    hover:bg-sp-primary-70
-                  ">
-                Get started
-              </a>
-            </div>
-          </div>
-        </div>
       </main>
 
       <footer class="bg-gray-50" aria-labelledby="footerHeading">
@@ -1505,6 +993,44 @@
         <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
           <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+              {{-- <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="
+                        text-sm
+                        font-semibold
+                        text-gray-400
+                        tracking-wider
+                        uppercase
+                      ">
+                      QUICK MENU
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        List Produk
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        List Pemesanan
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        Keranjang
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        Akun Saya
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div> --}}
               <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 class="
@@ -1514,140 +1040,24 @@
                         tracking-wider
                         uppercase
                       ">
-                    Solutions
+                      Support
                   </h3>
                   <ul class="mt-4 space-y-4">
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Marketing
+                        FAQs
                       </a>
                     </li>
 
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Analytics
+                        Kontak Kami
                       </a>
                     </li>
 
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Commerce
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Insights
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-12 md:mt-0">
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Support
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Pricing
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Documentation
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Guides
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        API Status
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Company
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        About
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Blog
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Jobs
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Press
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Partners
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-12 md:mt-0">
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Legal
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Claim
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Privacy
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Terms
+                        Tentang
                       </a>
                     </li>
                   </ul>
@@ -1662,14 +1072,13 @@
                     tracking-wider
                     uppercase
                   ">
-                Subscribe to our newsletter
+                Ikuti Kami
               </h3>
               <p class="mt-4 text-base text-gray-500">
-                The latest news, articles, and resources, sent to your inbox
-                weekly.
+                Berita, artikel, dan penawaran terbaru dikirim ke kotak masu emailmu setiap minggu.                
               </p>
               <form class="mt-4 sm:flex sm:max-w-md">
-                <label for="emailAddress" class="sr-only">Email address</label>
+                <label for="emailAddress" class="sr-only">Email</label>
                 <input type="email" name="emailAddress" id="emailAddress" autocomplete="email" required="" class="
                       appearance-none
                       min-w-0
@@ -1686,7 +1095,7 @@
                       focus:ring-indigo-500
                       focus:border-indigo-500
                       focus:placeholder-gray-400
-                    " placeholder="Enter your email" />
+                    " placeholder="Masukkan emailmu" />
                 <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <button type="submit" class="
                         w-full
@@ -1755,18 +1164,9 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </a>
-
-              <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Dribbble</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
             </div>
             <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              © 2020 Workflow, Inc. All rights reserved.
+              © 2021 Spiceso, Inc. All rights reserved.
             </p>
           </div>
         </div>
