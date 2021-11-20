@@ -27,7 +27,7 @@
               ">
             <div class="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span class="sr-only">Workflow</span>
+                <span class="sr-only">Spiceso</span>
                 <img class="h-14 w-auto sm:h-16"
                   src="{{ asset('/img/logo-sp.png') }}" alt="" />
               </a>
@@ -56,7 +56,7 @@
               </button>
             </div>
             <nav class="hidden md:flex space-x-10">
-              <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
+              {{-- <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
                 <button type="button" @click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active"
                   x-state:off="Item inactive"
                   :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }" class="
@@ -151,11 +151,10 @@
                           </div>
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
-                              Inbox
+                              List Pemesanan
                             </p>
                             <p class="mt-1 text-sm text-gray-500">
-                              Get a better understanding of where your traffic
-                              is coming from.
+                              Daftar pesanan Anda yang sedang dibeli, diproses, dikirim, dan selesai.
                             </p>
                           </div>
                         </a>
@@ -191,90 +190,10 @@
                           </div>
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
-                              Messaging
+                              Daftar Produk
                             </p>
                             <p class="mt-1 text-sm text-gray-500">
-                              Speak directly to your customers in a more
-                              meaningful way.
-                            </p>
-                          </div>
-                        </a>
-
-                        <a href="#" class="
-                              -m-3
-                              p-3
-                              flex
-                              items-start
-                              rounded-lg
-                              hover:bg-gray-50
-                            ">
-                          <div class="
-                                flex-shrink-0 flex
-                                items-center
-                                justify-center
-                                h-10
-                                w-10
-                                rounded-md
-                                bg-gradient-to-r
-                                from-sp-primary-100
-                                to-sp-primary-200
-                                text-white
-                                sm:h-12 sm:w-12
-                              ">
-                            <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2"
-                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                              aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div class="ml-4">
-                            <p class="text-base font-medium text-gray-900">
-                              Live Chat
-                            </p>
-                            <p class="mt-1 text-sm text-gray-500">
-                              Your customers' data will be safe and secure.
-                            </p>
-                          </div>
-                        </a>
-
-                        <a href="#" class="
-                              -m-3
-                              p-3
-                              flex
-                              items-start
-                              rounded-lg
-                              hover:bg-gray-50
-                            ">
-                          <div class="
-                                flex-shrink-0 flex
-                                items-center
-                                justify-center
-                                h-10
-                                w-10
-                                rounded-md
-                                bg-gradient-to-r
-                                from-sp-primary-100
-                                to-sp-primary-200
-                                text-white
-                                sm:h-12 sm:w-12
-                              ">
-                            <svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle"
-                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                              aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div class="ml-4">
-                            <p class="text-base font-medium text-gray-900">
-                              Knowledge Base
-                            </p>
-                            <p class="mt-1 text-sm text-gray-500">
-                              Connect with third-party tools that you're
-                              already using.
+                              Berbagai macam produk Spiceso terdapat di sini
                             </p>
                           </div>
                         </a>
@@ -282,7 +201,7 @@
                     </div>
                   </div>
                 </transition>
-              </div>
+              </div> --}}
 
               <a href="#" class="
                     text-base
@@ -290,7 +209,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Pricing
+                FAQs
               </a>
               <a href="#" class="
                     text-base
@@ -298,7 +217,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Partners
+                Kontak Kami
               </a>
               <a href="#" class="
                     text-base
@@ -306,7 +225,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Company
+                Tentang
               </a>
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -317,7 +236,7 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                Sign in
+                Masuk
               </a>
               <a href="#" class="
                     ml-8
@@ -338,7 +257,7 @@
                     to-sp-primary-200
                     hover:from-sp-primary-300 hover:to-sp-primary-400
                   ">
-                Sign up
+                Daftar
               </a>
             </div>
           </div>
@@ -386,7 +305,7 @@
                             focus:ring-inset
                             focus:ring-indigo-500
                           ">
-                        <span class="sr-only">Close menu</span>
+                        <span class="sr-only">Tutup menu</span>
                         <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -426,7 +345,7 @@
                           </svg>
                         </div>
                         <div class="ml-4 text-base font-medium text-gray-900">
-                          Inbox
+                          List Pemesanan
                         </div>
                       </a>
 
@@ -459,73 +378,7 @@
                           </svg>
                         </div>
                         <div class="ml-4 text-base font-medium text-gray-900">
-                          Messaging
-                        </div>
-                      </a>
-
-                      <a href="#" class="
-                            -m-3
-                            p-3
-                            flex
-                            items-center
-                            rounded-lg
-                            hover:bg-gray-50
-                          ">
-                        <div class="
-                              flex-shrink-0 flex
-                              items-center
-                              justify-center
-                              h-10
-                              w-10
-                              rounded-md
-                              bg-gradient-to-r
-                              from-sp-primary-100
-                              to-sp-primary-200
-                              text-white
-                            ">
-                          <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="ml-4 text-base font-medium text-gray-900">
-                          Live Chat
-                        </div>
-                      </a>
-
-                      <a href="#" class="
-                            -m-3
-                            p-3
-                            flex
-                            items-center
-                            rounded-lg
-                            hover:bg-gray-50
-                          ">
-                        <div class="
-                              flex-shrink-0 flex
-                              items-center
-                              justify-center
-                              h-10
-                              w-10
-                              rounded-md
-                              bg-gradient-to-r
-                              from-sp-primary-100
-                              to-sp-primary-200
-                              text-white
-                            ">
-                          <svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="ml-4 text-base font-medium text-gray-900">
-                          Knowledge Base
+                          Daftar Produk
                         </div>
                       </a>
                     </nav>
@@ -539,7 +392,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Pricing
+                      FAQs
                     </a>
 
                     <a href="#" class="
@@ -548,7 +401,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Partners
+                      Kontak Kami
                     </a>
 
                     <a href="#" class="
@@ -557,7 +410,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      Company
+                      Tentang
                     </a>
                   </div>
                   <div class="mt-6">
@@ -579,7 +432,7 @@
                           to-sp-primary-200
                           hover:from-sp-primary-300 hover:to-sp-primary-400
                         ">
-                      Sign up
+                      Daftar
                     </a>
                     <p class="
                           mt-6
@@ -587,8 +440,8 @@
                           font-medium
                           text-gray-500
                         ">
-                      Existing customer?
-                      <a href="#" class="text-gray-900"> Sign in </a>
+                      Sudah pernah daftar?
+                      <a href="#" class="text-gray-900"> Masuk </a>
                     </p>
                   </div>
                 </div>
@@ -606,10 +459,10 @@
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
               <div class="sm:max-w-lg">
                 <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                  Summer styles are finally here
+                  Temukan Bumbu Masakan Rahasia Terbaikmu
                 </h1>
-                <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the
-                  harsh elements of a world that doesn't care if you live or die.</p>
+                <p class="mt-4 text-xl text-gray-500">Dari bumbu kuliner hingga rempah-rempah dan rempah-rempah, 
+                  Spiceso memiliki bahan-bahan organik tanpa pengawet untuk meningkatkan cita rasa masakan Anda.</p>
               </div>
               <div>
                 <div class="mt-10">
@@ -621,35 +474,35 @@
                       <div class="flex items-center space-x-6 lg:space-x-8">
                         <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                           <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                            <img src="{{ asset('/img/sp/1.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                            <img src="{{ asset('/img/sp/2.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                         </div>
                         <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                            <img src="{{ asset('/img/sp/3.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                           <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                            <img src="{{ asset('/img/sp/4.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/5.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                        </div>
+                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/6.jpg') }}"
+                              alt="" class="w-full h-full object-center object-cover">
+                          </div>
+                          <div class="w-44 h-64 rounded-lg overflow-hidden">
+                            <img src="{{ asset('/img/sp/7.jpg') }}"
                               alt="" class="w-full h-full object-center object-cover">
                           </div>
                         </div>
@@ -658,79 +511,59 @@
                   </div>
 
                   <a href="#"
-                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Shop
-                    Collection</a>
+                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja Sekarang
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Logo Cloud -->
+        {{-- Category Product Section --}}
         <div class="bg-gray-100">
-          <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p class="
-                  text-center text-sm
-                  font-semibold
-                  uppercase
-                  text-gray-500
-                  tracking-wide
-                ">
-              Trusted by over 5 very average small businesses
-            </p>
-            <div class="
-                  mt-6
-                  grid grid-cols-2
-                  gap-8
-                  md:grid-cols-6
-                  lg:grid-cols-5
-                ">
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
-              </div>
-              <div class="
-                    col-span-1
-                    flex
-                    justify-center
-                    md:col-span-2 md:col-start-2
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor" />
-              </div>
-              <div class="
-                    col-span-2
-                    flex
-                    justify-center
-                    md:col-span-2 md:col-start-4
-                    lg:col-span-1
-                  ">
-                <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation" />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+              <h2 class="text-3xl font-extrabold text-gray-900">Temukan Produk dari Kategori</h2>
+        
+              <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-1.png') }}" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan < 1 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Rempah-Rempah</p>
+                </div>
+        
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-2.png') }}" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan 1-2 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Penyedap</p>
+                </div>
+        
+                <div class="group relative">
+                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="{{ asset('/img/sp/category-3.png') }}" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full h-full object-center object-cover">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Ketahanan > 2 Minggu
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Bumbu Masakan</p>
+                </div>
               </div>
             </div>
           </div>
@@ -738,14 +571,14 @@
 
         <!-- Product Section -->
         <div class="bg-white">
-          <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
+          <div class="max-w-3xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Jelajahi Produk Kami</h2>
 
             <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               <div class="group relative">
                 <div
                   class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  <img src="{{ asset('/img/sp/category-3.png') }}"
                     alt="Front of men&#039;s Basic Tee in black."
                     class="w-full h-full object-center object-cover lg:w-full lg:h-full">
                 </div>
@@ -754,89 +587,52 @@
                     <h3 class="text-sm text-gray-700">
                       <a href="#">
                         <span aria-hidden="true" class="absolute inset-0"></span>
-                        Basic Tee
+                        Rempah-Rempah
                       </a>
                     </h3>
-                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                    <p class="mt-1 text-sm text-gray-500">Spicy Chilly</p>
                   </div>
-                  <p class="text-sm font-medium text-gray-900">$35</p>
+                  <p class="text-sm font-medium text-gray-900">Rp 25.000</p>
                 </div>
+                <a
+                href="#"
+                class="
+                  mt-4
+                  w-full
+                  bg-transparent
+                  border border-sp-primary-100
+                  rounded-md
+                  py-3
+                  px-8
+                  flex
+                  items-center
+                  justify-center
+                  text-lg
+                  leading-6
+                  font-medium
+                  text-sp-primary-100
+                  hover:bg-sp-primary-50
+                  md:px-10
+                "
+              >
+                Beli
+              </a>
               </div>
 
               <!-- More products... -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Feature Product Sections -->
-        <div class="bg-gray-100">
-          <div
-            class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
-            <div>
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
-              <p class="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of
-                Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to
-                archive important task lists.</p>
-
-              <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Origin</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Designed by Good Goods, Inc.</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Material</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder coated
-                    steel card cover</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Dimensions</dt>
-                  <dd class="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Finish</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Includes</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
-                </div>
-
-                <div class="border-t border-gray-200 pt-4">
-                  <dt class="font-medium text-gray-900">Considerations</dt>
-                  <dd class="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each
-                    item.</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
-                alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
-                alt="Top down view of walnut card tray with embedded magnets and card groove."
-                class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
-                alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-                alt="Walnut card tray filled with cards and card angled in dedicated groove."
-                class="bg-gray-100 rounded-lg">
-            </div>
+            </div> 
           </div>
         </div>
 
         <!-- Alternating Feature Sections -->
-        <div class="relative pt-16 pb-32 lg:overflow-hidden">
+        <div class="bg-white relative pt-16 pb-32 lg:overflow-hidden">
           <div aria-hidden="true" class="
                 absolute
                 inset-x-0
                 top-0
                 h-48
                 bg-gradient-to-b
-                from-gray-100
+                to-gray-100
               "></div>
           <div class="relative">
             <div class="
@@ -884,14 +680,11 @@
                           tracking-tight
                           text-gray-900
                         ">
-                      Better understand your customers
+                        Pilihan untuk Kebutuhanmu
                     </h2>
                     <p class="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus
-                      ornare pharetra.
+                      Bumbu dan rempah pilihan yang diolah dengan sepenuh hati serta 
+                      dijamin enak, praktis dan tanpa 3P (Pengawet, Pewarna dan Perasa Buatan)
                     </p>
                     <div class="mt-6">
                       <a href="#" class="
@@ -909,7 +702,7 @@
                             to-sp-primary-200
                             hover:from-sp-primary-300 hover:to-sp-primary-400
                           ">
-                        Get started
+                        Belanja Sekarang
                       </a>
                     </div>
                   </div>
@@ -929,7 +722,7 @@
                         shadow-xl
                         ring-1 ring-black ring-opacity-5
                         lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
-                      " src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                      " src="{{ asset('/img/bg-banner.png') }}"
                     alt="Customer profile user interface" />
                 </div>
               </div>
@@ -937,346 +730,262 @@
           </div>
         </div>
 
-        <!-- Gradient Feature Section -->
-        <div class="bg-gradient-to-r from-sp-primary-200 to-sp-primary-400">
-          <div class="
-                max-w-4xl
-                mx-auto
-                px-4
-                py-16
-                sm:px-6 sm:pt-20 sm:pb-24
-                lg:max-w-7xl lg:pt-24 lg:px-8
-              ">
-            <h2 class="text-3xl font-extrabold text-white tracking-tight">
-              Inbox support built for efficiency
-            </h2>
-            <p class="mt-4 max-w-3xl text-lg text-sp-primary-50">
-              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-              Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod
-              mattis in.
-            </p>
-            <div class="
-                  mt-12
-                  grid grid-cols-1
-                  gap-x-6 gap-y-12
-                  sm:grid-cols-2
-                  lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16
-                ">
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/inbox"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">
-                      </path>
+        <!-- Split brand panel -->
+      <div class="relative bg-white">
+        <div class="absolute inset-0" aria-hidden="true">
+          <div
+            class="
+              absolute
+              inset-y-0
+              right-0
+              w-1/2
+              bg-gradient-to-r
+              from-sp-primary-200
+              to-sp-primary-300
+            "
+          ></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:px-8">
+          <div class="bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-0 lg:pr-8">
+            <div class="max-w-lg mx-auto lg:mx-0">
+              <h2
+                class="
+                  text-base
+                  font-semibold
+                  tracking-wide
+                  text-sp-primary-300
+                  uppercase
+                "
+              >
+                Mengapa Membeli Spiceso?
+              </h2>
+              <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                Penuhi kebutuhan tanpa khawatir terkait rasa dan kesehatan tubuh mu.
+              </p>
+              <dl class="mt-12 space-y-10">
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-4 w-4 text-white"
+                      x-description="Heroicon name: outline/view-list"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Halal MUI & Tersertifikasi BPOM
+                    </dt>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Unlimited Inboxes
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/users"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
-                      </path>
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-4 w-4 text-white"
+                      x-description="Heroicon name: outline/view-boards"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Tanpa 3P (Pengawet, Penguat Rasa, Pewarna Sintesis)
+                    </dt>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Manage Team Members
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/trash"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
-                      </path>
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-4 w-4 text-white"
+                      x-description="Heroicon name: outline/calendar"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Bervariasi dengan Masa Ketahanan 
+                    </dt>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">Spam Report</h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
 
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/pencil-alt"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
-                      </path>
+                <div class="flex">
+                  <div
+                    class="
+                      flex-shrink-0
+                      h-12
+                      w-12
+                      bg-gradient-to-r
+                      from-sp-primary-200
+                      to-sp-primary-300
+                      rounded-md
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      class="h-4 w-4 text-white"
+                      x-description="Heroicon name: outline/users"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                      ></path>
                     </svg>
-                  </span>
+                  </div>
+                  <div class="ml-4">
+                    <dt class="text-xl leading-6 font-medium text-gray-900">
+                      Buatan Lokal
+                    </dt>
+                  </div>
                 </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Compose in Markdown
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/document-report"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                      </path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Team Reporting
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/reply"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Saved Replies
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/chat-alt"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
-                      </path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Email Commenting
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <span class="
-                        flex
-                        items-center
-                        justify-center
-                        h-12
-                        w-12
-                        rounded-md
-                        bg-white bg-opacity-10
-                      ">
-                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/heart"
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                      </path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="mt-6">
-                  <h3 class="text-lg font-medium text-white">
-                    Connect with Customers
-                  </h3>
-                  <p class="mt-2 text-base text-sp-primary-50">
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </p>
-                </div>
-              </div>
+              </dl>
             </div>
           </div>
-        </div>
-
-        <!-- CTA Section -->
-        <div class="bg-white">
-          <div class="
-                max-w-4xl
-                mx-auto
-                py-16
-                px-4
-                sm:px-6 sm:py-24
-                lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between
-              ">
-            <h2 class="
-                  text-4xl
-                  font-extrabold
-                  tracking-tight
-                  text-gray-900
-                  sm:text-4xl
-                ">
-              <span class="block">Ready to get started?</span>
-              <span class="
-                    block
-                    bg-gradient-to-r
-                    from-sp-primary-100
-                    to-sp-primary-200
-                    bg-clip-text
-                    text-transparent
-                  ">Get in touch or create an account.</span>
-            </h2>
-            <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-              <a href="#" class="
-                    flex
-                    items-center
-                    justify-center
-                    px-4
-                    py-3
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-md
-                    shadow-sm
-                    text-white
-                    bg-gradient-to-r
-                    from-sp-primary-100
-                    to-sp-primary-200
-                    hover:from-sp-primary-300 hover:to-sp-primary-400
-                  ">
-                Learn more
+          <div
+            class="
+              bg-gradient-to-r
+              from-sp-primary-200
+              to-sp-primary-300
+              py-16
+              px-4
+              sm:py-24 sm:px-6
+              lg:bg-none lg:flex lg:items-center lg:justify-end lg:px-0 lg:pl-8
+            "
+          >
+            <div class="max-w-lg mx-auto w-full space-y-8 lg:mx-0">
+              <div>
+                <h2 class="sr-only">Harga</h2>
+                <p class="relative grid grid-cols-1">
+                  <span class="flex flex-col text-center">
+                    <span
+                      class="text-5xl font-extrabold text-white tracking-tight"
+                      >Hanya Rp 125.000</span
+                    >
+                  </span>
+                </p>
+              </div>
+              <a href="#">
+                <img class="w-full mt-2"
+                  src="{{ asset('/img/sp/pack.png') }}" alt="" />
               </a>
-              <a href="#" class="
-                    flex
-                    items-center
-                    justify-center
-                    px-4
-                    py-3
-                    border border-transparent
-                    text-base
-                    font-medium
-                    rounded-md
-                    shadow-sm
-                    text-sp-primary-400 
-                    bg-sp-primary-50
-                    hover:bg-sp-primary-70
-                  ">
-                Get started
+              <a
+                href="#"
+                class="
+                  w-full
+                  bg-white
+                  border border-transparent
+                  rounded-md
+                  py-4
+                  px-8
+                  flex
+                  items-center
+                  justify-center
+                  text-lg
+                  leading-6
+                  font-medium
+                  text-sp-primary-400
+                  hover:bg-sp-primary-50
+                  md:px-10
+                "
+              >
+                Mulai Belanja
+              </a>
+              <a
+                href="#"
+                class="
+                  block
+                  text-center text-base
+                  font-medium
+                  text-sp-primary-50
+                  hover:text-white
+                "
+              >
+                Paket Lengkap Masakan Enak & Sehat
               </a>
             </div>
           </div>
         </div>
+      </div>
       </main>
 
       <footer class="bg-gray-50" aria-labelledby="footerHeading">
@@ -1284,6 +993,44 @@
         <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
           <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+              {{-- <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="
+                        text-sm
+                        font-semibold
+                        text-gray-400
+                        tracking-wider
+                        uppercase
+                      ">
+                      QUICK MENU
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        List Produk
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        List Pemesanan
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        Keranjang
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        Akun Saya
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div> --}}
               <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 class="
@@ -1293,140 +1040,24 @@
                         tracking-wider
                         uppercase
                       ">
-                    Solutions
+                      Support
                   </h3>
                   <ul class="mt-4 space-y-4">
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Marketing
+                        FAQs
                       </a>
                     </li>
 
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Analytics
+                        Kontak Kami
                       </a>
                     </li>
 
                     <li>
                       <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Commerce
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Insights
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-12 md:mt-0">
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Support
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Pricing
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Documentation
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Guides
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        API Status
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Company
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        About
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Blog
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Jobs
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Press
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Partners
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-12 md:mt-0">
-                  <h3 class="
-                        text-sm
-                        font-semibold
-                        text-gray-400
-                        tracking-wider
-                        uppercase
-                      ">
-                    Legal
-                  </h3>
-                  <ul class="mt-4 space-y-4">
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Claim
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Privacy
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
-                        Terms
+                        Tentang
                       </a>
                     </li>
                   </ul>
@@ -1441,14 +1072,13 @@
                     tracking-wider
                     uppercase
                   ">
-                Subscribe to our newsletter
+                Ikuti Kami
               </h3>
               <p class="mt-4 text-base text-gray-500">
-                The latest news, articles, and resources, sent to your inbox
-                weekly.
+                Berita, artikel, dan penawaran terbaru dikirim ke kotak masu emailmu setiap minggu.                
               </p>
               <form class="mt-4 sm:flex sm:max-w-md">
-                <label for="emailAddress" class="sr-only">Email address</label>
+                <label for="emailAddress" class="sr-only">Email</label>
                 <input type="email" name="emailAddress" id="emailAddress" autocomplete="email" required="" class="
                       appearance-none
                       min-w-0
@@ -1465,7 +1095,7 @@
                       focus:ring-indigo-500
                       focus:border-indigo-500
                       focus:placeholder-gray-400
-                    " placeholder="Enter your email" />
+                    " placeholder="Masukkan emailmu" />
                 <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <button type="submit" class="
                         w-full
@@ -1534,18 +1164,9 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </a>
-
-              <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Dribbble</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
             </div>
             <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              © 2020 Workflow, Inc. All rights reserved.
+              © 2021 Spiceso, Inc. All rights reserved.
             </p>
           </div>
         </div>
