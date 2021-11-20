@@ -23,6 +23,10 @@ Route::get('/detail', function () {
     return view('layouts/detail-product');
 });
 
+Route::get('/list', function () {
+    return view('layouts/list-product');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

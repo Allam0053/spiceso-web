@@ -216,8 +216,8 @@
               <button class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">
                 <span class="sr-only">Lihat Notifikasi</span>
                 <svg class="h-6 w-6" x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-  </svg>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
               </button>
   
               <!-- Profile dropdown -->
@@ -410,205 +410,56 @@
       </header>
       <main>
         <div class="bg-white">
-          <div class="pt-6">
-            <nav aria-label="Breadcrumb">
-              <ol role="list" class="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8">
-                <li>
-                  <div class="flex items-center">
-                    <a href="#" class="mr-2 text-sm font-medium text-gray-900">
-                      Rempah-rempah dan Bumbu
-                    </a>
-                    <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-4 h-5 text-gray-300">
-                      <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-                    </svg>
-                  </div>
-                </li>
-        
-                <li class="text-sm">
-                  <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
-                    Simply Organic Harissa 
-                  </a>
-                </li>
-              </ol>
-            </nav>
-        
-            <!-- Image gallery -->
-            <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
-              <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
-                <img src="{{ asset('img/sp/h1.jpg') }}" alt="Two each of gray, white, and black shirts laying flat." class="w-full h-full object-center object-cover">
-              </div>
-              <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-                <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                  <img src="{{ asset('img/sp/h3.jpg') }}" alt="Model wearing plain black basic tee." class="w-full h-full object-center object-cover">
-                </div>
-                <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                  <img src="{{ asset('img/sp/h2.jpg') }}" alt="Model wearing plain gray basic tee." class="w-full h-full object-center object-cover">
-                </div>
-              </div>
-              <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
-                <img src="{{ asset('img/sp/h0.jpg') }}" alt="Model wearing plain white basic tee." class="w-full h-full object-center object-cover">
-              </div>
-            </div>
-        
-            <!-- Product info -->
-            <div class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
-              <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
-                  Simply Organic Harissa 
-                </h1>
-              </div>
-        
-              <!-- Options -->
-              <div class="mt-4 lg:mt-0 lg:row-span-3">
-                <h2 class="sr-only">Deskripsi Produk</h2>
-                <p class="text-3xl text-gray-900">Rp 64.000</p>
-        
-                <!-- Reviews -->
-                <div class="mt-6">
-                  <h3 class="sr-only">Reviews</h3>
-                  <div class="flex items-center">
-                    <div class="flex items-center">
-                      <!--
-                        Heroicon name: solid/star
-        
-                        Active: "text-gray-900", Default: "text-gray-200"
-                      -->
-                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-        
-                      <!-- Heroicon name: solid/star -->
-                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-        
-                      <!-- Heroicon name: solid/star -->
-                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-        
-                      <!-- Heroicon name: solid/star -->
-                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-        
-                      <!-- Heroicon name: solid/star -->
-                      <svg class="text-gray-200 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                    <p class="sr-only">4 out of 5 stars</p>
-                    <a href="#" class="ml-3 text-sm font-medium text-sp-primary-100 hover:text-sp-primary-400">117 ulasan</a>
-                  </div>
-                </div>
-        
-                <div class="mt-10">
-                  <div>
-                      <div
-                        class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 border border-sp-primary-100 bg-white text-sp-primary-100 rounded-full"
-                      >
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-archive mr-2"
-                      >
-                        <polyline points="21 8 21 21 3 21 3 8"></polyline>
-                        <rect x="1" y="3" width="22" height="5"></rect>
-                        <line x1="10" y1="12" x2="14" y2="12"></line>
-                      </svg>
-                        1-2 Minggu
-                      </div>
-                      <div
-                      class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-hard-drive mr-2"
-                        >
-                          <line x1="22" y1="12" x2="2" y2="12"></line>
-                          <path
-                            d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
-                          ></path>
-                          <line x1="6" y1="16" x2="6.01" y2="16"></line>
-                          <line x1="10" y1="16" x2="10.01" y2="16"></line>
-                        </svg>
-                        Rempah-rempah dan Bumbu
-                      </div>
-                  </div>
+          <div class="max-w-3xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Jelajahi Produk Kami</h2>
 
-                  <form action="#" method="POST">
-                    <fieldset>
-                      <div class="grid grid-cols-2 mt-4">
-                        <div class="group">
-                          <label for="netto" class="block text-sm font-medium text-gray-700">Berat Bersih</label>
-                          <select id="netto" name="netto" autocomplete="netto-name" class="mt-1 block w-40 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            <option>25g</option>
-                          </select>
-                        </div>
-                        <div class="group">
-                          <label for="sum" class="block text-sm font-medium text-gray-700">Jumlah</label>
-                          <input type="number" name="sum" id="sum" autocomplete="address-level2" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-40 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="1">
-                        </div>
-                      </div>
-                    </fieldset>
-                  </form>
-        
-                  <button type="submit" class="mt-10 w-full bg-sp-contrast border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Tambah ke Keranjang</button>
+            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+              <div class="shadow-md rounded group relative bg-white p-4">
+                <div
+                  class="w-full min-h-60 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                  <img src="{{ asset('/img/sp/category-3.png') }}"
+                    alt="Front of men&#039;s Basic Tee in black."
+                    class="w-full h-full object-center object-cover lg:w-full lg:h-full">
                 </div>
-                <button type="submit" class="mt-2 w-full bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Chat Penjual</button>
+                <div class="mt-4 flex justify-between">
+                  <div>
+                    <h3 class="text-sm text-gray-700">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Rempah-rempah & Bumbu
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-lg text-gray-500">Spicy Chilly</p>
+                  </div>
+                  <p class="text-xl font-bold text-right font-medium text-gray-900">Rp 25.000</p>
+                </div>
+                <a
+                href="#"
+                class="
+                  mt-4
+                  w-full
+                  bg-transparent
+                  border border-sp-primary-100
+                  rounded-md
+                  py-3
+                  px-8
+                  flex
+                  items-center
+                  justify-center
+                  text-lg
+                  leading-6
+                  font-medium
+                  text-sp-primary-100
+                  hover:bg-sp-primary-50
+                  md:px-10
+                "
+              >
+                Beli
+              </a>
               </div>
-        
-              <div class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                <!-- Description and details -->
-                <div>
-                  <h3 class="sr-only">Deskripsi Produk</h3>
-        
-                  <div class="space-y-6">
-                    <p class="text-base text-gray-900">
-                      Harissa adalah Saus atau pasta pedas Tunisia yang biasanya dibuat dari cabai, minyak zaitun, dan rempah-rempah. 
-                      Kami mendapatkan rempah-rempah Anda tertutup di sini. Bumbu Harissa kami adalah campuran organik, 
-                      aroma bawang putih dengan rasa yang kompleks, berasap, seperti kari dan sentuhan panas pedas. </p>
-                  </div>
-                </div>
-        
-                <div class="mt-10">
-                  <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-        
-                  <div class="mt-4">
-                    <ul role="list" class="pl-4 list-disc text-sm space-y-2">
-                      <li class="text-gray-400"><span class="text-gray-600">Berwarna merah canti</span></li>
-        
-                      <li class="text-gray-400"><span class="text-gray-600">Sangat cocok untuk masakan pasta</span></li>
-        
-                      <li class="text-gray-400"><span class="text-gray-600">Sedap dan berasa kompleks</span></li>        
-                    </ul>
-                  </div>
-                </div>
-        
-                <div class="mt-10">
-                  <h2 class="text-sm font-medium text-gray-900">Komposisi</h2>
-        
-                  <div class="mt-4 space-y-6">
-                    <p class="text-sm text-gray-600">Paprika Organik, Jintan Organik, Cabai Organik, Cabai Organik, Ketumbar Organik, Jintan Organik, Bawang Putih Organik, Peppermint Organik..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+              <!-- More products... -->
+            </div> 
           </div>
         </div>
       </main>

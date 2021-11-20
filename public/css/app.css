@@ -54,6 +54,10 @@ Use a better box model (opinionated).
   background-color: #7BA14B !important;
 }
 
+.bg-sp-contrast {
+  background-color: #E9982F !important;
+}
+
 .from-sp-primary-100 {
   --tw-gradient-from: #A4D961;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #A4D961); 
@@ -88,10 +92,6 @@ Use a better box model (opinionated).
 
 .to-sp-primary-400 {
   --tw-gradient-to: #7BA14B;
-}
-
-.bg-sp-contrast {
-  color: #E9982F !important;
 }
 
 *,
