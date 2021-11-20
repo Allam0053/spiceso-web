@@ -612,7 +612,7 @@
           </div>
         </div>
       </main>
-      <footer class="bg-gray-50" aria-labelledby="footerHeading">
+      <footer class="bg-gray-100" aria-labelledby="footerHeading">
         <h2 id="footerHeading" class="sr-only">Footer</h2>
         <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
           <div class="xl:grid xl:grid-cols-3 xl:gap-8">
