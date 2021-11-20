@@ -435,18 +435,18 @@
             <!-- Image gallery -->
             <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
               <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
-                <img src="{{ asset('img/sp/h0.jpg') }}" alt="Two each of gray, white, and black shirts laying flat." class="w-full h-full object-center object-cover">
+                <img src="{{ asset('img/sp/h1.jpg') }}" alt="Two each of gray, white, and black shirts laying flat." class="w-full h-full object-center object-cover">
               </div>
               <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                 <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                  <img src="{{ asset('img/sp/h1.jpg') }}" alt="Model wearing plain black basic tee." class="w-full h-full object-center object-cover">
+                  <img src="{{ asset('img/sp/h3.jpg') }}" alt="Model wearing plain black basic tee." class="w-full h-full object-center object-cover">
                 </div>
                 <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <img src="{{ asset('img/sp/h2.jpg') }}" alt="Model wearing plain gray basic tee." class="w-full h-full object-center object-cover">
                 </div>
               </div>
               <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
-                <img src="{{ asset('img/sp/h3.jpg') }}" alt="Model wearing plain white basic tee." class="w-full h-full object-center object-cover">
+                <img src="{{ asset('img/sp/h0.jpg') }}" alt="Model wearing plain white basic tee." class="w-full h-full object-center object-cover">
               </div>
             </div>
         
@@ -502,9 +502,8 @@
                   </div>
                 </div>
         
-                <form class="mt-10">
+                <div class="mt-10">
                   <div>
-                    <fieldset class="mt-4">
                       <div
                         class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 border border-sp-primary-100 bg-white text-sp-primary-100 rounded-full"
                       >
@@ -550,47 +549,28 @@
                         </svg>
                         Rempah-rempah dan Bumbu
                       </div>
-                    </fieldset>
                   </div>
-        
-                  <!-- Sizes -->
-                  <div class="mt-10">
-                    <div class="flex items-center justify-between">
-                      <h3 class="text-sm text-gray-900 font-medium">Berat Bersih</h3>
-                    </div>
-        
-                    <fieldset class="mt-4">
-                      <legend class="sr-only">
-                        Pilih salah satu
-                      </legend>
-                      <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                        <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed">
-                          <input type="radio" name="size-choice" value="25 gram" disabled class="sr-only" aria-labelledby="size-choice-0-label">
-                          <p id="size-choice-0-label">
-                            25 gram
-                          </p>
-        
-                          <div aria-hidden="true" class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
-                            <svg class="absolute inset-0 w-full h-full text-gray-200 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
-                              <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke" />
-                            </svg>
-                          </div>
-                        </label>
-        
-                        <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
-                          <input type="radio" name="size-choice" value="50 gram" class="sr-only" aria-labelledby="size-choice-1-label">
-                          <p id="size-choice-1-label">
-                            50 gram
-                          </p>
-        
-                          <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
-                        </label>
+
+                  <form action="#" method="POST">
+                    <fieldset>
+                      <div class="grid grid-cols-2 mt-4">
+                        <div class="group">
+                          <label for="netto" class="block text-sm font-medium text-gray-700">Berat Bersih</label>
+                          <select id="netto" name="netto" autocomplete="netto-name" class="mt-1 block w-40 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>25g</option>
+                          </select>
+                        </div>
+                        <div class="group">
+                          <label for="sum" class="block text-sm font-medium text-gray-700">Jumlah</label>
+                          <input type="number" name="sum" id="sum" autocomplete="address-level2" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-40 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="1">
+                        </div>
                       </div>
                     </fieldset>
-                  </div>
+                  </form>
         
-                  <button type="submit" class="mt-10 w-full bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Tambah Ke Keranjang</button>
-                </form>
+                  <button type="submit" class="mt-10 w-full bg-sp-contrast border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Tambah ke Keranjang</button>
+                </div>
+                <button type="submit" class="mt-2 w-full bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Chat Penjual</button>
               </div>
         
               <div class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
