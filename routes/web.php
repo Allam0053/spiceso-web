@@ -10,6 +10,15 @@ Route::get('/home', function () {
     return view('layouts/home');
 });
 
+
+Route::get('/daftar', function () {
+    return view('layouts/register');
+});
+
+Route::get('/masuk', function () {
+    return view('layouts/login');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
