@@ -498,7 +498,7 @@
                       </svg>
                     </div>
                     <p class="sr-only">4 out of 5 stars</p>
-                    <a href="#" class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">117 ulasan</a>
+                    <a href="#" class="ml-3 text-sm font-medium text-sp-primary-100 hover:text-sp-primary-400">117 ulasan</a>
                   </div>
                 </div>
         
