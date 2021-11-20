@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Auth;
+namespace App\Actions\Auth\Account;
 
 use Lorisleiva\Actions\Concerns\AsAction;
 use App\Http\Requests\Auth\LoginRequest;
