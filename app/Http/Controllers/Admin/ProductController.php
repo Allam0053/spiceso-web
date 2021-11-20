@@ -13,7 +13,7 @@ use Exception;
 
 class ProductController extends Controller
 {
-  public function create()
+  public function index()
   {
     try {
       $response = GetProducts::run(10, true);
@@ -26,6 +26,11 @@ class ProductController extends Controller
     } catch (Exception $exc) {
       return redirect()->back()->with('error', $exc->getMessage());
     }
+  }
+
+  public function create()
+  {
+    return view('');
   }
 
   public function store(StoreProductRequest $request)

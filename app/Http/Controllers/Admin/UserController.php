@@ -9,7 +9,7 @@ use Exception;
 
 class UserController extends Controller
 {
-  public function create()
+  public function index()
   {
     try {
       $response = GetUsers::run(10, true);

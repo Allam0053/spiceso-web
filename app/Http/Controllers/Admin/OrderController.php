@@ -13,7 +13,7 @@ use Exception;
 
 class OrderController extends Controller
 {
-  public function create()
+  public function index()
   {
     try {
       $response = GetOrders::run(10, true);
@@ -26,6 +26,11 @@ class OrderController extends Controller
     } catch (Exception $exc) {
       return redirect()->back()->with('error', $exc->getMessage());
     }
+  }
+
+  public function create()
+  {
+    return view('');
   }
 
   public function store(StoreOrderRequest $request)
