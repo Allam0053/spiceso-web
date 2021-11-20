@@ -19,6 +19,10 @@ Route::get('/masuk', function () {
     return view('layouts/login');
 });
 
+Route::get('/detail', function () {
+    return view('layouts/detail-product');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

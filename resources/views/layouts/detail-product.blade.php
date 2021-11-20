@@ -56,7 +56,7 @@
               </button>
             </div>
             <nav class="hidden md:flex space-x-10">
-              {{-- <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
+              <div @click.away="flyoutMenuOpen = false" x-data="{ flyoutMenuOpen: false }" class="relative">
                 <button type="button" @click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active"
                   x-state:off="Item inactive"
                   :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }" class="
@@ -74,7 +74,7 @@
                       focus:ring-offset-2
                       focus:ring-indigo-500
                     ">
-                  <span>Solutions</span>
+                  <span>Produk</span>
                   <svg x-state:on="Item active" x-state:off="Item inactive" class="
                         ml-2
                         h-5
@@ -93,7 +93,7 @@
                 <transition enter-active-class="transition ease-out duration-200" enter-class="opacity-0 translate-y-1"
                   enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
                   leave-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-                  <div x-description="'Solutions' flyout menu, show/hide based on flyout menu state."
+                  <div x-description="'Produk' flyout menu, show/hide based on flyout menu state."
                     x-show="flyoutMenuOpen" class="
                         absolute
                         z-10
@@ -201,7 +201,7 @@
                     </div>
                   </div>
                 </transition>
-              </div> --}}
+              </div>
 
               <a href="#" class="
                     text-base
@@ -209,56 +209,32 @@
                     text-gray-500
                     hover:text-gray-900
                   ">
-                FAQs
-              </a>
-              <a href="#" class="
-                    text-base
-                    font-medium
-                    text-gray-500
-                    hover:text-gray-900
-                  ">
-                Kontak Kami
-              </a>
-              <a href="#" class="
-                    text-base
-                    font-medium
-                    text-gray-500
-                    hover:text-gray-900
-                  ">
-                Tentang
+                Keranjang
               </a>
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="#" class="
-                    whitespace-nowrap
-                    text-base
-                    font-medium
-                    text-gray-500
-                    hover:text-gray-900
-                  ">
-                Masuk
-              </a>
-              <a href="#" class="
-                    ml-8
-                    whitespace-nowrap
-                    inline-flex
-                    items-center
-                    justify-center
-                    px-4
-                    py-2
-                    border border-transparent
-                    rounded-md
-                    shadow-sm
-                    text-base
-                    font-medium
-                    text-white
-                    bg-gradient-to-r
-                    from-sp-primary-100
-                    to-sp-primary-200
-                    hover:from-sp-primary-300 hover:to-sp-primary-400
-                  ">
-                Daftar
-              </a>
+              <button class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">
+                <span class="sr-only">Lihat Notifikasi</span>
+                <svg class="h-6 w-6" x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+  </svg>
+              </button>
+  
+              <!-- Profile dropdown -->
+              <div @click.away="open = false" class="ml-3 relative" x-data="{ open: false }">
+                <div>
+                  <button @click="open = !open" class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100" id="user-menu" aria-haspopup="true" x-bind:aria-expanded="open">
+                    <span class="sr-only">Buka Menu User</span>
+                    <img class="h-8 w-8 rounded-full" src="{{ asset('/img/user.png')}}" alt="">
+                  </button>
+                </div>
+                <transition enter-active-class="transition ease-out duration-100" enter-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95"><div x-show="open" x-description="Profile dropdown panel, show/hide based on dropdown state." class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                  
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Profil Saya</a>
+                                    
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Keluar</a>
+                  
+                </div></transition>
             </div>
           </div>
 
@@ -392,25 +368,7 @@
                           text-gray-900
                           hover:text-gray-700
                         ">
-                      FAQs
-                    </a>
-
-                    <a href="#" class="
-                          text-base
-                          font-medium
-                          text-gray-900
-                          hover:text-gray-700
-                        ">
-                      Kontak Kami
-                    </a>
-
-                    <a href="#" class="
-                          text-base
-                          font-medium
-                          text-gray-900
-                          hover:text-gray-700
-                        ">
-                      Tentang
+                      Keranjang
                     </a>
                   </div>
                   <div class="mt-6">
@@ -450,550 +408,236 @@
           </transition>
         </div>
       </header>
-
       <main>
-        <!-- Hero section -->
-        <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="relative bg-white overflow-hidden">
-          <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
-              <div class="sm:max-w-lg">
-                <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                  Temukan Bumbu Masakan Rahasia Terbaikmu
-                </h1>
-                <p class="mt-4 text-xl text-gray-500">Dari bumbu kuliner hingga rempah-rempah dan rempah-rempah, 
-                  Spiceso memiliki bahan-bahan organik tanpa pengawet untuk meningkatkan cita rasa masakan Anda.</p>
-              </div>
-              <div>
-                <div class="mt-10">
-                  <!-- Decorative image grid -->
-                  <div aria-hidden="true"
-                    class="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full">
-                    <div
-                      class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                      <div class="flex items-center space-x-6 lg:space-x-8">
-                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                            <img src="{{ asset('/img/sp/1.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/2.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/3.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/4.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/5.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/6.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                          <div class="w-44 h-64 rounded-lg overflow-hidden">
-                            <img src="{{ asset('/img/sp/7.jpg') }}"
-                              alt="" class="w-full h-full object-center object-cover">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <a href="#"
-                    class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja Sekarang
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {{-- Category Product Section --}}
-        <div class="bg-gray-100">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-              <h2 class="text-3xl font-extrabold text-gray-900">Temukan Produk dari Kategori</h2>
-        
-              <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
-                <div class="group relative">
-                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                    <img src="{{ asset('/img/sp/category-1.png') }}" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
-                  </div>
-                  <h3 class="mt-6 text-sm text-gray-500">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Ketahanan < 1 Minggu
-                    </a>
-                  </h3>
-                  <p class="text-base font-semibold text-gray-900">Rempah-rempah dan Bumbu</p>
-                </div>
-        
-                <div class="group relative">
-                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                    <img src="{{ asset('/img/sp/category-2.png') }}" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full h-full object-center object-cover">
-                  </div>
-                  <h3 class="mt-6 text-sm text-gray-500">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Ketahanan 1-2 Minggu
-                    </a>
-                  </h3>
-                  <p class="text-base font-semibold text-gray-900">Penyedap</p>
-                </div>
-        
-                <div class="group relative">
-                  <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                    <img src="{{ asset('/img/sp/category-3.png') }}" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full h-full object-center object-cover">
-                  </div>
-                  <h3 class="mt-6 text-sm text-gray-500">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Ketahanan > 2 Minggu
-                    </a>
-                  </h3>
-                  <p class="text-base font-semibold text-gray-900">Bumbu Masakan</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Section -->
         <div class="bg-white">
-          <div class="max-w-3xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Jelajahi Produk Kami</h2>
-
-            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-              <div class="group relative">
-                <div
-                  class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <img src="{{ asset('/img/sp/category-3.png') }}"
-                    alt="Front of men&#039;s Basic Tee in black."
-                    class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-                </div>
-                <div class="mt-4 flex justify-between">
-                  <div>
-                    <h3 class="text-sm text-gray-700">
-                      <a href="#">
-                        <span aria-hidden="true" class="absolute inset-0"></span>
-                        Rempah-rempah dan Bumbu
-                      </a>
-                    </h3>
-                    <p class="mt-1 text-sm text-gray-500">Spicy Chilly</p>
+          <div class="pt-6">
+            <nav aria-label="Breadcrumb">
+              <ol role="list" class="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8">
+                <li>
+                  <div class="flex items-center">
+                    <a href="#" class="mr-2 text-sm font-medium text-gray-900">
+                      Rempah-rempah dan Bumbu
+                    </a>
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-4 h-5 text-gray-300">
+                      <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                    </svg>
                   </div>
-                  <p class="text-sm font-medium text-gray-900">Rp 25.000</p>
-                </div>
-                <a
-                href="#"
-                class="
-                  mt-4
-                  w-full
-                  bg-transparent
-                  border border-sp-primary-100
-                  rounded-md
-                  py-3
-                  px-8
-                  flex
-                  items-center
-                  justify-center
-                  text-lg
-                  leading-6
-                  font-medium
-                  text-sp-primary-100
-                  hover:bg-sp-primary-50
-                  md:px-10
-                "
-              >
-                Beli
-              </a>
+                </li>
+        
+                <li class="text-sm">
+                  <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
+                    Simply Organic Harissa 
+                  </a>
+                </li>
+              </ol>
+            </nav>
+        
+            <!-- Image gallery -->
+            <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+              <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+                <img src="{{ asset('img/sp/h0.jpg') }}" alt="Two each of gray, white, and black shirts laying flat." class="w-full h-full object-center object-cover">
               </div>
-
-              <!-- More products... -->
-            </div> 
-          </div>
-        </div>
-
-        <!-- Alternating Feature Sections -->
-        <div class="bg-white relative pt-16 pb-32 lg:overflow-hidden">
-          <div aria-hidden="true" class="
-                absolute
-                inset-x-0
-                top-0
-                h-48
-                bg-gradient-to-b
-                to-gray-100
-              "></div>
-          <div class="relative">
-            <div class="
-                  lg:mx-auto
-                  lg:max-w-7xl
-                  lg:px-8
-                  lg:grid
-                  lg:grid-cols-2
-                  lg:grid-flow-col-dense
-                  lg:gap-24
-                ">
-              <div class="
-                    px-4
-                    max-w-xl
-                    mx-auto
-                    sm:px-6
-                    lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2
-                  ">
-                <div>
-                  <div>
-                    <span class="
-                          h-12
-                          w-12
-                          rounded-md
-                          flex
-                          items-center
-                          justify-center
-                          bg-gradient-to-r
-                          from-sp-primary-100
-                          to-sp-primary-200
-                        ">
-                      <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/sparkles"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
-                        </path>
+              <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+                <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                  <img src="{{ asset('img/sp/h1.jpg') }}" alt="Model wearing plain black basic tee." class="w-full h-full object-center object-cover">
+                </div>
+                <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                  <img src="{{ asset('img/sp/h2.jpg') }}" alt="Model wearing plain gray basic tee." class="w-full h-full object-center object-cover">
+                </div>
+              </div>
+              <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
+                <img src="{{ asset('img/sp/h3.jpg') }}" alt="Model wearing plain white basic tee." class="w-full h-full object-center object-cover">
+              </div>
+            </div>
+        
+            <!-- Product info -->
+            <div class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
+              <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+                  Simply Organic Harissa 
+                </h1>
+              </div>
+        
+              <!-- Options -->
+              <div class="mt-4 lg:mt-0 lg:row-span-3">
+                <h2 class="sr-only">Deskripsi Produk</h2>
+                <p class="text-3xl text-gray-900">Rp 64.000</p>
+        
+                <!-- Reviews -->
+                <div class="mt-6">
+                  <h3 class="sr-only">Reviews</h3>
+                  <div class="flex items-center">
+                    <div class="flex items-center">
+                      <!--
+                        Heroicon name: solid/star
+        
+                        Active: "text-gray-900", Default: "text-gray-200"
+                      -->
+                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                    </span>
-                  </div>
-                  <div class="mt-6">
-                    <h2 class="
-                          text-3xl
-                          font-extrabold
-                          tracking-tight
-                          text-gray-900
-                        ">
-                        Pilihan untuk Kebutuhanmu
-                    </h2>
-                    <p class="mt-4 text-lg text-gray-500">
-                      Bumbu dan rempah pilihan yang diolah dengan sepenuh hati serta 
-                      dijamin enak, praktis dan tanpa 3P (Pengawet, Pewarna dan Perasa Buatan)
-                    </p>
-                    <div class="mt-6">
-                      <a href="#" class="
-                            inline-flex
-                            px-4
-                            py-2
-                            border border-transparent
-                            text-base
-                            font-medium
-                            rounded-md
-                            shadow-sm
-                            text-white
-                            bg-gradient-to-r
-                            from-sp-primary-100
-                            to-sp-primary-200
-                            hover:from-sp-primary-300 hover:to-sp-primary-400
-                          ">
-                        Belanja Sekarang
-                      </a>
+        
+                      <!-- Heroicon name: solid/star -->
+                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+        
+                      <!-- Heroicon name: solid/star -->
+                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+        
+                      <!-- Heroicon name: solid/star -->
+                      <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+        
+                      <!-- Heroicon name: solid/star -->
+                      <svg class="text-gray-200 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
                     </div>
+                    <p class="sr-only">4 out of 5 stars</p>
+                    <a href="#" class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">117 ulasan</a>
                   </div>
                 </div>
+        
+                <form class="mt-10">
+                  <div>
+                    <fieldset class="mt-4">
+                      <div
+                        class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 border border-sp-primary-100 bg-white text-sp-primary-100 rounded-full"
+                      >
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-archive mr-2"
+                      >
+                        <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                        <rect x="1" y="3" width="22" height="5"></rect>
+                        <line x1="10" y1="12" x2="14" y2="12"></line>
+                      </svg>
+                        1-2 Minggu
+                      </div>
+                      <div
+                      class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-hard-drive mr-2"
+                        >
+                          <line x1="22" y1="12" x2="2" y2="12"></line>
+                          <path
+                            d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+                          ></path>
+                          <line x1="6" y1="16" x2="6.01" y2="16"></line>
+                          <line x1="10" y1="16" x2="10.01" y2="16"></line>
+                        </svg>
+                        Rempah-rempah dan Bumbu
+                      </div>
+                    </fieldset>
+                  </div>
+        
+                  <!-- Sizes -->
+                  <div class="mt-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="text-sm text-gray-900 font-medium">Berat Bersih</h3>
+                    </div>
+        
+                    <fieldset class="mt-4">
+                      <legend class="sr-only">
+                        Pilih salah satu
+                      </legend>
+                      <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                        <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed">
+                          <input type="radio" name="size-choice" value="25 gram" disabled class="sr-only" aria-labelledby="size-choice-0-label">
+                          <p id="size-choice-0-label">
+                            25 gram
+                          </p>
+        
+                          <div aria-hidden="true" class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
+                            <svg class="absolute inset-0 w-full h-full text-gray-200 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                              <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke" />
+                            </svg>
+                          </div>
+                        </label>
+        
+                        <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                          <input type="radio" name="size-choice" value="50 gram" class="sr-only" aria-labelledby="size-choice-1-label">
+                          <p id="size-choice-1-label">
+                            50 gram
+                          </p>
+        
+                          <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+        
+                  <button type="submit" class="mt-10 w-full bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Tambah Ke Keranjang</button>
+                </form>
               </div>
-              <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                <div class="
-                      pr-4
-                      -ml-48
-                      sm:pr-6
-                      md:-ml-16
-                      lg:px-0 lg:m-0 lg:relative lg:h-full
-                    ">
-                  <img class="
-                        w-full
-                        rounded-xl
-                        shadow-xl
-                        ring-1 ring-black ring-opacity-5
-                        lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
-                      " src="{{ asset('/img/bg-banner.png') }}"
-                    alt="Customer profile user interface" />
+        
+              <div class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+                <!-- Description and details -->
+                <div>
+                  <h3 class="sr-only">Deskripsi Produk</h3>
+        
+                  <div class="space-y-6">
+                    <p class="text-base text-gray-900">
+                      Harissa adalah Saus atau pasta pedas Tunisia yang biasanya dibuat dari cabai, minyak zaitun, dan rempah-rempah. 
+                      Kami mendapatkan rempah-rempah Anda tertutup di sini. Bumbu Harissa kami adalah campuran organik, 
+                      aroma bawang putih dengan rasa yang kompleks, berasap, seperti kari dan sentuhan panas pedas. </p>
+                  </div>
+                </div>
+        
+                <div class="mt-10">
+                  <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+        
+                  <div class="mt-4">
+                    <ul role="list" class="pl-4 list-disc text-sm space-y-2">
+                      <li class="text-gray-400"><span class="text-gray-600">Berwarna merah canti</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Sangat cocok untuk masakan pasta</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Sedap dan berasa kompleks</span></li>        
+                    </ul>
+                  </div>
+                </div>
+        
+                <div class="mt-10">
+                  <h2 class="text-sm font-medium text-gray-900">Komposisi</h2>
+        
+                  <div class="mt-4 space-y-6">
+                    <p class="text-sm text-gray-600">Paprika Organik, Jintan Organik, Cabai Organik, Cabai Organik, Ketumbar Organik, Jintan Organik, Bawang Putih Organik, Peppermint Organik..</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Split brand panel -->
-      <div class="relative bg-white">
-        <div class="absolute inset-0" aria-hidden="true">
-          <div
-            class="
-              absolute
-              inset-y-0
-              right-0
-              w-1/2
-              bg-gradient-to-r
-              from-sp-primary-200
-              to-sp-primary-300
-            "
-          ></div>
-        </div>
-        <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:px-8">
-          <div class="bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-0 lg:pr-8">
-            <div class="max-w-lg mx-auto lg:mx-0">
-              <h2
-                class="
-                  text-base
-                  font-semibold
-                  tracking-wide
-                  text-sp-primary-300
-                  uppercase
-                "
-              >
-                Mengapa Membeli Spiceso?
-              </h2>
-              <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                Penuhi kebutuhan tanpa khawatir terkait rasa dan kesehatan tubuh mu.
-              </p>
-              <dl class="mt-12 space-y-10">
-                <div class="flex">
-                  <div
-                    class="
-                      flex-shrink-0
-                      h-12
-                      w-12
-                      bg-gradient-to-r
-                      from-sp-primary-200
-                      to-sp-primary-300
-                      rounded-md
-                      flex
-                      items-center
-                      justify-center
-                    "
-                  >
-                    <svg
-                      class="h-4 w-4 text-white"
-                      x-description="Heroicon name: outline/view-list"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 10h16M4 14h16M4 18h16"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <dt class="text-xl leading-6 font-medium text-gray-900">
-                      Halal MUI & Tersertifikasi BPOM
-                    </dt>
-                  </div>
-                </div>
-
-                <div class="flex">
-                  <div
-                    class="
-                      flex-shrink-0
-                      h-12
-                      w-12
-                      bg-gradient-to-r
-                      from-sp-primary-200
-                      to-sp-primary-300
-                      rounded-md
-                      flex
-                      items-center
-                      justify-center
-                    "
-                  >
-                    <svg
-                      class="h-4 w-4 text-white"
-                      x-description="Heroicon name: outline/view-boards"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <dt class="text-xl leading-6 font-medium text-gray-900">
-                      Tanpa 3P (Pengawet, Penguat Rasa, Pewarna Sintesis)
-                    </dt>
-                  </div>
-                </div>
-
-                <div class="flex">
-                  <div
-                    class="
-                      flex-shrink-0
-                      h-12
-                      w-12
-                      bg-gradient-to-r
-                      from-sp-primary-200
-                      to-sp-primary-300
-                      rounded-md
-                      flex
-                      items-center
-                      justify-center
-                    "
-                  >
-                    <svg
-                      class="h-4 w-4 text-white"
-                      x-description="Heroicon name: outline/calendar"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <dt class="text-xl leading-6 font-medium text-gray-900">
-                      Bervariasi dengan Masa Ketahanan 
-                    </dt>
-                  </div>
-                </div>
-
-                <div class="flex">
-                  <div
-                    class="
-                      flex-shrink-0
-                      h-12
-                      w-12
-                      bg-gradient-to-r
-                      from-sp-primary-200
-                      to-sp-primary-300
-                      rounded-md
-                      flex
-                      items-center
-                      justify-center
-                    "
-                  >
-                    <svg
-                      class="h-4 w-4 text-white"
-                      x-description="Heroicon name: outline/users"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <dt class="text-xl leading-6 font-medium text-gray-900">
-                      Buatan Lokal
-                    </dt>
-                  </div>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="
-              bg-gradient-to-r
-              from-sp-primary-200
-              to-sp-primary-300
-              py-16
-              px-4
-              sm:py-24 sm:px-6
-              lg:bg-none lg:flex lg:items-center lg:justify-end lg:px-0 lg:pl-8
-            "
-          >
-            <div class="max-w-lg mx-auto w-full space-y-8 lg:mx-0">
-              <div>
-                <h2 class="sr-only">Harga</h2>
-                <p class="relative grid grid-cols-1">
-                  <span class="flex flex-col text-center">
-                    <span
-                      class="text-5xl font-extrabold text-white tracking-tight"
-                      >Hanya Rp 125.000</span
-                    >
-                  </span>
-                </p>
-              </div>
-              <a href="#">
-                <img class="w-full mt-2"
-                  src="{{ asset('/img/sp/pack.png') }}" alt="" />
-              </a>
-              <a
-                href="#"
-                class="
-                  w-full
-                  bg-white
-                  border border-transparent
-                  rounded-md
-                  py-4
-                  px-8
-                  flex
-                  items-center
-                  justify-center
-                  text-lg
-                  leading-6
-                  font-medium
-                  text-sp-primary-400
-                  hover:bg-sp-primary-50
-                  md:px-10
-                "
-              >
-                Mulai Belanja
-              </a>
-              <a
-                href="#"
-                class="
-                  block
-                  text-center text-base
-                  font-medium
-                  text-sp-primary-50
-                  hover:text-white
-                "
-              >
-                Paket Lengkap Masakan Enak & Sehat
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
       </main>
-
       <footer class="bg-gray-50" aria-labelledby="footerHeading">
         <h2 id="footerHeading" class="sr-only">Footer</h2>
         <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
           <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-              {{-- <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 class="
                         text-sm
@@ -1030,7 +674,7 @@
                     </li>
                   </ul>
                 </div>
-              </div> --}}
+              </div>
               <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 class="
