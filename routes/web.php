@@ -18,6 +18,10 @@ Route::get('/masuk', function () {
     return view('layouts/login');
 });
 
+Route::get('/admin', function () {
+    return view('layouts/admin/dashboard');
+});
+
 Route::get('/detail', function () {
     return view('layouts/detail-product');
 });
