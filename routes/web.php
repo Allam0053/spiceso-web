@@ -10,7 +10,6 @@ Route::get('/home', function () {
     return view('layouts/home');
 });
 
-
 Route::get('/daftar', function () {
     return view('layouts/register');
 });
@@ -27,9 +26,7 @@ Route::get('/list', function () {
     return view('layouts/list-product');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::view('/', 'dashboard')->name('dashboard');
 
 require __DIR__.'/auth.php';
 

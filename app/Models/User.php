@@ -15,7 +15,7 @@ class User extends Model
 
   protected $fillable = [
     'account_id',
-    'name',
+    'nama',
     'no_hp',
     'jenis_kelamin',
     'alamat'
@@ -23,7 +23,7 @@ class User extends Model
 
   public function account()
   {
-    return $this->belongsTo(Account::class);
+    return $this->belongsTo(Account::class, 'account_id', 'account_id');
   }
 
   public function orders()

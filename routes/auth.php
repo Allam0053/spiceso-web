@@ -1,15 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticateUserController;
-use App\Http\Controllers\Auth\AuthenticateAdminController;
-use App\Http\Controllers\Auth\RegisterUserController;
-use App\Http\Controllers\Auth\RegisterAdminController;
-use App\Http\Controllers\Auth\ConfirmablePasswordController;
-use App\Http\Controllers\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\User\AuthenticateUserController;
+use App\Http\Controllers\Auth\Admin\AuthenticateAdminController;
+use App\Http\Controllers\Auth\User\RegisterUserController;
+use App\Http\Controllers\Auth\Admin\RegisterAdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::name('user.')->group(function () {

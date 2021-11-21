@@ -24,7 +24,7 @@ class AuthenticateAccount
       }
     } else if ($role == 'admin') {
       if (Auth::user()->role == 'user') {
-        return redirect()->route('user.dashboard');
+        return redirect()->route('dashboard');
       }
     }
 

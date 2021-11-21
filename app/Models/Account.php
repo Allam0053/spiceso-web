@@ -32,7 +32,7 @@ class Account extends Authenticatable
 
   public function user()
   {
-    return $this->hasOne(User::class);
+    return $this->hasOne(User::class, 'account_id', 'account_id');
   }
 
   public function admin()

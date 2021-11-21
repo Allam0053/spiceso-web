@@ -13,7 +13,7 @@ class RedirectIfAuthenticated
     if (Auth::check()) {
       if ($role == 'user') {
         if (Auth::user()->role == $role) {
-          return redirect()->route('user.dashboard');
+          return redirect()->route('dashboard');
         } else if (Auth::user()->role == 'admin') {
           return redirect()->route('admin.dashboard');
         }
@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
         if (Auth::user()->role == $role) {
           return redirect()->route('admin.dashboard');
         } else if (Auth::user()->role == 'user') {
-          return redirect()->route('user.dashboard');
+          return redirect()->route('dashboard');
         }
       }
     }

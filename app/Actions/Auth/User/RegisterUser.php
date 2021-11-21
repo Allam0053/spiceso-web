@@ -16,8 +16,8 @@ class RegisterUser
   public function handle($credentials, $nama)
   {
     $account = Account::create([
-      'email' => $credentials->email,
-      'password' => Hash::make($credentials->password),
+      'email' => $credentials['email'],
+      'password' => Hash::make($credentials['password']),
       'role' => 'user',
     ]);
 
@@ -37,7 +37,7 @@ class RegisterUser
       return false;
     }
 
-    $account->user->save($user);
+    $account->user()->save($user);
 
     return true;
   }
