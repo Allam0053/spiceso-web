@@ -23,11 +23,11 @@ Route::get('/admin', function () {
 });
 
 Route::get('/detail', function () {
-    return view('layouts/detail-product');
+    return view('layouts/user/detail-product');
 });
 
 Route::get('/list', function () {
-    return view('layouts/list-product');
+    return view('layouts/user/list-product');
 });
 
 Route::view('/', 'dashboard')->name('dashboard');

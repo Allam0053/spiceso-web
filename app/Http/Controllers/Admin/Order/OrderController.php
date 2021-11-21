@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Order;
 
 use App\Actions\Admin\Order\DeleteOrder;
 use App\Actions\Admin\Order\GetOrder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\User;
 
 use App\Actions\Admin\User\GetUser;
 use App\Actions\Admin\User\GetUsers;
