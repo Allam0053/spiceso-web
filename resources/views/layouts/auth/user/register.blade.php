@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer=""></script>
 
@@ -6,10 +7,15 @@
   <link rel="stylesheet" href="https://tailwindui.com/css/components-v2.css" />
   <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
 </head>
+
 <body>
   <div>
     <div class="min-h-screen bg-white flex">
-      <div class="
+      <div class="hidden lg:block relative w-0 flex-1">
+        <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/img/sp/v6.jpg') }}" alt="" />
+      </div>
+      <div
+        class="
             flex-1 flex flex-col
             justify-center
             py-12
@@ -22,7 +28,7 @@
           <div>
             <img class="h-12 w-auto" src="{{ asset('/img/logo-sp.png') }}" alt="Workflow" />
             <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
-              Selamat Datang Kembali
+              Selamat Datang
             </h2>
           </div>
 
@@ -39,15 +45,39 @@
             </div>
 
             <div class="mt-6">
-              <form action="{{ route('user.login.store') }}" method="POST" class="space-y-6">
+              <form action="{{ route('user.register.store') }}" method="POST" class="space-y-6">
                 @csrf
-
                 <div>
-                  <label for="email" class="block text-sm font-medium text-gray-700">
-                    Email address
+                  <label for="nama" class="block text-sm font-medium text-gray-700">
+                    Nama
                   </label>
                   <div class="mt-1">
-                    <input id="email" name="email" type="email" autocomplete="email" required="" class="
+                    <input id="nama" name="nama" type="text" required=""
+                      class="
+                          appearance-none
+                          block
+                          w-full
+                          px-3
+                          py-2
+                          border border-gray-300
+                          rounded-md
+                          shadow-sm
+                          placeholder-gray-400
+                          focus:outline-none
+                          focus:ring-sp-primary-100
+                          focus:border-sp-primary-100
+                          sm:text-sm
+                        " />
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <label for="email" class="block text-sm font-medium text-gray-700">
+                    Email
+                  </label>
+                  <div class="mt-1">
+                    <input id="email" name="email" type="email" autocomplete="email" required=""
+                      class="
                           appearance-none
                           block
                           w-full
@@ -70,7 +100,32 @@
                     Password
                   </label>
                   <div class="mt-1">
-                    <input id="password" name="password" type="password" autocomplete="current-password" required="" class="
+                    <input id="password" name="password" type="password" required=""
+                      class="
+                          appearance-none
+                          block
+                          w-full
+                          px-3
+                          py-2
+                          border border-gray-300
+                          rounded-md
+                          shadow-sm
+                          placeholder-gray-400
+                          focus:outline-none
+                          focus:ring-sp-primary-100
+                          focus:border-sp-primary-100
+                          sm:text-sm
+                        " />
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <label for="password_confirmation" class="block text-sm font-medium text-gray-700">
+                    Password
+                  </label>
+                  <div class="mt-1">
+                    <input id="password_confirmation" name="password_confirmation" type="password" required=""
+                      class="
                           appearance-none
                           block
                           w-full
@@ -90,7 +145,8 @@
 
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
-                    <input id="remember_me" name="remember_me" type="checkbox" class="
+                    <input id="remember_me" name="remember_me" type="checkbox"
+                      class="
                           h-4
                           w-4
                           text-indigo-600
@@ -104,7 +160,8 @@
                   </div>
 
                   <div class="text-sm">
-                    <a href="#" class="
+                    <a href="#"
+                      class="
                           font-medium
                           text-sp-primary-100
                           hover:text-sp-primary-300
@@ -115,7 +172,8 @@
                 </div>
 
                 <div>
-                  <button type="submit" class="
+                  <button type="submit"
+                    class="
                         w-full
                         flex
                         justify-center
@@ -134,7 +192,7 @@
                         focus:ring-offset-2
                         focus:ring-sp-primary-100
                       ">
-                    Masuk
+                    Daftar
                   </button>
                 </div>
               </form>
@@ -142,10 +200,8 @@
           </div>
         </div>
       </div>
-      <div class="hidden lg:block relative w-0 flex-1">
-        <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/img/sp/v5.jpg')}}" alt="" />
-      </div>
     </div>
   </div>
 </body>
+
 </html>
