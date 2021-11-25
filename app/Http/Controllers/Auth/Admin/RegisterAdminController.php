@@ -11,7 +11,7 @@ class RegisterAdminController extends Controller
 {
   public function create()
   {
-    return view('admin.register');
+    return view('layouts.auth.admin.register');
   }
 
   public function store(RegisterRequest $request)

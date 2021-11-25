@@ -13,7 +13,7 @@ class AuthenticateAdminController extends Controller
 {
   public function create()
   {
-    return view('admin.login');
+    return view('layouts.auth.admin.login');
   }
 
   public function store(LoginRequest $request)
