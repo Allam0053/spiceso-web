@@ -15,7 +15,7 @@ class UserController extends Controller
       $response = GetUsers::run(10, true);
 
       if ($response) {
-        return redirect()->route('', ['users' => $response]);
+        return view('layouts.admin.user.index', ['users' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
