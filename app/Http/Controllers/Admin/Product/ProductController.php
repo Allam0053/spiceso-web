@@ -30,7 +30,7 @@ class ProductController extends Controller
 
   public function create()
   {
-    return view('');
+    return view('layouts.admin.product.create');
   }
 
   public function store(StoreProductRequest $request)

@@ -14,6 +14,8 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
   Route::get('/detail-pengguna/{id}', [UserController::class, 'show'])->name('user');
 
   Route::get('/daftar-produk', [ProductController::class, 'index'])->name('products');
+  Route::get('/daftar-produk/tambah', [ProductController::class, 'create'])->name('products.create');
+
   Route::post('/daftar-produk/{id}', [ProductController::class, 'store'])->name('products.store');
   Route::delete('/daftar-produk/{id}', [ProductController::class, 'destroy'])->name('products.delete');
 
