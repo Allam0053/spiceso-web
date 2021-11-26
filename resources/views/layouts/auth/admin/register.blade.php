@@ -55,14 +55,14 @@
                   <span class="text-gray-700 dark:text-gray-400">Name</span>
                   <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="Jane Doe" type="text" name="nama" :value="old('nama')" required autofocus
+                    placeholder="Master" type="text" name="nama" required autofocus
                     autocomplete="nama" />
                 </label>
                 <label class="block mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">Email</span>
                   <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="Jane Doe" type="email" name="email" :value="old('email')" required />
+                    placeholder="master@example.com" type="email" name="email" required />
                 </label>
                 <label class="block mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">Password</span>
@@ -73,7 +73,7 @@
                 </label>
                 <label class="block mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">
-                    Confirm password
+                    Konfirmasi password
                   </span>
                   <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
@@ -92,7 +92,7 @@
               <p class="mt-4">
                 <a class="text-sm font-medium text-red-600 dark:text-red-400 hover:underline"
                   href="{{ route('admin.login') }}">
-                  Already have an account? Login
+                  Sudah punya akun? Login
                 </a>
               </p>
             </div>

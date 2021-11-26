@@ -54,7 +54,7 @@
                   <span class="text-gray-700 dark:text-gray-400">Email</span>
                   <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="Jane Doe" name="email" value="{{ old('email') }}" required autofocus />
+                    placeholder="master@example.com" name="email" required autofocus />
                 </label>
                 <label class="block mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">Password</span>
@@ -77,7 +77,7 @@
 
               <p class="mt-4">
                 <a class="text-sm font-medium text-red-600 dark:text-red-400 hover:underline" href="#">
-                  {{ __('Forgot your password?') }}
+                  {{ __('Lupa password?') }}
                 </a>
               </p>
             </div>

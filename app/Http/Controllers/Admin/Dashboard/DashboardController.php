@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Product;
+namespace App\Http\Controllers\Admin\Dashboard;
 
 use App\Actions\Admin\Product\DeleteProduct;
 use App\Actions\Admin\Product\GetProduct;
@@ -11,26 +11,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
 use Exception;
 
-class ProductController extends Controller
+class DashboardController extends Controller
 {
   public function index()
   {
-    try {
-      $response = GetProducts::run(10, true);
-
-      if ($response) {
-        return view('layouts.admin.product.index', ['products' => $response]);
-      } else {
-        return redirect()->back()->with('error', 'Coba muat ulang!');
-      }
-    } catch (Exception $exc) {
-      return redirect()->back()->with('error', $exc->getMessage());
-    }
-  }
-
-  public function create()
-  {
-    return view('');
+    return view('layouts.admin.dashboard');
   }
 
   public function store(StoreProductRequest $request)
