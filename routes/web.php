@@ -2,35 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('', 'layouts.dashboard')->name('dashboard');
 
-Route::get('/home', function () {
-    return view('layouts/home');
-});
-
-Route::get('/daftar', function () {
-    return view('layouts/register');
-});
-
-Route::get('/masuk', function () {
-    return view('layouts/login');
-});
-
-Route::get('/admin', function () {
-    return view('layouts/admin/dashboard');
-});
-
-Route::get('/detail', function () {
-    return view('layouts/user/detail-product');
-});
-
-Route::get('/list', function () {
+Route::get('/produk', function () {
     return view('layouts/user/list-product');
 });
 
-Route::view('/', 'dashboard')->name('dashboard');
+Route::get('/produk/{id}', function () {
+    return view('layouts/user/detail-product');
+});
+
+Route::prefix('/admin')->group(function () {
+    Route::view('/buttons', 'layouts.admin.buttons');
+    Route::view('/cards', 'layouts.admin.cards');
+    Route::view('/charts', 'layouts.admin.charts');
+    Route::view('/forms', 'layouts.admin.forms');
+    Route::view('/modals', 'layouts.admin.modals');
+    Route::view('/tables', 'layouts.admin.tables');
+});
 
 require __DIR__.'/auth.php';
 

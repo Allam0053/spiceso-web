@@ -16,8 +16,8 @@ class RegisterAdmin
   public function handle($credentials, $nama)
   {
     $account = Account::create([
-      'email' => $credentials->email,
-      'password' => Hash::make($credentials->password),
+      'email' => $credentials['email'],
+      'password' => Hash::make($credentials['password']),
       'role' => 'admin',
     ]);
 
