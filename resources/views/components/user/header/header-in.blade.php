@@ -27,7 +27,7 @@
         </div>
         <input
           class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary form-input"
-          type="text" placeholder="Search for products" aria-label="Search" />
+          type="text" placeholder="Cari produk" aria-label="Search" />
       </div>
     </div>
     <ul class="flex items-center flex-shrink-0 space-x-6">
