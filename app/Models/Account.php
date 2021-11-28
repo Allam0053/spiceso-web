@@ -37,6 +37,6 @@ class Account extends Authenticatable
 
   public function admin()
   {
-    return $this->hasOne(Admmin::class);
+    return $this->hasOne(Admin::class);
   }
 }

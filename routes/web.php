@@ -21,6 +21,11 @@ Route::prefix('/admin')->group(function () {
     Route::view('/tables', 'layouts.admin.tables');
 });
 
+Route::prefix('/user')->group(function () {
+    Route::view('/home', 'layouts.user.home');
+    Route::view('/checkout', 'layouts.user.checkout');
+});
+
 require __DIR__.'/auth.php';
 
 require __DIR__.'/user.php';
