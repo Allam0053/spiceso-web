@@ -76,7 +76,7 @@
       {{-- {{ $orders->links('components.admin.pagination.pagination') }} --}}
     </div>
 
-    <div class="my-6 p-6 mb-8 bg-white rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary">
+    <div class="bg-white my-6 p-6 mb-8 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary">
       <div class="flex flex-row justify-end">
         <button
           class="bg-sp-primary-200 text-white hover:text-white hover:bg-sp-primary-400 h-12 w-full rounded cursor-pointer">

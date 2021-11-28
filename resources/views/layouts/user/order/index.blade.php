@@ -5,7 +5,7 @@
     </h2>
     <!-- CTA -->
     <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-400 bg-sp-primary-50 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary"
-      href="https://github.com/estevanmaito/Spiceso-dashboard">
+      href="">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.shop-bag')
         <span>{{}} Pesanan</span>
@@ -21,9 +21,10 @@
             <tr
               class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
               <th class="px-4 py-3">Produk</th>
-              <th class="px-4 py-3">Jumlah</th>
+              <th class="px-1 py-3">Jumlah</th>
               <th class="px-4 py-3">Harga Satuan</th>
               <th class="px-4 py-3">Total</th>
+              <th class="px-4 py-3"></th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -42,10 +43,13 @@
                     <p class="text-xs text-gray-600 dark:text-gray-400 overflow-ellipsis">
                       Deskripsi Order
                     </p>
+                    <div class="mt-3">
+                      @include('components.user.icons.tag-send')
+                    </div>
                   </div>
                 </div>
               </td>
-              <td class="px-4 py-3 text-sm">
+              <td class="px-1 py-3 text-sm">
                 Jumlah
               </td>
               <td class="px-4 py-3 text-sm">
@@ -53,6 +57,14 @@
               </td>
               <td class="px-4 py-3 text-sm">
                 Total Order
+              </td>
+              <td class="px-4 py-3 text-sm">
+                <button
+                  class="bg-gray-100 text-gray-600 hover:text-white hover:bg-gray-600 h-8 w-16 rounded cursor-pointer">
+                  <a href="#">
+                    <i class="fa fa-chevron-right"></i>
+                  </a>
+                </button>
               </td>
             </tr>
             {{-- @endforeach --}}

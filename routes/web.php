@@ -25,6 +25,7 @@ Route::prefix('/user')->group(function () {
     Route::view('/home', 'layouts.user.home');
     Route::view('/checkout', 'layouts.user.trolley.index');
     Route::view('/order', 'layouts.user.order.index');
+    Route::view('/order-detail', 'layouts.user.order.detail');
 });
 
 require __DIR__.'/auth.php';
