@@ -23,27 +23,6 @@
               <p>Tambah Gambar</p>
             </button>
           </div>
-          <div class="hidden" id="image-container">
-            <label class="block mt-4 text-sm w-1/2" id="image-item">
-              <span class="text-gray-700 dark:text-gray-400" id="image-name">
-                Nama
-              </span>
-
-              <input id="image-place" type="file" name="gambars[]" class="form-control hidden">
-              <img class="w-full object-cover mt-1 mb-2" id="image-preview" src="">
-
-              <button
-                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                id="insert-image" type="button">
-                Upload Gambar
-              </button>
-              <button
-                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                id="delete-image">
-                Hapus
-              </button>
-            </label>
-          </div>
         </label>
 
         <label class="block mt-4 text-sm">
@@ -102,14 +81,33 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var counter = 0;
+        var marker = 0;
 
         $("#add-image").click(function() {
-          $("#image-container").children("label").children("span").html("Gambar Produk " + (counter + 1));
-          var html = $("#image-container").html();
-
           if (counter < 3) {
-            $("#image-control").after(html);
+            $("#image-control").after(`
+              <label class="block mt-4 text-sm w-1/2" id="image-item-${marker + 1}">
+                <span class="text-gray-700 dark:text-gray-400" id="image-name-${marker + 1}">
+                  Gambar Produk
+                </span>
+
+                <input id="image-place-${marker + 1}" type="file" name="gambars[]" class="form-control hidden" data-id="${marker + 1}">
+                <img class="w-full object-cover mt-1 mb-2" id="image-preview-${marker + 1}" src="">
+
+                <button
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                  id="insert-image" type="button" data-id="${marker + 1}">
+                  Upload Gambar
+                </button>
+                <button
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                  id="delete-image" type="button" data-id="${marker + 1}">
+                  Hapus
+                </button>
+              </label>
+            `);
             counter += 1;
+            marker += 1;
           }
 
           if (counter == 3) {
@@ -117,10 +115,11 @@
           }
         });
 
-        $("body").on("click", "#delete-image", function() {
+        $("body").on("click", "#delete-image", function(e) {
           event.preventDefault();
-
-          $(this).parents("#image-item").remove();
+          
+          var num = $(this).data("id"); 
+          $("#image-item-" + num).remove();
           counter -= 1;
 
           if (counter < 3) {
@@ -140,17 +139,19 @@
           }
         }
 
-        $("body").on('change', "#image-place", function() {
-          readURL($(this).parents("#image-item").children("#image-preview"), this);
+        $("body").on('change', "input[id*='image-place']", function(e) {
+          var num = $(this).data("id"); 
+          readURL($("#image-item-" + num).children("img"), this);
 
-          $(this).parents("#image-item").children("#insert-image").html("Ubah Gambar");
+          $("#image-item-" + num).children("#insert-image").html("Ubah Gambar");
           
           var filename = $(this).val().split(/(\\|\/)/g).pop()
-          $(this).parents("#image-item").children("#image-name").html(filename);
+          $("#image-name-" + num).html(filename);
         });
 
         $("body").on("click", "#insert-image", function() {
-          $('#image-place').click();
+          var num = $(this).data("id"); 
+          $("#image-place-" + num).click();
         });
       });
     </script>

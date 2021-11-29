@@ -46,7 +46,7 @@
               </button>
             </label>
           </div>
-
+{{-- 
           @foreach ($product->images as $image)
             <label class="block mt-4 text-sm w-1/2" id="image-item">
               <span class="text-gray-700 dark:text-gray-400">
@@ -63,11 +63,11 @@
               </button>
               <button
                 class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                id="delete-image">
+                id="delete-image" type="button">
                 Hapus
               </button>
             </label>
-          @endforeach
+          @endforeach --}}
         </label>
 
         <label class="block mt-4 text-sm">
@@ -124,10 +124,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
     <script type="text/javascript">
+        var counter = {{!! json_encode(count($product->images)) !!}};
       $(document).ready(function() {
-        var counter = {{!! json_encode($product->images()->count()) !!}};
+
+        console.log(counter);
 
         $("#add-image").click(function() {
+        console.log(counter);
           $("#image-container").children("label").children("span").html("Gambar Produk " + (counter + 1));
           var html = $("#image-container").html();
 
@@ -143,6 +146,7 @@
 
         $("body").on("click", "#delete-image", function() {
           event.preventDefault();
+        console.log(counter);
 
           $(this).parents("#image-item").remove();
           counter -= 1;
