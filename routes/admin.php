@@ -16,7 +16,7 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
   Route::get('/daftar-produk/tambah', [ProductController::class, 'create'])->name('products.create');
   Route::post('/daftar-produk/tambah', [ProductController::class, 'store'])->name('products.store');
 
-  Route::get('/detail-produk/{id}', [ProductController::class, 'show'])->name('product');
+  Route::get('/detail-produk/{id}', [ProductController::class, 'show'])->name('product.show');
   Route::get('/detail-produk/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
   Route::put('/detail-produk/{id}/update', [ProductController::class, 'update'])->name('product.update');
   Route::delete('/detail-produk/{id}', [ProductController::class, 'destroy'])->name('product.delete');

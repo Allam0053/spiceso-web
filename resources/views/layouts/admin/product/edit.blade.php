@@ -1,7 +1,7 @@
 <x-admin-layout>
   <div class="container px-6 mx-auto grid">
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-      Tambah Produk
+      Ubah Produk: {{ $product->nama }}
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -25,49 +25,36 @@
               <p>Tambah Gambar</p>
             </button>
           </div>
-          <div class="hidden" id="image-container">
-            <label class="block mt-4 text-sm w-1/2" id="image-item">
-              <span class="text-gray-700 dark:text-gray-400">
-                Nama
-              </span>
 
-              <input id="image-place" type="file" name="gambars[]" class="form-control hidden">
-              <img class="w-full object-cover mt-1 mb-2" id="image-preview" src="">
+          @php
+            $counter = 0;
+          @endphp
 
-              <button
-                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                id="insert-image" type="button">
-                Upload Gambar
-              </button>
-              <button
-                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                id="delete-image">
-                Hapus
-              </button>
-            </label>
-          </div>
-{{-- 
           @foreach ($product->images as $image)
-            <label class="block mt-4 text-sm w-1/2" id="image-item">
-              <span class="text-gray-700 dark:text-gray-400">
+            @php
+              $counter++;
+            @endphp
+  
+            <label class="block mt-4 text-sm w-1/2" id="image-item-{{ $counter }}">
+              <span class="text-gray-700 dark:text-gray-400" id="image-name-{{ $counter }}">
                 {{ $image->nama }}
               </span>
 
-              <input id="image-place" type="file" name="gambars[]" class="form-control hidden">
-              <img class="w-full object-cover mt-1 mb-2" id="image-preview" src="{{ asset($image->link) }}">
+              <input id="image-place-{{ $counter }}" type="file" name="gambars[]" class="form-control hidden" data-id="{{ $counter }}">
+              <img class="w-full object-cover mt-1 mb-2" id="image-preview-{{ $counter }}" src="{{ asset($image->link) }}">
 
               <button
                 class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                id="insert-image" type="button">
+                id="insert-image" type="button" data-id="{{ $counter }}">
                 Ubah Gambar
               </button>
               <button
                 class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
-                id="delete-image" type="button">
+                id="delete-image" type="button" data-id="{{ $counter }}">
                 Hapus
               </button>
             </label>
-          @endforeach --}}
+          @endforeach
         </label>
 
         <label class="block mt-4 text-sm">
@@ -83,7 +70,7 @@
           <span class="text-gray-700 dark:text-gray-400">Deskripsi</span>
           <textarea
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-            name="deskripsi" rows="3" value="{{ $product->deskripsi ?? '' }}"></textarea>
+            name="deskripsi" rows="3" value="{{ $product->deskripsi ?? '' }}">{{ $product->deskripsi ?? '' }}</textarea>
         </label>
 
         <label class="block mt-4 text-sm">
@@ -113,7 +100,7 @@
           <button
             class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             type="submit">
-            Tambah
+            Simpan
           </button>
         </div>
       </form>
@@ -124,19 +111,35 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
     <script type="text/javascript">
-        var counter = {{!! json_encode(count($product->images)) !!}};
       $(document).ready(function() {
-
-        console.log(counter);
+        var counter = {!! json_encode(count($product->images)) !!};
+        var marker = counter;
 
         $("#add-image").click(function() {
-        console.log(counter);
-          $("#image-container").children("label").children("span").html("Gambar Produk " + (counter + 1));
-          var html = $("#image-container").html();
-
           if (counter < 3) {
-            $("#image-control").after(html);
+            $("#image-control").after(`
+              <label class="block mt-4 text-sm w-1/2" id="image-item-${marker + 1}">
+                <span class="text-gray-700 dark:text-gray-400" id="image-name-${marker + 1}">
+                  Gambar Produk
+                </span>
+
+                <input id="image-place-${marker + 1}" type="file" name="gambars[]" class="form-control hidden" data-id="${marker + 1}">
+                <img class="w-full object-cover mt-1 mb-2" id="image-preview-${marker + 1}" src="">
+
+                <button
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                  id="insert-image" type="button" data-id="${marker + 1}">
+                  Upload Gambar
+                </button>
+                <button
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                  id="delete-image" type="button" data-id="${marker + 1}">
+                  Hapus
+                </button>
+              </label>
+            `);
             counter += 1;
+            marker += 1;
           }
 
           if (counter == 3) {
@@ -144,11 +147,11 @@
           }
         });
 
-        $("body").on("click", "#delete-image", function() {
+        $("body").on("click", "#delete-image", function(e) {
           event.preventDefault();
-        console.log(counter);
-
-          $(this).parents("#image-item").remove();
+          
+          var num = $(this).data("id"); 
+          $("#image-item-" + num).remove();
           counter -= 1;
 
           if (counter < 3) {
@@ -168,13 +171,19 @@
           }
         }
 
-        $("body").on('change', "#image-place", function() {
-          readURL($(this).parents("#image-item").children("img"), this);
-          $(this).parents("#image-item").children("#insert-image").html("Ubah Gambar");
+        $("body").on('change', "input[id*='image-place']", function(e) {
+          var num = $(this).data("id"); 
+          readURL($("#image-item-" + num).children("img"), this);
+
+          $("#image-item-" + num).children("#insert-image").html("Ubah Gambar");
+          
+          var filename = $(this).val().split(/(\\|\/)/g).pop()
+          $("#image-name-" + num).html(filename);
         });
 
         $("body").on("click", "#insert-image", function() {
-          $('#image-place').click();
+          var num = $(this).data("id"); 
+          $("#image-place-" + num).click();
         });
       });
     </script>
