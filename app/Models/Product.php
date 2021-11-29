@@ -26,6 +26,11 @@ class Product extends Model
     return $this->belongsTo(Admin::class);
   }
 
+  public function images()
+  {
+    return $this->hasMany(Product::class, 'product_id', 'product_id');
+  }
+
   public function orders()
   {
     return $this->belongsToMany(Order::class, 'order_product');

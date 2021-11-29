@@ -14,11 +14,11 @@ class StoreProductRequest extends FormRequest
   public function rules()
   {
     return [
-      // 'admin_id' => ['integer'],
-      // 'nama' => ['string'],
-      // 'deskripsi' => ['string'],
-      // 'stok' => ['integer'],
-      // 'harga' => ['numeric'],
+      'admin_id' => ['required', 'integer'],
+      'nama' => ['required', 'string'],
+      'deskripsi' => ['nullable', 'string'],
+      'stok' => ['nullable', 'integer'],
+      'harga' => ['nullable', 'numeric'],
     ];
   }
 }
