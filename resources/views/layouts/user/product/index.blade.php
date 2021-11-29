@@ -1,7 +1,7 @@
 <x-user-in-layout>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="relative z-10 flex items-baseline justify-between pt-10 pb-8 border-b border-gray-200">
-    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">Produk</h1>
+    <h1 class="text-4xl font-bold tracking-tight text-gray-900">Produk</h1>
 
     <div class="flex items-center">
       <div class="relative inline-block text-left">

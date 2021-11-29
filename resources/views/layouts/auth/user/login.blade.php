@@ -24,7 +24,7 @@
         <div class="mx-auto w-full max-w-sm lg:w-96">
           <div>
             <img class="h-12 w-auto" src="{{ asset('/img/logo-sp.png') }}" alt="Workflow" />
-            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+            <h2 class="mt-6 text-3xl font-bold text-gray-900">
               Selamat Datang Kembali
             </h2>
           </div>
