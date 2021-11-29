@@ -1,6 +1,8 @@
-<x-user-layout>
+<x-none-layout>
     <!-- Hero section -->
     <!-- This example requires Tailwind CSS v2.0+ -->
+    @include('components.user.header.header-out')
+
     <div class="relative bg-white overflow-hidden">
         <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
@@ -498,4 +500,6 @@
             </div>
         </div>
     </div>
-</x-user-layout>
+
+    @include('components.user.footer.footer')
+</x-none-layout>
