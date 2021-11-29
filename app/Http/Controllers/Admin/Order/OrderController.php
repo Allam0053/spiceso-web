@@ -19,7 +19,7 @@ class OrderController extends Controller
       $response = GetOrders::run(10, true);
 
       if ($response) {
-        return redirect()->route('', ['orders' => $response]);
+        return view('layouts.admin.order.index', ['orders' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

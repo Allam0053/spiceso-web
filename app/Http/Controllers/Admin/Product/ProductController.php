@@ -54,7 +54,7 @@ class ProductController extends Controller
       $response = GetProduct::run($id);
 
       if ($response) {
-        return view('layouts.admin.product.create', ['product' => $response]);
+        return view('layouts.admin.product.show', ['product' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -81,7 +81,7 @@ class ProductController extends Controller
   public function update(StoreProductRequest $request, $id)
   {
     try {
-      $response = UpdateProduct::run($request->except(['_method', '_token']), $id);
+      $response = UpdateProduct::run($request, $id);
 
       if ($response) {
         return redirect()->back()->with('success', $response . ' behasil diperbarui');
