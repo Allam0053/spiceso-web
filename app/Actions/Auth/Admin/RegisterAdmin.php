@@ -31,13 +31,14 @@ class RegisterAdmin
 
     $admin = Admin::create([
       'nama' => $nama,
+      'account_id' => $account->account_id,
     ]);
 
     if (!$admin) {
       return false;
     }
 
-    $account->admin->save($admin);
+    $account->admin()->save($admin);
 
     return true;
   }

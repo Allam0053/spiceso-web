@@ -9,6 +9,7 @@ use App\Actions\Admin\Product\StoreProduct;
 use App\Actions\Admin\Product\UpdateProduct;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
+use Storage;
 use Exception;
 
 class ProductController extends Controller
@@ -35,6 +36,11 @@ class ProductController extends Controller
 
   public function store(StoreProductRequest $request)
   {
+    dd($request);
+    foreach($images as $key => $value) {
+      $file = file_get_contents($key);
+      Storage::put('coba.png', $file);
+    }
     try {
       $response = StoreProduct::run($request->except(['_method', '_token']));
 

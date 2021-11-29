@@ -31,6 +31,7 @@ class RegisterUser
 
     $user = User::create([
       'nama' => $nama,
+      'account_id' => $account->account_id,
     ]);
 
     if (!$user) {
