@@ -2,15 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('', 'layouts.dashboard')->name('dashboard');
-
-Route::get('/produk', function () {
-    return view('layouts/user/product/index');
-});
-
-Route::get('/produk/{id}', function () {
-    return view('layouts/user/product/detail');
-});
+Route::view('/', 'layouts.dashboard')->name('dashboard');
 
 Route::prefix('/admin')->group(function () {
     Route::view('/buttons', 'layouts.admin.buttons');
@@ -22,7 +14,6 @@ Route::prefix('/admin')->group(function () {
 });
 
 Route::prefix('/user')->group(function () {
-    Route::view('/home', 'layouts.user.home');
     Route::view('/checkout', 'layouts.user.trolley.index');
     Route::view('/order', 'layouts.user.order.index');
     Route::view('/order/detail', 'layouts.user.order.detail');
