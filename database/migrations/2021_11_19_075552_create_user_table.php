@@ -12,6 +12,7 @@ class CreateUserTable extends Migration
       $table->id('user_id');
       $table->unsignedBigInteger('account_id')->nullable();
       $table->string('nama');
+      $table->string('foto_profil')->nullable();
       $table->string('no_hp')->nullable();
       $table->char('jenis_kelamin', 2)->nullable();
       $table->string('alamat')->nullable();

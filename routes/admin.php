@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Product\ProductController;
+use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,10 +22,10 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
   Route::put('/detail-produk/{id}/update', [ProductController::class, 'update'])->name('product.update');
   Route::delete('/detail-produk/{id}', [ProductController::class, 'destroy'])->name('product.delete');
 
-  Route::get('/pesanan', [ProductController::class, 'index'])->name('orders');
-  Route::delete('/pesanan/{id}', [ProductController::class, 'destroy'])->name('orders.delete');
-
-  Route::get('/pesanan/{id}', [ProductController::class, 'show'])->name('order');
-  Route::get('/pesanan/{id}/edit', [ProductController::class, 'edit'])->name('order.edit');
-  Route::put('/pesanan/{id}', [ProductController::class, 'update'])->name('order.update');
+  Route::get('/daftar-pesanan', [OrderController::class, 'index'])->name('orders');
+  
+  Route::get('/detail-pesanan/{id}', [OrderController::class, 'show'])->name('order.show');
+  Route::get('/detail-pesanan/{id}/edit', [OrderController::class, 'edit'])->name('order.edit');
+  Route::put('/detail-pesanan/{id}/update', [OrderController::class, 'update'])->name('order.update');
+  Route::delete('/detail-pesanan/{id}', [OrderController::class, 'destroy'])->name('order.delete');
 });

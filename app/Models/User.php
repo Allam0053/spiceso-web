@@ -16,6 +16,7 @@ class User extends Model
   protected $fillable = [
     'account_id',
     'nama',
+    'foto_profil',
     'no_hp',
     'jenis_kelamin',
     'alamat'
@@ -28,11 +29,11 @@ class User extends Model
 
   public function orders()
   {
-    return $this->hasMany(Product::class);
+    return $this->hasMany(Order::class, 'user_id', 'user_id');
   }
 
   public function trolley()
   {
-    return $this->hasOne(Trolley::class);
+    return $this->hasOne(Trolley::class, 'user_id', 'user_id');
   }
 }
