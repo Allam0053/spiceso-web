@@ -5,10 +5,12 @@
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <form method="POST" action="{{ route('admin.products.store') }}"  enctype="multipart/form-data">
+      <form method="POST" action="{{ route('admin.product.update', ['id' => $product->product_id]) }}" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
 
-        <input type="number" name="admin_id" class="hidden" value="{{ Auth::user()->admin->admin_id }}" required>
+        <input type="number" name="admin_id" class="hidden" value="{{ Auth::user()->admin->admin_id }}"
+          required>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">
@@ -25,7 +27,7 @@
           </div>
           <div class="hidden" id="image-container">
             <label class="block mt-4 text-sm w-1/2" id="image-item">
-              <span class="text-gray-700 dark:text-gray-400" id="image-name">
+              <span class="text-gray-700 dark:text-gray-400">
                 Nama
               </span>
 
@@ -44,6 +46,28 @@
               </button>
             </label>
           </div>
+
+          @foreach ($product->images as $image)
+            <label class="block mt-4 text-sm w-1/2" id="image-item">
+              <span class="text-gray-700 dark:text-gray-400">
+                {{ $image->nama }}
+              </span>
+
+              <input id="image-place" type="file" name="gambars[]" class="form-control hidden">
+              <img class="w-full object-cover mt-1 mb-2" id="image-preview" src="{{ asset($image->link) }}">
+
+              <button
+                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                id="insert-image" type="button">
+                Ubah Gambar
+              </button>
+              <button
+                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                id="delete-image">
+                Hapus
+              </button>
+            </label>
+          @endforeach
         </label>
 
         <label class="block mt-4 text-sm">
@@ -52,14 +76,14 @@
           </span>
           <input
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-            name="nama" placeholder="Nama Produk" required/>
+            name="nama" value="{{ $product->nama ?? '' }}" required />
         </label>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Deskripsi</span>
           <textarea
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-            name="deskripsi" rows="3" placeholder="Deskripsi singkat terkait produk."></textarea>
+            name="deskripsi" rows="3" value="{{ $product->deskripsi ?? '' }}"></textarea>
         </label>
 
         <label class="block mt-4 text-sm">
@@ -68,7 +92,7 @@
           </span>
           <input
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-            name="harga" type="number" placeholder="Rp 0.00,-" />
+            name="harga" type="number" value="{{ $product->harga ?? '' }}" />
         </label>
 
         <label class="block mt-4 text-sm">
@@ -77,7 +101,7 @@
           </span>
           <input
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-            name="stok" type="number" placeholder="Jumlah Produk" />
+            name="stok" type="number" value="{{ $product->stok ?? '' }}" />
         </label>
 
         <div class="flex items-center gap-2 mt-4 text-sm justify-end">
@@ -101,7 +125,7 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-        var counter = 0;
+        var counter = {{!! json_encode($product->images()->count()) !!}};
 
         $("#add-image").click(function() {
           $("#image-container").children("label").children("span").html("Gambar Produk " + (counter + 1));
@@ -141,12 +165,8 @@
         }
 
         $("body").on('change', "#image-place", function() {
-          readURL($(this).parents("#image-item").children("#image-preview"), this);
-
+          readURL($(this).parents("#image-item").children("img"), this);
           $(this).parents("#image-item").children("#insert-image").html("Ubah Gambar");
-          
-          var filename = $(this).val().split(/(\\|\/)/g).pop()
-          $(this).parents("#image-item").children("#image-name").html(filename);
         });
 
         $("body").on("click", "#insert-image", function() {

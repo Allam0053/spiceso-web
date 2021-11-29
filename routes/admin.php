@@ -10,18 +10,16 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
 
   Route::get('/daftar-pengguna', [UserController::class, 'index'])->name('users');
   Route::delete('/daftar-pengguna/{id}', [UserController::class, 'destroy'])->name('users.delete');
-
   Route::get('/detail-pengguna/{id}', [UserController::class, 'show'])->name('user');
 
   Route::get('/daftar-produk', [ProductController::class, 'index'])->name('products');
-  Route::delete('/daftar-produk/{id}', [ProductController::class, 'destroy'])->name('products.delete');
-  
   Route::get('/daftar-produk/tambah', [ProductController::class, 'create'])->name('products.create');
   Route::post('/daftar-produk/tambah', [ProductController::class, 'store'])->name('products.store');
 
   Route::get('/detail-produk/{id}', [ProductController::class, 'show'])->name('product');
   Route::get('/detail-produk/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
-  Route::put('/detail-produk/{id}/edit', [ProductController::class, 'update'])->name('product.update');
+  Route::put('/detail-produk/{id}/update', [ProductController::class, 'update'])->name('product.update');
+  Route::delete('/detail-produk/{id}', [ProductController::class, 'destroy'])->name('product.delete');
 
   Route::get('/pesanan', [ProductController::class, 'index'])->name('orders');
   Route::delete('/pesanan/{id}', [ProductController::class, 'destroy'])->name('orders.delete');
