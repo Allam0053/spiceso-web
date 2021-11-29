@@ -16,6 +16,7 @@ Route::prefix('/admin')->group(function () {
 Route::prefix('/user')->group(function () {
     Route::view('/checkout', 'layouts.user.trolley.index');
     Route::view('/payment', 'layouts.user.payment.index');
+    Route::view('/review-p', 'layouts.user.review-p.index');
     Route::view('/order', 'layouts.user.order.index');
     Route::view('/order/detail', 'layouts.user.order.detail');
     Route::view('/profile', 'layouts.user.profile.index');
