@@ -7,7 +7,7 @@
     <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-400 bg-sp-primary-50 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary"
       href="">
       <div class="flex items-center gap-2">
-        @include('components.admin.icons.shop-bag')
+        @include('components.user.icons.shop-bag')
         <span>{{}} Pesanan</span>
       </div>
       <span>Tambah Pesanan &sum;</span>

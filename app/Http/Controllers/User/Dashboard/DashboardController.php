@@ -9,11 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('layouts.user.dashboard');
-    }
-
-    public function home()
-    {
-        return view('layouts.user.home');
+        return view('layouts.user.product.index');
     }
 }

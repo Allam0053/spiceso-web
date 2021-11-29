@@ -25,17 +25,13 @@
 
 <body>
   <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
-    {{-- <div class="flex h-screen bg-gray-50 dark:bg-gray-900"> --}}
 
     <div class="flex flex-col flex-1 w-full">
       @include('components.user.header.header-in')
       
       <main class="mb-auto overflow-y-auto">
         {{ $slot }}
-
-        {{-- @include('components.user.footer.footer') --}}
       </main>
-      
     </div>
   </div>
 
