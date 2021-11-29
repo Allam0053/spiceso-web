@@ -22,7 +22,7 @@ class AuthenticateUserController extends Controller
       $response = LoginAccount::run($request);
 
       if ($response) {
-        return redirect()->route('user.dashboard');
+        return redirect()->route('user.home');
       } else {
         return redirect()->back()->with('error', 'Masuk gagal, silahkan masuk ulang!');
       }
@@ -37,7 +37,7 @@ class AuthenticateUserController extends Controller
       $response = LogoutAccount::run($request);
 
       if ($response) {
-        return redirect()->route('user.dashboard');
+        return redirect()->route('user.home');
       } else {
         return redirect()->back()->with('error', 'Keluar gagal, silahkan keluar ulang!');
       }

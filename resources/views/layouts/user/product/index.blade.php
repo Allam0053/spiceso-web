@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <section aria-labelledby="products-heading" class="pt-6 pb-24">
+  <section aria-labelledby="products-heading" class="pt-6 pb-14">
     <h2 id="products-heading" class="sr-only">Products</h2>
 
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
@@ -41,7 +41,7 @@
             <button type="button"
               class="py-3 bg-white w-full flex items-center justify-between text-sm text-gray-400 hover:text-gray-500"
               aria-controls="filter-section-0" aria-expanded="false">
-              <span class="font-medium text-gray-900">
+              <span class="font-medium text-xl text-gray-900">
                 Kategori
               </span>
               <span class="ml-6 flex items-center">
@@ -53,7 +53,7 @@
             <div class="space-y-4">
               <div class="flex items-center">
                 <input id="filter-color-0" name="color[]" value="white" type="checkbox"
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-color-0" class="ml-3 text-sm text-gray-600">
                   Bumbu Komplit
                 </label>
@@ -61,7 +61,7 @@
 
               <div class="flex items-center">
                 <input id="filter-color-1" name="color[]" value="beige" type="checkbox"
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-color-1" class="ml-3 text-sm text-gray-600">
                   Penyedap
                 </label>
@@ -69,7 +69,7 @@
 
               <div class="flex items-center">
                 <input id="filter-color-2" name="color[]" value="blue" type="checkbox" checked
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-color-2" class="ml-3 text-sm text-gray-600">
                   Rempah
                 </label>
@@ -84,7 +84,7 @@
             <button type="button"
               class="py-3 bg-white w-full flex items-center justify-between text-sm text-gray-400 hover:text-gray-500"
               aria-controls="filter-section-1" aria-expanded="false">
-              <span class="font-medium text-gray-900">
+              <span class="font-medium text-xl text-gray-900">
                 Ketahanan
               </span>
             </button>
@@ -94,14 +94,14 @@
             <div class="space-y-4">
               <div class="flex items-center">
                 <input id="filter-category-0" name="category[]" value="new-arrivals" type="checkbox"
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-category-0" class="ml-3 text-sm text-gray-600">
                   < 1 Minggu </label>
               </div>
 
               <div class="flex items-center">
                 <input id="filter-category-1" name="category[]" value="sale" type="checkbox"
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-category-1" class="ml-3 text-sm text-gray-600">
                   1-2 Minggu
                 </label>
@@ -109,7 +109,7 @@
 
               <div class="flex items-center">
                 <input id="filter-category-2" name="category[]" value="travel" type="checkbox" checked
-                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                  class="h-4 w-4 border-gray-300 rounded text-sp-primary-100 focus:ring-indigo-500">
                 <label for="filter-category-2" class="ml-3 text-sm text-gray-600">
                   > 2 Minggu
                 </label>

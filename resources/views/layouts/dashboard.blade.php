@@ -60,7 +60,7 @@
                             </div>
                         </div>
 
-                        <a href="#"
+                        <a href="{{ route('user.register') }}"
                             class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja
                             Sekarang
                         </a>
@@ -250,7 +250,7 @@
                                 dijamin enak, praktis dan tanpa 3P (Pengawet, Pewarna dan Perasa Buatan)
                             </p>
                             <div class="mt-6">
-                                <a href="#"
+                                <a href="{{ route('user.register') }}"
                                     class="
                             inline-flex
                             px-4
@@ -466,7 +466,7 @@
                     <a href="#">
                         <img class="w-full mt-2" src="{{ asset('/img/sp/pack.png') }}" alt="" />
                     </a>
-                    <a href="#"
+                    <a href="{{ route('user.register') }}"
                         class="
                   w-full
                   bg-white
@@ -486,7 +486,7 @@
                 ">
                         Mulai Belanja
                     </a>
-                    <a href="#"
+                    <a href="{{ route('user.register') }}"
                         class="
                   block
                   text-center text-base

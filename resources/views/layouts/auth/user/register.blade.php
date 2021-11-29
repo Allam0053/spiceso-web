@@ -196,6 +196,15 @@
                   </button>
                 </div>
               </form>
+              <p class="
+                    mt-6
+                    text-center text-base
+                    font-medium
+                    text-gray-500
+                  ">
+                Sudah pernah daftar?
+                <a href="{{ route('user.login') }}" class="text-sp-primary-100"> Masuk </a>
+              </p>
             </div>
           </div>
         </div>

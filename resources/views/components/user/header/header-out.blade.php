@@ -216,7 +216,7 @@
         </a>
       </nav>
       <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-        <a href="#" class="
+        <a href="{{ route('user.login') }}" class="
               whitespace-nowrap
               text-base
               font-medium
@@ -225,7 +225,7 @@
             ">
           Masuk
         </a>
-        <a href="#" class="
+        <a href="{{ route('user.register') }}" class="
               ml-8
               whitespace-nowrap
               inline-flex
@@ -401,7 +401,7 @@
               </a>
             </div>
             <div class="mt-6">
-              <a href="#" class="
+              <a href="{{ route('user.register') }}" class="
                     w-full
                     flex
                     items-center
@@ -428,7 +428,7 @@
                     text-gray-500
                   ">
                 Sudah pernah daftar?
-                <a href="#" class="text-gray-900"> Masuk </a>
+                <a href="{{ route('user.login') }}" class="text-gray-900"> Masuk </a>
               </p>
             </div>
           </div>

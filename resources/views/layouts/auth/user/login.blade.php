@@ -99,7 +99,7 @@
                       class="
                           h-4
                           w-4
-                          text-indigo-600
+                          text-sp-primary-100
                           focus:ring-sp-primary-100
                           border-gray-300
                           rounded
@@ -146,6 +146,15 @@
                   </button>
                 </div>
               </form>
+              <p class="
+                    mt-6
+                    text-center text-base
+                    font-medium
+                    text-gray-500
+                  ">
+                Belum punya akun?
+                <a href="{{ route('user.register') }}" class="text-sp-primary-100"> Daftar </a>
+              </p>
             </div>
           </div>
         </div>
