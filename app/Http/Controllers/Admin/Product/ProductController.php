@@ -54,7 +54,7 @@ class ProductController extends Controller
       $response = GetProduct::run($id);
 
       if ($response) {
-        return redirect()->route('', ['product' => $response]);
+        return view('layouts.admin.product.create', ['product' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -69,7 +69,7 @@ class ProductController extends Controller
       $response = GetProduct::run($id);
 
       if ($response) {
-        return redirect()->route('', ['product' => $response]);
+        return view('layouts.admin.product.edit', ['product' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

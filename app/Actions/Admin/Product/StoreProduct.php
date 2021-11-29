@@ -44,15 +44,15 @@ class StoreProduct
         foreach ($request->file('gambars') as $image) {
           if ($image) {
             $name = $image->getClientOriginalName();
-            $path = public_path() . '/img/products/' . $product->product_id;
-            $image->move($path . '/', $name);
+            $path = '/img/products/' . $product->product_id . "/";
+            $image->move(public_path() . $path, $name);
 
             array_push(
               $images,
               ProductImage::create([
                 'product_id' => $product->product_id,
                 'nama' => $name,
-                'link' => $path,
+                'link' => $path . $name,
               ])
             );
           }
