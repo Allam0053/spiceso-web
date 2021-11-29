@@ -12,6 +12,11 @@ Use a better box model (opinionated).
 */
 
 /* Spiceso Color */
+
+.shadow-outline-sp-primary { 
+  box-shadow: 0 0 0 3px #A4D961; 
+}
+
 .text-sp-primary-100 {
   color: #A4D961 !important;
 }

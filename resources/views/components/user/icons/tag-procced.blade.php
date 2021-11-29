@@ -1,0 +1,1 @@
+<span class="text-sm font-medium bg-yellow-100 py-1 px-2 rounded text-yellow-500 align-middle">Sedang Diproses</span>

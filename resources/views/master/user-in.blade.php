@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="{{ asset('/css/tailwind.output.css') }}" />
   <link rel="stylesheet" href="https://tailwindui.com/css/components-v2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -22,16 +24,16 @@
 </head>
 
 <body>
-  <div class="h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+  <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
     {{-- <div class="flex h-screen bg-gray-50 dark:bg-gray-900"> --}}
 
     <div class="flex flex-col flex-1 w-full">
-      @include('components.user.header.header')
+      @include('components.user.header.header-in')
       
       <main class="mb-auto overflow-y-auto">
         {{ $slot }}
 
-        @include('components.user.footer.footer')
+        {{-- @include('components.user.footer.footer') --}}
       </main>
       
     </div>
