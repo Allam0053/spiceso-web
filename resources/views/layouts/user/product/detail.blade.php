@@ -140,13 +140,13 @@
               </div>
           </div>
 
-          <form action="#" method="POST">
+          <form action="{{ route('user.trolley.store') }}" method="POST">
             <fieldset>
               <div class="grid grid-cols-2 mt-4">
                 <div class="group">
                   <label for="netto" class="block text-sm font-medium text-gray-700">Berat Bersih</label>
-                  <select id="netto" name="netto" autocomplete="netto-name" class="mt-1 block w-40 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option>25g</option>
+                  <select id="netto" name="netto" autocomplete="netto-name" class="mt-1 block w-40 py-2 px-3 border border-gray-300 bg-white rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option class="py-2">25g</option>
                   </select>
                 </div>
                 <div class="group">
@@ -155,9 +155,9 @@
                 </div>
               </div>
             </fieldset>
+            <button type="submit" class="mt-10 w-full bg-sp-contrast border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Tambah ke Keranjang</button>
           </form>
 
-          <button type="submit" class="mt-10 w-full bg-sp-contrast border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Tambah ke Keranjang</button>
         </div>
         <button type="submit" class="mt-2 w-full bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Chat Penjual</button>
       </div>

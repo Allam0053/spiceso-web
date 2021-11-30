@@ -132,7 +132,7 @@
               <div>
                 <h3 class="text-sm text-gray-700">
                   <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    <span aria-hidden="true"></span>
                     Rempah-rempah & Bumbu
                   </a>
                 </h3>
@@ -140,85 +140,7 @@
               </div>
               <p class="text-xl font-bold text-right font-medium text-gray-900">Rp 25.000</p>
             </div>
-            <a href="#" class="
-                        mt-4
-                        w-full
-                        bg-transparent
-                        border border-sp-primary-100
-                        rounded-md
-                        py-3
-                        px-8
-                        flex
-                        items-center
-                        justify-center
-                        text-lg
-                        leading-6
-                        font-medium
-                        text-sp-primary-100
-                        hover:bg-sp-primary-50
-                        md:px-10
-                      ">
-              Beli
-            </a>
-          </div>
-          <div class="shadow-md rounded group relative bg-white p-4">
-            <div
-              class="w-full min-h-60 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
-              <img src="{{ asset('/img/sp/category-3.png') }}" alt="Front of men&#039;s Basic Tee in black."
-                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Rempah-rempah & Bumbu
-                  </a>
-                </h3>
-                <p class="mt-1 text-lg text-gray-500">Spicy Chilly</p>
-              </div>
-              <p class="text-xl font-bold text-right font-medium text-gray-900">Rp 25.000</p>
-            </div>
-            <a href="#" class="
-                        mt-4
-                        w-full
-                        bg-transparent
-                        border border-sp-primary-100
-                        rounded-md
-                        py-3
-                        px-8
-                        flex
-                        items-center
-                        justify-center
-                        text-lg
-                        leading-6
-                        font-medium
-                        text-sp-primary-100
-                        hover:bg-sp-primary-50
-                        md:px-10
-                      ">
-              Beli
-            </a>
-          </div>
-          <div class="shadow-md rounded group relative bg-white p-4">
-            <div
-              class="w-full min-h-60 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
-              <img src="{{ asset('/img/sp/category-3.png') }}" alt="Front of men&#039;s Basic Tee in black."
-                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Rempah-rempah & Bumbu
-                  </a>
-                </h3>
-                <p class="mt-1 text-lg text-gray-500">Spicy Chilly</p>
-              </div>
-              <p class="text-xl font-bold text-right font-medium text-gray-900">Rp 25.000</p>
-            </div>
-            <a href="#" class="
+            <a href="{{ route('user.product.detail') }}" class="
                         mt-4
                         w-full
                         bg-transparent
