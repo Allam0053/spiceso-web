@@ -7,6 +7,7 @@ use App\Actions\Common\Product\GetProduct;
 use App\Actions\Common\Product\GetProducts;
 use App\Actions\Admin\Product\StoreProduct;
 use App\Actions\Admin\Product\UpdateProduct;
+use App\Actions\Admin\ProductDurability\GetProductDurabilities;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
 use Exception;
@@ -30,7 +31,17 @@ class ProductController extends Controller
 
   public function create()
   {
-    return view('layouts.admin.product.create');
+    try {
+      $response = GetProductDurabilities::run();
+
+      if ($response) {
+        return view('layouts.admin.product.create', ['durabilities' => $response]);
+      } else {
+        return redirect()->back()->with('error', 'Coba muat ulang!');
+      }
+    } catch (Exception $exc) {
+      return redirect()->back()->with('error', $exc->getMessage());
+    }
   }
 
   public function store(StoreProductRequest $request)
@@ -67,9 +78,13 @@ class ProductController extends Controller
   {
     try {
       $response = GetProduct::run($id);
+      $durabilities = GetProductDurabilities::run();
 
       if ($response) {
-        return view('layouts.admin.product.edit', ['product' => $response]);
+        return view('layouts.admin.product.edit', [
+          'product' => $response,
+          'durabilities' => $durabilities,
+        ]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

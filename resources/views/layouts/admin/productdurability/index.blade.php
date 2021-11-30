@@ -11,7 +11,7 @@
         <span>{{ $durabilities->total() }} Tipe Ketahanan</span>
       </div>
       <span class="flex items-center gap-2">
-        <p>Tambah Produk</p>
+        <p>Tambah Tipe</p>
         @include('components.admin.icons.plus')
       </span>
     </a>

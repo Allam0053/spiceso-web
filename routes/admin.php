@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\DeliverMethod\DeliverMethodController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Order\OrderController;
+use App\Http\Controllers\Admin\PaymentMethod\PaymentMethodController;
+use App\Http\Controllers\Admin\ProductCategory\ProductCategoryController;
 use App\Http\Controllers\Admin\ProductDurability\ProductDurabilityController;
 use App\Http\Controllers\Admin\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -38,4 +40,12 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
   Route::get('/daftar-pengiriman', [DeliverMethodController::class, 'index'])->name('delivers');
   Route::post('/daftar-pengiriman/tambah', [DeliverMethodController::class, 'store'])->name('delivers.store');
   Route::delete('/daftar-pengiriman/{id}/hapus', [DeliverMethodController::class, 'destroy'])->name('delivers.delete');
+
+  Route::get('/daftar-kategori', [ProductCategoryController::class, 'index'])->name('categories');
+  Route::post('/daftar-kategori/tambah', [ProductCategoryController::class, 'store'])->name('categories.store');
+  Route::delete('/daftar-kategori/{id}/hapus', [ProductCategoryController::class, 'destroy'])->name('categories.delete');
+
+  Route::get('/daftar-pembayaran', [PaymentMethodController::class, 'index'])->name('payments');
+  Route::post('/daftar-pembayaran/tambah', [PaymentMethodController::class, 'store'])->name('payments.store');
+  Route::delete('/daftar-pembayaran/{id}/hapus', [PaymentMethodController::class, 'destroy'])->name('payments.delete');
 });

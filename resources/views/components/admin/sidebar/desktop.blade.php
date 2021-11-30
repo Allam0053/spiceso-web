@@ -31,6 +31,13 @@
       </li>
       <li class="relative px-6 py-3">
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.categories') }}">
+          @include('components.admin.icons.template')
+          <span class="ml-4">Kategori Produk</span>
+        </a>
+      </li>
+      <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.durabilities') }}">
           @include('components.admin.icons.liquid')
           <span class="ml-4">Tipe Ketahanan</span>
@@ -48,6 +55,13 @@
           href="{{ route('admin.delivers') }}">
           @include('components.admin.icons.inbox-in')
           <span class="ml-4">Metode Pengiriman</span>
+        </a>
+      </li>
+      <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.payments') }}">
+          @include('components.admin.icons.credit-card')
+          <span class="ml-4">Metode Pambayaran</span>
         </a>
       </li>
       {{-- <li class="relative px-6 py-3">
