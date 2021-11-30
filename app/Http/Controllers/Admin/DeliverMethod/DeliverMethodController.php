@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ProductDurability;
+namespace App\Http\Controllers\Admin\DeliverMethod;
 
-use App\Actions\Admin\ProductDurability\DeleteProductDurability;
-use App\Actions\Admin\ProductDurability\GetProductDurability;
-use App\Actions\Admin\ProductDurability\GetProductDurabilities;
-use App\Actions\Admin\ProductDurability\StoreProductDurability;
+use App\Actions\Admin\DeliverMethod\DeleteDeliverMethod;
+use App\Actions\Admin\DeliverMethod\GetDeliverMethod;
+use App\Actions\Admin\DeliverMethod\GetDeliverMethods;
+use App\Actions\Admin\DeliverMethod\StoreDeliverMethod;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ProductDurability\StoreProductDurabilityRequest;
+use App\Http\Requests\Admin\DeliverMethod\StoreDeliverMethodRequest;
 use Exception;
 
-class ProductDurabilityController extends Controller
+class DeliverMethodController extends Controller
 {
   public function index()
   {
     try {
-      $response = GetProductDurabilities::run(10, true);
+      $response = GetDeliverMethods::run(10, true);
 
       if ($response) {
-        return view('layouts.admin.productdurability.index', ['durabilities' => $response]);
+        return view('layouts.admin.delivermethod.index', ['delivers' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -27,10 +27,10 @@ class ProductDurabilityController extends Controller
     }
   }
 
-  public function store(StoreProductDurabilityRequest $request)
+  public function store(StoreDeliverMethodRequest $request)
   {
     try {
-      $response = StoreProductDurability::run($request->except(['_token', '_method']));
+      $response = StoreDeliverMethod::run($request->except(['_token', '_method']));
 
       if ($response) {
         return redirect()->back()->with('success', 'Data ketahanan berhasil ditambahkan!');
@@ -45,7 +45,7 @@ class ProductDurabilityController extends Controller
   public function destroy($id)
   {
     try {
-      $response = DeleteProductDurability::run($id);
+      $response = DeleteDeliverMethod::run($id);
 
       if ($response) {
         return redirect()->back()->with('success', $response . ' behasil dihapus');

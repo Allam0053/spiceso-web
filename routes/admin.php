@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\DeliverMethod\DeliverMethodController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\ProductDurability\ProductDurabilityController;
@@ -33,4 +34,8 @@ Route::name('admin.')->prefix('/admin')->middleware('auth:admin')->group(functio
   Route::get('/daftar-ketahanan', [ProductDurabilityController::class, 'index'])->name('durabilities');
   Route::post('/daftar-ketahanan/tambah', [ProductDurabilityController::class, 'store'])->name('durabilities.store');
   Route::delete('/daftar-ketahanan/{id}/hapus', [ProductDurabilityController::class, 'destroy'])->name('durabilities.delete');
+
+  Route::get('/daftar-pengiriman', [DeliverMethodController::class, 'index'])->name('delivers');
+  Route::post('/daftar-pengiriman/tambah', [DeliverMethodController::class, 'store'])->name('delivers.store');
+  Route::delete('/daftar-pengiriman/{id}/hapus', [DeliverMethodController::class, 'destroy'])->name('delivers.delete');
 });
