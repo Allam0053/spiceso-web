@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin\Product;
 
 use App\Actions\Admin\Product\DeleteProduct;
-use App\Actions\Admin\Product\GetProduct;
-use App\Actions\Admin\Product\GetProducts;
+use App\Actions\Common\Product\GetProduct;
+use App\Actions\Common\Product\GetProducts;
 use App\Actions\Admin\Product\StoreProduct;
 use App\Actions\Admin\Product\UpdateProduct;
 use App\Http\Controllers\Controller;
