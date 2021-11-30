@@ -31,12 +31,40 @@
       </li>
       <li class="relative px-6 py-3">
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.categories') }}">
+          @include('components.admin.icons.template')
+          <span class="ml-4">Kategori Produk</span>
+        </a>
+      </li>
+      <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.durabilities') }}">
+          @include('components.admin.icons.liquid')
+          <span class="ml-4">Tipe Ketahanan</span>
+        </a>
+      </li>
+      <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.orders') }}">
           @include('components.admin.icons.shop-cart')
           <span class="ml-4">Pesanan</span>
         </a>
       </li>
       <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.delivers') }}">
+          @include('components.admin.icons.inbox-in')
+          <span class="ml-4">Metode Pengiriman</span>
+        </a>
+      </li>
+      <li class="relative px-6 py-3">
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          href="{{ route('admin.payments') }}">
+          @include('components.admin.icons.credit-card')
+          <span class="ml-4">Metode Pambayaran</span>
+        </a>
+      </li>
+      {{-- <li class="relative px-6 py-3">
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="buttons.html">
           <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -116,14 +144,7 @@
             </li>
           </ul>
         </template>
-      </li>
+      </li> --}}
     </ul>
-    <div class="px-6 my-6">
-      <button
-        class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-        Create account
-        <span class="ml-2" aria-hidden="true">+</span>
-      </button>
-    </div>
   </div>
 </aside>

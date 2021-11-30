@@ -18,12 +18,19 @@ class Product extends Model
     'nama',
     'deskripsi',
     'stok',
-    'harga'
+    'harga',
+    'kategori',
+    'product_durability_id',
   ];
 
   public function admin()
   {
     return $this->belongsTo(Admin::class);
+  }
+
+  public function durability()
+  {
+    return $this->belongsTo(ProductDurability::class);
   }
 
   public function images()

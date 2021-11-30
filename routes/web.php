@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\User\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'layouts.dashboard')->name('dashboard');
+
+Route::get('/daftar-produk', [ProductController::class, 'index'])->name('products');
 
 Route::prefix('/admin')->group(function () {
     Route::view('/buttons', 'layouts.admin.buttons');
