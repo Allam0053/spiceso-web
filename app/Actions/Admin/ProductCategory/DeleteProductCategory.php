@@ -11,8 +11,8 @@ class DeleteProductCategory
 
   public function handle($id)
   {
-    $product_durability = ProductCategory::findOrFail($id)->delete();
+    $product_category = ProductCategory::findOrFail($id)->delete();
 
-    return $product_durability;
+    return $product_category;
   }
 }

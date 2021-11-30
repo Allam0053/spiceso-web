@@ -5,7 +5,8 @@
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <form method="POST" action="{{ route('admin.product.update', ['id' => $product->product_id]) }}" enctype="multipart/form-data">
+      <form method="POST" action="{{ route('admin.product.update', ['id' => $product->product_id]) }}"
+        enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -34,14 +35,16 @@
             @php
               $counter++;
             @endphp
-  
+
             <label class="block mt-4 text-sm w-1/2" id="image-item-{{ $counter }}">
               <span class="text-gray-700 dark:text-gray-400" id="image-name-{{ $counter }}">
                 {{ $image->nama }}
               </span>
 
-              <input id="image-place-{{ $counter }}" type="file" name="gambars[]" class="form-control hidden" data-id="{{ $counter }}">
-              <img class="w-full object-cover mt-1 mb-2" id="image-preview-{{ $counter }}" src="{{ asset($image->link) }}">
+              <input id="image-place-{{ $counter }}" type="file" name="gambars[]" class="form-control hidden"
+                data-id="{{ $counter }}">
+              <img class="w-full object-cover mt-1 mb-2" id="image-preview-{{ $counter }}"
+                src="{{ asset($image->link) }}">
 
               <button
                 class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
@@ -70,7 +73,8 @@
           <span class="text-gray-700 dark:text-gray-400">Deskripsi</span>
           <textarea
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-            name="deskripsi" rows="3" value="{{ $product->deskripsi ?? '' }}">{{ $product->deskripsi ?? '' }}</textarea>
+            name="deskripsi" rows="3"
+            value="{{ $product->deskripsi ?? '' }}">{{ $product->deskripsi ?? '' }}</textarea>
         </label>
 
         <label class="block mt-4 text-sm">
@@ -89,6 +93,40 @@
           <input
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
             name="stok" type="number" value="{{ $product->stok ?? '' }}" />
+        </label>
+
+        <label class="block mt-4 text-sm">
+          <span class="text-gray-700 dark:text-gray-400">
+            Kategori
+          </span>
+
+          <select name="product_category_id"
+            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            @foreach ($categories as $category)
+              @if ($product->product_category_id == $category->product_category_id)
+                <option selected value="{{ $category->product_category_id }}">{{ $category->nama }}</option>
+              @else
+                <option value="{{ $category->product_category_id }}">{{ $category->nama }}</option>
+              @endif
+            @endforeach
+          </select>
+        </label>
+
+        <label class="block mt-4 text-sm">
+          <span class="text-gray-700 dark:text-gray-400">
+            Ketahanan
+          </span>
+
+          <select name="product_durability_id"
+            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            @foreach ($durabilities as $durability)
+              @if ($product->product_durability_id == $durability->product_durability_id)
+                <option selected value="{{ $durability->product_durability_id }}">{{ $durability->nama }}</option>
+              @else
+                <option value="{{ $durability->product_durability_id }}">{{ $durability->nama }}</option>
+              @endif
+            @endforeach
+          </select>
         </label>
 
         <div class="flex items-center gap-2 mt-4 text-sm justify-end">
@@ -149,8 +187,8 @@
 
         $("body").on("click", "#delete-image", function(e) {
           event.preventDefault();
-          
-          var num = $(this).data("id"); 
+
+          var num = $(this).data("id");
           $("#image-item-" + num).remove();
           counter -= 1;
 
@@ -172,17 +210,17 @@
         }
 
         $("body").on('change', "input[id*='image-place']", function(e) {
-          var num = $(this).data("id"); 
+          var num = $(this).data("id");
           readURL($("#image-item-" + num).children("img"), this);
 
           $("#image-item-" + num).children("#insert-image").html("Ubah Gambar");
-          
+
           var filename = $(this).val().split(/(\\|\/)/g).pop()
           $("#image-name-" + num).html(filename);
         });
 
         $("body").on("click", "#insert-image", function() {
-          var num = $(this).data("id"); 
+          var num = $(this).data("id");
           $("#image-place-" + num).click();
         });
       });

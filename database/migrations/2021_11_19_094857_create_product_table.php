@@ -15,12 +15,13 @@ class CreateProductTable extends Migration
       $table->text('deskripsi')->nullable();
       $table->integer('stok')->nullable();
       $table->decimal('harga', 9, 2)->nullable();
-      $table->string('kategori')->nullable();
+      $table->unsignedBigInteger('product_category_id')->nullable();
       $table->unsignedBigInteger('product_durability_id')->nullable();
       $table->timestamps();
 
       $table->foreign('admin_id')->references('admin_id')->on('admin')->onDelete('cascade');
       $table->foreign('product_durability_id')->references('product_durability_id')->on('product_durability');
+      $table->foreign('product_category_id')->references('product_category_id')->on('product_category');
     });
   }
 

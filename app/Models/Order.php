@@ -18,22 +18,27 @@ class Order extends Model
     'total_harga',
     'tgl_dipesan',
     'tgl_diterima',
-    'metode_pembayaran',
+    'payment_method_id',
     'deliver_method_id',
   ];
 
   public function user()
   {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo(User::class, 'user_id', 'user_id');
+  }
+
+  public function payment()
+  {
+    return $this->belongsTo(PaymentMethod::class, 'payment_method_id', 'payment_method_id');
   }
 
   public function deliver()
   {
-    return $this->belongsTo(DeliverMethod::class);
+    return $this->belongsTo(DeliverMethod::class, 'deliver_method_id', 'deliver_method_id');
   }
 
   public function products()
   {
-    return $this->belongsToMany(Product::class, 'order_product');
+    return $this->belongsToMany(Product::class, 'order_product', 'product_id', 'product_id');
   }
 }

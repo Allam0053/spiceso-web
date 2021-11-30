@@ -19,11 +19,11 @@ class Trolley extends Model
 
   public function user()
   {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo(User::class, 'user_id', 'user_id');
   }
 
   public function products()
   {
-    return $this->belongsToMany(Product::class, 'trolley_product');
+    return $this->belongsToMany(Product::class, 'trolley_product', 'product_id', 'product_id');
   }
 }

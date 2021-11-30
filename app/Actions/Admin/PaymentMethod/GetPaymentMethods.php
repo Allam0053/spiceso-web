@@ -11,13 +11,13 @@ class GetPaymentMethods
 
   public function handle($limit = 10, $paginate = false)
   {
-    $product_durabilitys = [];
+    $payment_methods = [];
     if ($paginate) {
-      $product_durabilitys = PaymentMethod::paginate($limit);
+      $payment_methods = PaymentMethod::paginate($limit);
     } else {
-      $product_durabilitys = PaymentMethod::limit($limit)->get();
+      $payment_methods = PaymentMethod::limit($limit)->get();
     }
 
-    return $product_durabilitys;
+    return $payment_methods;
   }
 }

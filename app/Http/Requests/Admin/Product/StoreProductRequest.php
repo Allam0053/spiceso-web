@@ -19,6 +19,8 @@ class StoreProductRequest extends FormRequest
       'deskripsi' => ['nullable', 'string'],
       'stok' => ['nullable', 'integer'],
       'harga' => ['nullable', 'numeric'],
+      'product_category_id' => ['nullable', 'integer'],
+      'product_durability_id' => ['nullable', 'integer'],
     ];
   }
 }

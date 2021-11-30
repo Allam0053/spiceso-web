@@ -7,6 +7,7 @@ use App\Actions\Common\Product\GetProduct;
 use App\Actions\Common\Product\GetProducts;
 use App\Actions\Admin\Product\StoreProduct;
 use App\Actions\Admin\Product\UpdateProduct;
+use App\Actions\Admin\ProductCategory\GetProductCategories;
 use App\Actions\Admin\ProductDurability\GetProductDurabilities;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
@@ -32,10 +33,14 @@ class ProductController extends Controller
   public function create()
   {
     try {
-      $response = GetProductDurabilities::run();
+      $durabilities = GetProductDurabilities::run();
+      $categories = GetProductCategories::run();
 
-      if ($response) {
-        return view('layouts.admin.product.create', ['durabilities' => $response]);
+      if ($durabilities && $categories) {
+        return view('layouts.admin.product.create', compact([
+          'durabilities',
+          'categories',
+        ]));
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -77,14 +82,16 @@ class ProductController extends Controller
   public function edit($id)
   {
     try {
-      $response = GetProduct::run($id);
+      $product = GetProduct::run($id);
       $durabilities = GetProductDurabilities::run();
+      $categories = GetProductCategories::run();
 
-      if ($response) {
-        return view('layouts.admin.product.edit', [
-          'product' => $response,
-          'durabilities' => $durabilities,
-        ]);
+      if ($product && $durabilities && $categories) {
+        return view('layouts.admin.product.edit', compact([
+          'product',
+          'durabilities',
+          'categories',
+        ]));
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

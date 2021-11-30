@@ -11,13 +11,13 @@ class GetProductCategories
 
   public function handle($limit = 10, $paginate = false)
   {
-    $product_durabilitys = [];
+    $product_categorys = [];
     if ($paginate) {
-      $product_durabilitys = ProductCategory::paginate($limit);
+      $product_categorys = ProductCategory::paginate($limit);
     } else {
-      $product_durabilitys = ProductCategory::limit($limit)->get();
+      $product_categorys = ProductCategory::limit($limit)->get();
     }
 
-    return $product_durabilitys;
+    return $product_categorys;
   }
 }

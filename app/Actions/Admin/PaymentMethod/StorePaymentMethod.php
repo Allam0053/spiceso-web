@@ -11,8 +11,8 @@ class StorePaymentMethod
 
   public function handle($fill)
   {
-    $product_durability = PaymentMethod::create($fill);
+    $payment_method = PaymentMethod::create($fill);
 
-    return $product_durability;
+    return $payment_method;
   }
 }

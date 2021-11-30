@@ -14,12 +14,13 @@ class CreateOrderTable extends Migration
       $table->decimal('total_harga', 9, 2)->nullable();
       $table->date('tgl_dipesan')->nullable();
       $table->date('tgl_diterima')->nullable();
-      $table->string('metode_pembayaran')->nullable();
+      $table->unsignedBigInteger('payment_method_id')->nullable();
       $table->unsignedBigInteger('deliver_method_id')->nullable();
       $table->timestamps();
 
       $table->foreign('user_id')->references('user_id')->on('user')->onDelete('cascade');
       $table->foreign('deliver_method_id')->references('deliver_method_id')->on('deliver_method');
+      $table->foreign('payment_method_id')->references('payment_method_id')->on('payment_method');
     });
   }
 

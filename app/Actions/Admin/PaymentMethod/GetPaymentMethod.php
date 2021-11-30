@@ -11,8 +11,8 @@ class GetPaymentMethod
 
   public function handle($id)
   {
-    $product_durability = PaymentMethod::findOrFail($id);
+    $payment_method = PaymentMethod::findOrFail($id);
 
-    return $product_durability;
+    return $payment_method;
   }
 }

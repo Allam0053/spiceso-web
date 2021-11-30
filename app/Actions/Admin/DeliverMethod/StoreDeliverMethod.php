@@ -11,8 +11,8 @@ class StoreDeliverMethod
 
   public function handle($fill)
   {
-    $product_durability = DeliverMethod::create($fill);
+    $deliver_method = DeliverMethod::create($fill);
 
-    return $product_durability;
+    return $deliver_method;
   }
 }

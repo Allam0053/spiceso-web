@@ -23,9 +23,11 @@
           <thead>
             <tr
               class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-              <th class="px-4 py-3 w-1/2">Produk</th>
-              <th class="px-4 py-3 w-3/12">Harga</th>
+              <th class="px-4 py-3 w-3/12">Produk</th>
+              <th class="px-4 py-3 w-2/12">Harga</th>
               <th class="px-4 py-3 w-2/12">Jumlah Stok</th>
+              <th class="px-4 py-3 w-2/12">Kategori</th>
+              <th class="px-4 py-3 w-2/12">Ketahanan</th>
               <th class="px-4 py-3 w-1/12">Aksi</th>
             </tr>
           </thead>
@@ -60,6 +62,12 @@
                 </td>
                 <td class="px-4 py-3 text-sm">
                   {{ $product->harga }}
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  {{ $product->category->nama }}
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  {{ $product->durability->nama }}
                 </td>
                 <td class="px-4 py-3 text-sm flex gap-3">
                   <button

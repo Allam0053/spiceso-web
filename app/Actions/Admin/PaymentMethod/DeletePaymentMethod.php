@@ -11,8 +11,8 @@ class DeletePaymentMethod
 
   public function handle($id)
   {
-    $product_durability = PaymentMethod::findOrFail($id)->delete();
+    $payment_method = PaymentMethod::findOrFail($id)->delete();
 
-    return $product_durability;
+    return $payment_method;
   }
 }

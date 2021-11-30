@@ -11,13 +11,13 @@ class GetDeliverMethods
 
   public function handle($limit = 10, $paginate = false)
   {
-    $product_durabilitys = [];
+    $deliver_methods = [];
     if ($paginate) {
-      $product_durabilitys = DeliverMethod::paginate($limit);
+      $deliver_methods = DeliverMethod::paginate($limit);
     } else {
-      $product_durabilitys = DeliverMethod::limit($limit)->get();
+      $deliver_methods = DeliverMethod::limit($limit)->get();
     }
 
-    return $product_durabilitys;
+    return $deliver_methods;
   }
 }

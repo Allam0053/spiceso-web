@@ -11,8 +11,8 @@ class GetProductCategory
 
   public function handle($id)
   {
-    $product_durability = ProductCategory::findOrFail($id);
+    $product_category = ProductCategory::findOrFail($id);
 
-    return $product_durability;
+    return $product_category;
   }
 }

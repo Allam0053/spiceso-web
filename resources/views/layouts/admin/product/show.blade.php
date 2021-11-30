@@ -61,6 +61,26 @@
 
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
+          Kategori
+        </span>
+
+        <p class="dark:text-gray-400 text-lg">
+          {{ $product->category->nama ?? '' }}
+        </p>
+      </label>
+
+      <label class="block mt-4 text-sm">
+        <span class="text-gray-700 dark:text-gray-400">
+          Ketahanan
+        </span>
+
+        <p class="dark:text-gray-400 text-lg">
+          {{ $product->durability->nama ?? '' }}
+        </p>
+      </label>
+
+      <label class="block mt-4 text-sm">
+        <span class="text-gray-700 dark:text-gray-400">
           Jumlah Pesanan
         </span>
 

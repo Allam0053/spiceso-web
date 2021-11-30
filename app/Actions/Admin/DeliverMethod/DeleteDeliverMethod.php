@@ -11,8 +11,8 @@ class DeleteDeliverMethod
 
   public function handle($id)
   {
-    $product_durability = DeliverMethod::findOrFail($id)->delete();
+    $deliver_method = DeliverMethod::findOrFail($id)->delete();
 
-    return $product_durability;
+    return $deliver_method;
   }
 }

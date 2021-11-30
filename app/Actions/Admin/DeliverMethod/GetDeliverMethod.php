@@ -11,8 +11,8 @@ class GetDeliverMethod
 
   public function handle($id)
   {
-    $product_durability = DeliverMethod::findOrFail($id);
+    $deliver_method = DeliverMethod::findOrFail($id);
 
-    return $product_durability;
+    return $deliver_method;
   }
 }

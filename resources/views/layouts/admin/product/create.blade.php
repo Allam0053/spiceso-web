@@ -5,10 +5,11 @@
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <form method="POST" action="{{ route('admin.products.store') }}"  enctype="multipart/form-data">
+      <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
         @csrf
 
-        <input type="number" name="admin_id" class="hidden" value="{{ Auth::user()->admin->admin_id }}" required>
+        <input type="number" name="admin_id" class="hidden" value="{{ Auth::user()->admin->admin_id }}"
+          required>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">
@@ -31,7 +32,7 @@
           </span>
           <input
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-            name="nama" placeholder="Nama Produk" required/>
+            name="nama" placeholder="Nama Produk" required />
         </label>
 
         <label class="block mt-4 text-sm">
@@ -63,12 +64,25 @@
           <span class="text-gray-700 dark:text-gray-400">
             Kategori
           </span>
-          <select
+
+          <select name="product_category_id"
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-            <option>$1,000</option>
-            <option>$5,000</option>
-            <option>$10,000</option>
-            <option>$25,000</option>
+            @foreach ($categories as $category)
+              <option value="{{ $category->product_category_id }}">{{ $category->nama }}</option>
+            @endforeach
+          </select>
+        </label>
+
+        <label class="block mt-4 text-sm">
+          <span class="text-gray-700 dark:text-gray-400">
+            Ketahanan
+          </span>
+
+          <select name="product_durability_id"
+            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            @foreach ($durabilities as $durability)
+              <option value="{{ $durability->product_durability_id }}">{{ $durability->nama }}</option>
+            @endforeach
           </select>
         </label>
 
@@ -130,8 +144,8 @@
 
         $("body").on("click", "#delete-image", function(e) {
           event.preventDefault();
-          
-          var num = $(this).data("id"); 
+
+          var num = $(this).data("id");
           $("#image-item-" + num).remove();
           counter -= 1;
 
@@ -153,17 +167,17 @@
         }
 
         $("body").on('change', "input[id*='image-place']", function(e) {
-          var num = $(this).data("id"); 
+          var num = $(this).data("id");
           readURL($("#image-item-" + num).children("img"), this);
 
           $("#image-item-" + num).children("#insert-image").html("Ubah Gambar");
-          
+
           var filename = $(this).val().split(/(\\|\/)/g).pop()
           $("#image-name-" + num).html(filename);
         });
 
         $("body").on("click", "#insert-image", function() {
-          var num = $(this).data("id"); 
+          var num = $(this).data("id");
           $("#image-place-" + num).click();
         });
       });

@@ -11,8 +11,8 @@ class StoreProductCategory
 
   public function handle($fill)
   {
-    $product_durability = ProductCategory::create($fill);
+    $product_category = ProductCategory::create($fill);
 
-    return $product_durability;
+    return $product_category;
   }
 }
