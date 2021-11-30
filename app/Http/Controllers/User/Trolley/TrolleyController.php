@@ -19,7 +19,7 @@ class TrolleyController extends Controller
       $response = GetTrolleys::run(10, true);
 
       if ($response) {
-        return redirect()->route('', ['orders' => $response]);
+        return redirect()->route('user.trolley', ['trolleys' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -39,7 +39,7 @@ class TrolleyController extends Controller
       $response = StoreTrolley::run($request->except(['_method', '_token']));
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return redirect()->route('', ['trolley' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba masukkan dan simpan ulang!');
       }
@@ -54,7 +54,7 @@ class TrolleyController extends Controller
       $response = GetTrolley::run($id);
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return redirect()->route('', ['trolley' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -69,7 +69,7 @@ class TrolleyController extends Controller
       $response = GetTrolley::run($id);
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return redirect()->route('', ['trolley' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
