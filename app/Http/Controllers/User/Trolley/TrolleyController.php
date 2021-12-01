@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Trolley;
+namespace App\Http\Controllers\User\Trolley;
 
 use App\Actions\User\Trolley\DeleteTrolley;
 use App\Actions\User\Trolley\GetTrolley;

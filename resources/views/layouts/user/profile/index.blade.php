@@ -27,7 +27,7 @@
                                     Nama Lengkap
                                 </dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    Nama Saya
+                                    {{ $profile->nama }}
                                 </dd>
                             </div>
                             <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -35,26 +35,23 @@
                                     Email
                                 </dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    spiceso@example.com
+                                    {{ $profile->account->email }}
                                 </dd>
                             </div>
                             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt class="text-sm font-medium text-gray-500">
                                     No Telepon
                                 </dt>
-                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    +628XXXXXXXXXX
+                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 {{  $profile->no_hp ? '' : 'text-red-400 font-medium'}}">
+                                    {{ $profile->no_hp ? $profile->no_hp : 'Belum ada telepon'}}
                                 </dd>
                             </div>
                             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt class="text-sm font-medium text-gray-500">
+                                <dt class="text-sm font-medium text-gray-500 ">
                                     Alamat
                                 </dt>
-                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum
-                                    culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla
-                                    mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad
-                                    adipisicing reprehenderit deserunt qui eu.
+                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 {{  $profile->alamat ? '' : 'text-red-400 font-medium'}}">
+                                    {{ $profile->alamat ? $profile->alamat : 'Belum ada alamat'}}
                                 </dd>
                             </div>
                         </dl>
