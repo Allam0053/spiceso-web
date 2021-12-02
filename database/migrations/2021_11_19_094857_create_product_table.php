@@ -15,6 +15,7 @@ class CreateProductTable extends Migration
       $table->text('deskripsi')->nullable();
       $table->integer('stok')->nullable();
       $table->decimal('harga', 9, 2)->nullable();
+      $table->text('komposisi')->nullable();
       $table->unsignedBigInteger('product_category_id')->nullable();
       $table->unsignedBigInteger('product_durability_id')->nullable();
       $table->timestamps();

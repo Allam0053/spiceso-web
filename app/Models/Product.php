@@ -19,6 +19,7 @@ class Product extends Model
     'deskripsi',
     'stok',
     'harga',
+    'komposisi',
     'product_category_id',
     'product_durability_id',
   ];

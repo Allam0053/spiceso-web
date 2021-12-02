@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'layouts.dashboard')->name('dashboard');
 
 Route::get('/daftar-produk', [ProductController::class, 'index'])->name('products');
+Route::get('/produk/{id}', [ProductController::class, 'show'])->name('product.show');
 
 Route::prefix('/admin')->group(function () {
     Route::view('/buttons', 'layouts.admin.buttons');
@@ -18,7 +19,7 @@ Route::prefix('/admin')->group(function () {
 
 Route::prefix('/user')->group(function () {
     Route::view('/checkout', 'layouts.user.trolley.index');
-    Route::view('/product', 'layouts.user.product.detail');
+    Route::view('/product', 'layouts.user.product.show');
     Route::view('/payment', 'layouts.user.payment.index');
     Route::view('/review-p', 'layouts.user.review-p.index');
     Route::view('/refund', 'layouts.user.refund.index');

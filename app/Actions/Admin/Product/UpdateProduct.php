@@ -19,7 +19,7 @@ class UpdateProduct
 
     try {
       $product = Product::findOrFail($id);
-      
+
       $result = $product->update($request->except([
         '_method',
         '_token',
@@ -32,27 +32,19 @@ class UpdateProduct
       }
 
       $images = [];
-      if ($request->hasfile('gambars')) {
-        foreach ($request->file('gambars') as $image) {
-          if ($image) {
-            $name = $image->getClientOriginalName();
-            $path = '/img/products/' . $id . "/";
-            $image->move(public_path() . $path, $name);
+      foreach ($request->file('gambars') as $image) {
+        $name = $image->getClientOriginalName();
+        $path = '/img/products/' . $id . "/";
+        $image->move(public_path() . $path, $name);
 
-            $product_image = ProductImage::create([
-              'product_id' => $id,
-              'nama' => $name,
-              'link' => $path . $name,
-            ]);
-
-            dd($product_image);
-
-            array_push(
-              $images,
-              $product_image
-            );
-          }
-        }
+        array_push(
+          $images,
+          ProductImage::create([
+            'product_id' => $id,
+            'nama' => $name,
+            'link' => $path . $name,
+          ])
+        );
       }
 
       $product->images()->saveMany($images);

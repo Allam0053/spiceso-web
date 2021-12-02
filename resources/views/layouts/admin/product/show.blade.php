@@ -40,6 +40,14 @@
       </label>
 
       <label class="block mt-4 text-sm">
+        <span class="text-gray-700 dark:text-gray-400">Komposisi</span>
+
+        <p class="dark:text-gray-400 text-base">
+          {{ $product->komposisi ?? '' }}
+        </p>
+      </label>
+
+      <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
           Harga
         </span>

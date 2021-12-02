@@ -136,7 +136,7 @@
                       </div>
                       <p class="text-xl font-bold text-right text-gray-900">Rp {{ $product->harga }}</p>
                     </div>
-                    <a href="{{ route('user.product.detail') }}"
+                    <a href="{{ route('product.show', ['id' => $product->product_id ]) }}"
                       class="
                       mt-4
                       w-full
@@ -155,7 +155,7 @@
                       hover:bg-sp-primary-50
                       md:px-10
                     ">
-                      Beli
+                      Lihat
                     </a>
                   </a>
                 </div>

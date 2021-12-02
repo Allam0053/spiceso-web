@@ -43,6 +43,13 @@
         </label>
 
         <label class="block mt-4 text-sm">
+          <span class="text-gray-700 dark:text-gray-400">Komposisi</span>
+          <textarea
+            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+            name="komposisi" rows="2" placeholder="Gula, Garam, dan ..."></textarea>
+        </label>
+
+        <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">
             Harga
           </span>

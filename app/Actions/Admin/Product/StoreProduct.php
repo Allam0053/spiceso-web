@@ -40,23 +40,19 @@ class StoreProduct
       $admin->products()->saveMany([$product]);
 
       $images = [];
-      if ($request->hasfile('gambars')) {
-        foreach ($request->file('gambars') as $image) {
-          if ($image) {
-            $name = $image->getClientOriginalName();
-            $path = '/img/products/' . $product->product_id . "/";
-            $image->move(public_path() . $path, $name);
+      foreach ($request->file('gambars') as $image) {
+        $name = $image->getClientOriginalName();
+        $path = '/img/products/' . $product->product_id . "/";
+        $image->move(public_path() . $path, $name);
 
-            array_push(
-              $images,
-              ProductImage::create([
-                'product_id' => $product->product_id,
-                'nama' => $name,
-                'link' => $path . $name,
-              ])
-            );
-          }
-        }
+        array_push(
+          $images,
+          ProductImage::create([
+            'product_id' => $product->product_id,
+            'nama' => $name,
+            'link' => $path . $name,
+          ])
+        );
       }
 
       $product->images()->saveMany($images);

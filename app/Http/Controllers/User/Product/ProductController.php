@@ -34,10 +34,10 @@ class ProductController extends Controller
   public function show($id)
   {
     try {
-      $response = GetProduct::run($id);
+      $product = GetProduct::run($id);
 
-      if ($response) {
-        return view('layouts.user.product.show', ['product' => $response]);
+      if ($product) {
+        return view('layouts.user.product.show', ['product' => $product]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

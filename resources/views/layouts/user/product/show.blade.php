@@ -15,7 +15,7 @@
 
         <li class="text-sm">
           <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
-            Simply Organic Harissa 
+            {{ $product->nama }}
           </a>
         </li>
       </ol>
@@ -43,14 +43,14 @@
     <div class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
       <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
         <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-          Simply Organic Harissa 
+          {{ $product->nama }}
         </h1>
       </div>
 
       <!-- Options -->
       <div class="mt-4 lg:mt-0 lg:row-span-3">
         <h2 class="sr-only">Deskripsi Produk</h2>
-        <p class="text-3xl text-gray-900">Rp 64.000</p>
+        <p class="text-3xl text-gray-900">{{ $product->harga }}</p>
 
         <!-- Reviews -->
         <div class="mt-6">
@@ -144,12 +144,6 @@
             <fieldset>
               <div class="grid grid-cols-2 mt-4">
                 <div class="group">
-                  <label for="netto" class="block text-sm font-medium text-gray-700">Berat Bersih</label>
-                  <select id="netto" name="netto" autocomplete="netto-name" class="mt-1 block w-40 py-2 px-3 border border-gray-300 bg-white rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option class="py-2">25g</option>
-                  </select>
-                </div>
-                <div class="group">
                   <label for="sum" class="block text-sm font-medium text-gray-700">Jumlah</label>
                   <input type="number" name="sum" id="sum" autocomplete="address-level2" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-40 shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="1">
                 </div>
@@ -169,23 +163,7 @@
 
           <div class="space-y-6">
             <p class="text-base text-gray-900">
-              Harissa adalah Saus atau pasta pedas Tunisia yang biasanya dibuat dari cabai, minyak zaitun, dan rempah-rempah. 
-              Kami mendapatkan rempah-rempah Anda tertutup di sini. Bumbu Harissa kami adalah campuran organik, 
-              aroma bawang putih dengan rasa yang kompleks, berasap, seperti kari dan sentuhan panas pedas. </p>
-          </div>
-        </div>
-
-        <div class="mt-10">
-          <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-
-          <div class="mt-4">
-            <ul role="list" class="pl-4 list-disc text-sm space-y-2">
-              <li class="text-gray-400"><span class="text-gray-600">Berwarna merah canti</span></li>
-
-              <li class="text-gray-400"><span class="text-gray-600">Sangat cocok untuk masakan pasta</span></li>
-
-              <li class="text-gray-400"><span class="text-gray-600">Sedap dan berasa kompleks</span></li>        
-            </ul>
+              {{ $product->deskripsi }}</p>
           </div>
         </div>
 
