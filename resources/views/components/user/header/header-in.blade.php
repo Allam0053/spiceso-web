@@ -51,7 +51,7 @@
       </li>
       <!-- Notifications menu -->
       <li class="relative">
-        <a href="#">
+        <a href="{{ route('user.trolley') }}">
           <button class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-sp-primary"
             @click="toggleNotificationsMenu" @keydown.escape="closeNotificationsMenu" aria-label="Notifications"
             aria-haspopup="true">
@@ -71,7 +71,7 @@
             alt="" aria-hidden="true" />
         </button>
         <template x-if="isProfileMenuOpen">
-          <ul x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
+          <ul x-transition:leave="z-10 transition ease-in duration-150" x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0" @click.away="closeProfileMenu" @keydown.escape="closeProfileMenu"
             class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
             aria-label="submenu">
