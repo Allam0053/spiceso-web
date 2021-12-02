@@ -22,7 +22,7 @@ class RegisterUserController extends Controller
       $response = RegisterUser::run($request->only(['email', 'password']), $request->nama);
 
       if ($response) {
-        return redirect()->route('');
+        return redirect()->route('dashboard');
       } else {
 
         if (Auth::check()) {

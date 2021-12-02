@@ -17,7 +17,7 @@ class RegisterRequest extends FormRequest
     return [
       'nama' => ['required', 'string'],
       'email' => ['required', 'string', 'email', 'max:255', 'unique:account'],
-      'password' => ['required', 'confirmed', Rules\Password::defaults()],
+      'password' => ['required', 'confirmed'],
     ];
   }
 }

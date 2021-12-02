@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer=""></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
