@@ -137,12 +137,38 @@
     <div class="bg-white my-6 p-6 mb-8 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary">
       @if (count($trolley->products) > 0)
         <div class="flex flex-row justify-end">
-          <button
-            class="bg-sp-primary-200 text-white hover:text-white hover:bg-sp-primary-400 h-12 w-full rounded cursor-pointer">
-            <a href="#">
+          <form action="{{ route('user.order.store') }}" method="POST" class="form-control h-12 w-full">
+            @csrf
+            
+            <input class="hidden" type="number" value="{{ $trolley->trolley_id }}" name="trolley_id">
+
+            <input class="hidden" type="number" value="{{ Auth::user()->user->user_id }}" name="user_id">
+            
+            @php
+              $total_harga = 0.0;
+            @endphp
+            @foreach ($trolley->products as $product)
+              <input class="hidden" name="idproduks[]" type="number" value="{{ $product->product_id }}">
+              <input class="hidden" name="jumlahproduks[]" type="number" value="{{ $product->pivot->jumlah }}">
+
+              @php
+                $total_harga += ($product->pivot->jumlah * $product->harga);
+              @endphp
+            @endforeach
+
+            <input class="hidden" type="number" step="0.01" value="{{ $total_harga }}" name="total_harga">
+
+            @php
+              $date = date('Y-m-d H:i:s');
+            @endphp
+            <input class="hidden" type="text" value="{{ $date }}" name="tgl_dipesan">
+
+            <button
+              class="bg-sp-primary-200 text-white hover:text-white hover:bg-sp-primary-400 h-12 w-full rounded cursor-pointer"
+              type="submit">
               Beli Sekarang
-            </a>
-          </button>
+            </button>
+          </form>
         </div>
       @else
         <div class="flex flex-row justify-end">

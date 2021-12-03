@@ -36,8 +36,6 @@ class StoreTrolley
       return false;
     }
 
-    $trolley->products->attach($trolley_product->product_id);
-
     return $trolley_product;
   }
 }

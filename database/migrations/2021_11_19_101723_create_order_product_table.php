@@ -11,6 +11,8 @@ class CreateOrderProductTable extends Migration
     Schema::create('order_product', function (Blueprint $table) {
       $table->unsignedBigInteger('order_id')->nullable();
       $table->unsignedBigInteger('product_id')->nullable();
+      $table->unsignedBigInteger('product_id')->nullable();
+      $table->integer('jumlah')->nullable();
       $table->timestamps();
 
       $table->foreign('order_id')->references('order_id')->on('order')->onDelete('cascade');

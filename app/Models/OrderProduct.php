@@ -14,6 +14,7 @@ class OrderProduct extends Pivot
   protected $fillable = [
     'order_id',
     'product_id',
+    'jumlah',
   ];
 
   public function order()

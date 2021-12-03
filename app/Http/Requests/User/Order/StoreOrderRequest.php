@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Order;
+namespace App\Http\Requests\User\Order;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -15,9 +15,9 @@ class StoreOrderRequest extends FormRequest
   {
     return [
       'user_id' => ['required', 'integer'],
-      'total_harga' => ['numeric'],
-      'tgl_dipesan' => ['date'],
-      'tgl_diterima' => ['date'],
+      'total_harga' => ['nullable', 'numeric'],
+      'tgl_dipesan' => ['nullable', 'date'],
+      'tgl_diterima' => ['nullable', 'date'],
     ];
   }
 }
