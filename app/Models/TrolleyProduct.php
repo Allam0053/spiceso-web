@@ -3,17 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class TrolleyProduct extends Model
+class TrolleyProduct extends Pivot
 {
-  use HasFactory;
-
   protected $table = 'trolley_product';
 
   protected $fillable = [
     'trolley_id',
-    'product_id'
+    'product_id',
+    'jumlah',
   ];
 
   public function trolley()

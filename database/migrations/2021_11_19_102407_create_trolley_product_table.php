@@ -11,6 +11,7 @@ class CreateTrolleyProductTable extends Migration
     Schema::create('trolley_product', function (Blueprint $table) {
       $table->unsignedBigInteger('trolley_id')->nullable();
       $table->unsignedBigInteger('product_id')->nullable();
+      $table->integer('jumlah')->nullable();
       $table->timestamps();
 
       $table->foreign('trolley_id')->references('trolley_id')->on('trolley')->onDelete('cascade');

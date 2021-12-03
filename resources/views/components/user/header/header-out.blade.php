@@ -73,9 +73,6 @@
         </a>
       </nav>
 
-      @if(Auth::check())
-          
-      @else
       <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
         <a href="{{ route('user.login') }}"
           class="
@@ -110,7 +107,6 @@
           Daftar
         </a>
       </div>
-      @endif
     </div>
 
     <transition enter-active-class="duration-200 ease-out" enter-class="opacity-0 scale-95"

@@ -15,6 +15,8 @@ class StoreTrolleyRequest extends FormRequest
   {
     return [
       'user_id' => ['required', 'integer'],
+      'product_id' => ['required', 'integer'],
+      'jumlah' => ['nullable', 'integer'],
     ];
   }
 }
