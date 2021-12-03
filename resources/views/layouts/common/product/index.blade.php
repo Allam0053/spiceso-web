@@ -110,7 +110,7 @@
                           class="w-full h-full object-center object-cover lg:w-full lg:h-full">
                       @endif
                     </div>
-                    <div class="mt-4 flex justify-between">
+                    <div class="mt-4">
                       <div>
                         <h3 class="text-sm text-gray-700">
                           <a href="#">

@@ -4,22 +4,24 @@ namespace App\Http\Controllers\User\Trolley;
 
 use App\Actions\User\Trolley\DeleteTrolley;
 use App\Actions\User\Trolley\GetTrolley;
-use App\Actions\User\Trolley\GetTrolleys;
 use App\Actions\User\Trolley\StoreTrolley;
 use App\Actions\User\Trolley\UpdateTrolley;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Trolley\StoreTrolleyRequest;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 
 class TrolleyController extends Controller
 {
   public function index()
   {
     try {
-      $response = GetTrolleys::run(10, true);
+      $trolley = GetTrolley::run([
+        'user_id' => Auth::user()->user->user_id,
+      ]);
 
-      if ($response) {
-        return redirect()->route('user.trolley', ['trolleys' => $response]);
+      if ($trolley) {
+        return view('layouts.user.trolley.index', compact(['trolley']));
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -37,9 +39,9 @@ class TrolleyController extends Controller
   {
     try {
       $response = StoreTrolley::run($request->except(['_method', '_token']));
-
+      
       if ($response) {
-        return redirect()->route('', ['trolley' => $response]);
+        return redirect()->back()->with('success', 'Berhasil menambahkan produk ke troli.json');
       } else {
         return redirect()->back()->with('error', 'Coba masukkan dan simpan ulang!');
       }
@@ -93,10 +95,10 @@ class TrolleyController extends Controller
     }
   }
 
-  public function destroy($id)
+  public function destroy($id, $from)
   {
     try {
-      $response = DeleteTrolley::run($id);
+      $response = DeleteTrolley::run($id, $from);
 
       if ($response) {
         return redirect()->back()->with('success', $response . ' behasil dihapus');

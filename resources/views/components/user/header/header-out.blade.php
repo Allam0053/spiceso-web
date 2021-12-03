@@ -14,7 +14,7 @@
         lg:px-8
       ">
       <div class="flex justify-start lg:w-0 lg:flex-1">
-        <a href="#">
+        <a href="{{ route('dashboard') }}">
           <span class="sr-only">Spiceso</span>
           <img class="h-14 w-auto sm:h-16" src="{{ asset('/img/logo-sp.png') }}" alt="" />
         </a>
@@ -73,9 +73,6 @@
         </a>
       </nav>
 
-      @if(Auth::check())
-          
-      @else
       <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
         <a href="{{ route('user.login') }}"
           class="
@@ -110,7 +107,6 @@
           Daftar
         </a>
       </div>
-      @endif
     </div>
 
     <transition enter-active-class="duration-200 ease-out" enter-class="opacity-0 scale-95"

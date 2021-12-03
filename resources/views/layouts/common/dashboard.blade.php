@@ -49,7 +49,7 @@
               </div>
             </div>
 
-            <a href="{{ route('user.register') }}"
+            <a href="{{ route('products') }}"
               class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja
               Sekarang
             </a>

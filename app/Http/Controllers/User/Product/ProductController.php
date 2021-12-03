@@ -18,7 +18,7 @@ class ProductController extends Controller
       $categories = GetProductCategories::run();
 
       if ($products && $durabilities && $categories) {
-        return view('layouts.user.product.index', compact([
+        return view('layouts.common.product.index', compact([
           'products',
           'durabilities',
           'categories',
@@ -37,7 +37,7 @@ class ProductController extends Controller
       $product = GetProduct::run($id);
 
       if ($product) {
-        return view('layouts.user.product.show', ['product' => $product]);
+        return view('layouts.common.product.show', ['product' => $product]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

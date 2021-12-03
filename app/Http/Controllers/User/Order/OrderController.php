@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Order;
+namespace App\Http\Controllers\User\Order;
 
-use App\Actions\Admin\Order\DeleteOrder;
 use App\Actions\Common\Order\GetOrder;
 use App\Actions\Common\Order\GetOrders;
 use App\Actions\Common\Order\StoreOrder;
 use App\Actions\Common\Order\UpdateOrder;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Order\StoreOrderRequest;
+use App\Http\Requests\User\Order\StoreOrderRequest;
 use Exception;
 
 class OrderController extends Controller
@@ -19,7 +18,7 @@ class OrderController extends Controller
       $response = GetOrders::run(10, true);
 
       if ($response) {
-        return view('layouts.admin.order.index', ['orders' => $response]);
+        return view('layouts.User.order.index', ['orders' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -39,7 +38,7 @@ class OrderController extends Controller
       $response = StoreOrder::run($request->except(['_method', '_token']));
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return view('layouts.user.payment.index', ['order' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba masukkan dan simpan ulang!');
       }
@@ -87,21 +86,6 @@ class OrderController extends Controller
         return redirect()->back()->with('success', $response . ' behasil diperbarui');
       } else {
         return redirect()->back()->with('error', 'Coba masukkan ulang!');
-      }
-    } catch (Exception $exc) {
-      return redirect()->back()->with('error', $exc->getMessage());
-    }
-  }
-
-  public function destroy($id)
-  {
-    try {
-      $response = DeleteOrder::run($id);
-
-      if ($response) {
-        return redirect()->back()->with('success', $response . ' behasil dihapus');
-      } else {
-        return redirect()->back()->with('error', 'Coba hapus ulang!');
       }
     } catch (Exception $exc) {
       return redirect()->back()->with('error', $exc->getMessage());

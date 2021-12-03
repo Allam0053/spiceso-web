@@ -3,7 +3,7 @@
 use App\Http\Controllers\User\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'layouts.dashboard')->name('dashboard');
+Route::view('/', 'layouts.common.dashboard')->name('dashboard');
 
 Route::get('/daftar-produk', [ProductController::class, 'index'])->name('products');
 Route::get('/produk/{id}', [ProductController::class, 'show'])->name('product.show');

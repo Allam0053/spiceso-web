@@ -51,6 +51,8 @@ class Product extends Model
 
   public function trolleys()
   {
-    return $this->belongsToMany(Trolley::class, 'trolley_product', 'trolley_id', 'trolley_id');
+    return $this->belongsToMany(Trolley::class, 'trolley_product', 'trolley_id', 'trolley_id')
+      ->withPivot('jumlah')
+      ->using(TrolleyProduct::class);
   }
 }
