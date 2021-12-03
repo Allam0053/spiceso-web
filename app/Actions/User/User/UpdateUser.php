@@ -9,7 +9,7 @@ class UpdateUser
 {
   use AsAction;
 
-  public function handle($fill, $id)
+  public function handle(array $fill, $id)
   {
     $user = User::findOrFail($id)->update($fill);
 

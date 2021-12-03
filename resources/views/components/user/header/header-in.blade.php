@@ -63,7 +63,7 @@
         </a>
       </li>
       <!-- Profile menu -->
-      <li class="relative">
+      <li class="relative z-10">
         <button class="align-middle rounded-full focus:shadow-outline-sp-primary focus:outline-none"
           @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
           <img class="object-cover w-8 h-8 rounded-full"
@@ -77,7 +77,7 @@
             aria-label="submenu">
             <li class="flex">
               <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                href="#">
+                href="{{ route('user.profil.show')}}">
                 <svg class="w-4 h-4 mr-3" aria-hidden="true" fill="none" stroke-linecap="round"
                   stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -87,7 +87,7 @@
             </li>
             <li class="flex">
               <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                href="#">
+                href="{{ route('user.profil.show')}}">
                 <svg class="w-4 h-4 mr-3" aria-hidden="true" fill="none" stroke-linecap="round"
                   stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -99,7 +99,7 @@
               </a>
             </li>
             <li class="flex">
-              <form method="POST" action="{{ route('admin.logout') }}">
+              <form method="POST" action="{{ route('user.logout') }}">
                 @csrf
                 <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                   href="#" onclick="event.preventDefault(); this.closest('form').submit();">

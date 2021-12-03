@@ -1,21 +1,7 @@
 <x-user-in-layout>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="relative z-10 flex items-baseline justify-between pt-10 pb-8 border-b border-gray-200">
+    <div class="flex items-baseline justify-between pt-10 pb-8 border-b border-gray-200">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900">Produk</h1>
-
-      <div class="flex items-center">
-        <div class="relative inline-block text-left">
-        </div>
-        <button type="button" class="p-2 -m-2 ml-5 sm:ml-7 text-gray-400 hover:text-gray-500">
-          <span class="sr-only">View grid</span>
-          <!-- Heroicon name: solid/view-grid -->
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-            fill="currentColor">
-            <path
-              d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-          </svg>
-        </button>
-      </div>
     </div>
 
     <section aria-labelledby="products-heading" class="pt-6 pb-14">
