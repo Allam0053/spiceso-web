@@ -99,7 +99,7 @@
               </a>
             </li>
             <li class="flex">
-              <form method="POST" action="{{ route('user.logout') }}">
+              <form method="POST" action="{{ route('user.logout') }}" class="inline-flex items-center w-full">
                 @csrf
                 <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                   href="#" onclick="event.preventDefault(); this.closest('form').submit();">
