@@ -1,0 +1,1 @@
+<span class="text-sm font-medium bg-orange-100 py-1 px-2 rounded text-orange-500 align-middle">Belum Dibayar</span>

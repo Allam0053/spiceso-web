@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\User\Order;
 
 use App\Actions\Common\Order\GetOrder;
-use App\Actions\Common\Order\GetOrders;
+use App\Actions\User\Order\GetOrders;
 use App\Actions\Common\Order\StoreOrder;
 use App\Actions\Common\Order\UpdateOrder;
 use App\Http\Controllers\Controller;
