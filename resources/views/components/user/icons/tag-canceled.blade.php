@@ -1,1 +1,1 @@
-<span class="text-sm font-medium bg-red-100 py-1 px-2 rounded text-red-500 align-middle">Overdue</span>
+<span class="text-sm font-medium bg-red-100 py-1 px-2 rounded text-red-500 align-middle">Dibatalkan</span>
