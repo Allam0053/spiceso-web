@@ -11,7 +11,7 @@ class GetTrolley
 
   public function handle($id)
   {
-    $trolley = Trolley::findOrFail($id)->first();
+    $trolley = Trolley::where('user_id', $id)->first();
 
     return $trolley;
   }
