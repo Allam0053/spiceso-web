@@ -18,6 +18,7 @@ class Order extends Model
     'total_harga',
     'tgl_dipesan',
     'tgl_diterima',
+    'status',
     'payment_method_id',
     'deliver_method_id',
   ];
@@ -39,6 +40,8 @@ class Order extends Model
 
   public function products()
   {
-    return $this->belongsToMany(Product::class, 'order_product', 'product_id', 'product_id');
+    return $this->belongsToMany(Product::class, 'order_product', 'product_id', 'product_id')
+      ->withPivot('jumlah')
+      ->using(OrderProduct::class);
   }
 }

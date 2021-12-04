@@ -14,6 +14,7 @@ class CreateOrderTable extends Migration
       $table->decimal('total_harga', 9, 2)->nullable();
       $table->date('tgl_dipesan')->nullable();
       $table->date('tgl_diterima')->nullable();
+      $table->string('status')->nullable();
       $table->unsignedBigInteger('payment_method_id')->nullable();
       $table->unsignedBigInteger('deliver_method_id')->nullable();
       $table->timestamps();

@@ -9,16 +9,17 @@ use App\Actions\Common\Order\UpdateOrder;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Order\StoreOrderRequest;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
   public function index()
   {
     try {
-      $response = GetOrders::run(10, true);
+      $response = GetOrders::run(Auth::user()->user->user_id, 10, true);
 
       if ($response) {
-        return view('layouts.User.order.index', ['orders' => $response]);
+        return view('layouts.user.order.index', ['orders' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

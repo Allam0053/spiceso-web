@@ -9,13 +9,13 @@ class GetOrders
 {
   use AsAction;
 
-  public function handle($limit = 10, $paginate = false)
+  public function handle($id, $limit = 10, $paginate = false)
   {
     $orders = [];
     if ($paginate) {
-      $orders = Order::paginate($limit);
+      $orders = Order::where('user_id', $id)->paginate($limit);
     } else {
-      $orders = Order::limit($limit)->get();
+      $orders = Order::where('user_id', $id)->limit($limit)->get();
     }
 
     return $orders;
