@@ -14,6 +14,7 @@
                                 Informasi dan Data Diri
                             </h3>
                             <button
+                                type="button" onclick="location.href='{{route('user.profil.edit')}}'"
                                 class="flex items-center justify-center py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-600 border border-transparent rounded-lg active:bg-gray-600 hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray">
                                 @include('components.user.icons.edit')
                                 <span class="px-2">Edit</span>
@@ -58,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow overflow-hidden sm:rounded-lg mt-4">
+                {{-- <div class="bg-white shadow overflow-hidden sm:rounded-lg mt-4">
                     <div class="px-4 py-5 sm:px-6">
                         <div class="grid grid-rows-1 grid-flow-col">
                             <h3 class="mt-1 max-w-3xl text-gray-700 col-span-12">
@@ -71,7 +72,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
     </div>
