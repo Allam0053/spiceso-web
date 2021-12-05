@@ -17,7 +17,7 @@ class OrderController extends Controller
   {
     try {
       $response = GetOrders::run(Auth::user()->user->user_id, 10, true);
-
+      
       if ($response) {
         return view('layouts.user.order.index', ['orders' => $response]);
       } else {
@@ -39,7 +39,7 @@ class OrderController extends Controller
       $response = StoreOrder::run($request->except(['_method', '_token']));
 
       if ($response) {
-        return view('layouts.user.payment.index', ['order' => $response]);
+        return redirect()->route('user.order.payment', ['id' => $response->order_id]);
       } else {
         return redirect()->back()->with('error', 'Coba masukkan dan simpan ulang!');
       }

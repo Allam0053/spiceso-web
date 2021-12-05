@@ -11,7 +11,7 @@ class GetOrder
 
   public function handle($id)
   {
-    $order = Order::findOrFail($id);
+    $order = Order::where('order_id', $id)->first();
 
     return $order;
   }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\Dashboard\DashboardController;
 use App\Http\Controllers\User\Order\OrderController;
+use App\Http\Controllers\User\Order\PaymentController;
 use App\Http\Controllers\User\Product\ProductController;
 use App\Http\Controllers\User\User\UserController;
 use App\Http\Controllers\User\Trolley\TrolleyController;
@@ -22,4 +23,6 @@ Route::name('user.')->middleware('auth:user')->group(function () {
 
   Route::get('/pesanan', [OrderController::class, 'index'])->name('orders');
   Route::post('/pesanan/tambah', [OrderController::class, 'store'])->name('order.store');
+
+  Route::get('/pesanan/{id}/pembayaran', [PaymentController::class, 'show'])->name('order.payment');
 });
