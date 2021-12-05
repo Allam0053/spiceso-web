@@ -1,7 +1,7 @@
 <x-user-in-layout>
   <div class="container px-6 mt-12 mx-auto grid">
     <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-200 my-4">
-      Detail Pesanan
+      Detail Pesanan oleh: {{ $order->user->nama }}
     </h2>
     <!-- New Table -->
     <div class="w-full overflow-hidden rounded-lg shadow-xs">
@@ -23,31 +23,36 @@
                     <p class="text-xs text-gray-600 dark:text-gray-400 overflow-ellipsis">
                       {{ $product->pivot->jumlah }}
                     </p>
-                    <div class="mt-3">
-                      @if ($order->status == 'belum-bayar')
-                        @include('components.user.icons.tag-unpaid')
-                      @elseif ($order->status == "selesai")
-                        @include('components.user.icons.tag-done')
-                      @elseif ($order->status == "dibatalkan")
-                        @include('components.user.icons.tag-canceled')
-                      @elseif ($order->status == "sedang-dikirim")
-                        @include('components.user.icons.tag-send')
-                      @elseif ($order->status == "sedang-dikemas")
-                        @include('components.user.icons.tag-pack')
-                      @else
-                        @include('components.user.icons.tag-wait')
-                      @endif
-                    </div>
                   </div>
                 </div>
               </td>
-              <td></td>
-              <td></td>
             </tr>
             @endforeach
           </tbody>
         </table>
         <div class="bg-white px-4 py-4">
+          <label class="block mt-4 text-sm">
+            <span class="text-gray-700 dark:text-gray-400">
+              Status Pesanan
+            </span>
+    
+            <div class="mt-3">
+              @if ($order->status == 'belum-bayar')
+                @include('components.user.icons.tag-unpaid')
+              @elseif ($order->status == "selesai")
+                @include('components.user.icons.tag-done')
+              @elseif ($order->status == "dibatalkan")
+                @include('components.user.icons.tag-canceled')
+              @elseif ($order->status == "sedang-dikirim")
+                @include('components.user.icons.tag-send')
+              @elseif ($order->status == "sedang-dikemas")
+                @include('components.user.icons.tag-pack')
+              @else
+                @include('components.user.icons.tag-wait')
+              @endif
+            </div>
+          </label>
+
           <label class="block mt-4 text-sm">
             <span class="text-gray-700 dark:text-gray-400">
               Total Harga
@@ -57,7 +62,7 @@
               {{ $order->total_harga ?? '' }}
             </p>
           </label>
-    
+
           <label class="block mt-4 text-sm">
             <span class="text-gray-700 dark:text-gray-400">Tanggal Dipesan</span>
     
@@ -80,7 +85,7 @@
             </span>
     
             <p class="dark:text-gray-400 text-lg">
-              {{ $order->payment->nama ?? '' }}
+              {{ $order->payment->nama ?? '-' }}
             </p>
           </label>
     
@@ -90,7 +95,7 @@
             </span>
     
             <p class="dark:text-gray-400 text-lg">
-              {{ $order->deliver->nama ?? '' }}
+              {{ $order->deliver->nama ?? '-' }}
             </p>
           </label>
         </div>

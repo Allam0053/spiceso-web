@@ -10,8 +10,11 @@
     </a>
     <ul class="mt-2">
       <li class="relative px-6 py-3">
-        <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
-        <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+        @if ($page == 'dashboard')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
+        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.dashboard') }}">
           @include('components.admin.icons.home')
           <span class="ml-4">Dashboard</span>
@@ -20,6 +23,10 @@
     </ul>
     <ul>
       <li class="relative px-6 py-3">
+        @if ($page == 'user')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.users') }}">
           @include('components.admin.icons.client')
@@ -27,6 +34,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'product')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.products') }}">
           @include('components.admin.icons.shop-bag')
@@ -34,6 +45,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'category')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.categories') }}">
           @include('components.admin.icons.template')
@@ -41,6 +56,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'durability')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.durabilities') }}">
           @include('components.admin.icons.liquid')
@@ -48,6 +67,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'order')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.orders') }}">
           @include('components.admin.icons.shop-cart')
@@ -55,6 +78,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'delivers')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.delivers') }}">
           @include('components.admin.icons.inbox-in')
@@ -62,6 +89,10 @@
         </a>
       </li>
       <li class="relative px-6 py-3">
+        @if ($page == 'payment')
+          <span class="absolute inset-y-0 left-0 w-1 bg-sp-primary-100 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"></span>
+        @endif
         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
           href="{{ route('admin.payments') }}">
           @include('components.admin.icons.credit-card')

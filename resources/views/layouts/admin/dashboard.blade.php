@@ -1,8 +1,4 @@
-<head>
-  <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
-</head>
-
-<x-admin-layout>
+<x-admin-layout page="dashboard">
   <div class="container px-6 mx-auto grid">
     <h2 class="mt-6 text-3xl font-bold text-gray-900">
       Dashboard
