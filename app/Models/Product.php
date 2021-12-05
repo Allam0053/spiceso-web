@@ -46,12 +46,14 @@ class Product extends Model
 
   public function orders()
   {
-    return $this->belongsToMany(Order::class, 'order_product', 'order_id', 'order_id');
+    return $this->belongsToMany(Order::class, 'order_product', 'product_id', 'order_id')
+      ->withPivot('jumlah', 'product_id')
+      ->using(OrderProduct::class);
   }
 
   public function trolleys()
   {
-    return $this->belongsToMany(Trolley::class, 'trolley_product', 'trolley_id', 'trolley_id')
+    return $this->belongsToMany(Trolley::class, 'trolley_product', 'product_id', 'trolley_id')
       ->withPivot('jumlah')
       ->using(TrolleyProduct::class);
   }
