@@ -1,0 +1,1 @@
+<span class="text-sm font-medium bg-gray-100 py-1 px-2 rounded text-gray-500 align-middle">Menunggu Konfirmasi</span>

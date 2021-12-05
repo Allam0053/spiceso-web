@@ -16,9 +16,7 @@ class TrolleyController extends Controller
   public function index()
   {
     try {
-      $trolley = GetTrolley::run([
-        'user_id' => Auth::user()->user->user_id,
-      ]);
+      $trolley = GetTrolley::run(Auth::user()->user->user_id);
 
       if ($trolley) {
         return view('layouts.user.trolley.index', compact(['trolley']));

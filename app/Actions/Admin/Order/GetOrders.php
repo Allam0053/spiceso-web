@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Common\Order;
+namespace App\Actions\Admin\Order;
 
 use App\Models\Order;
 use Lorisleiva\Actions\Concerns\AsAction;

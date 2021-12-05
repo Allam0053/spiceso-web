@@ -21,7 +21,7 @@
               class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
               <th class="px-4 py-3 w-1/2">Pesanan Oleh</th>
               <th class="px-4 py-3 w-3/12">Total Harga</th>
-              <th class="px-4 py-3 w-2/12">Jumlah Produk</th>
+              <th class="px-4 py-3 w-2/12">Status</th>
               <th class="px-4 py-3 w-2/12">Tanggal Pesan</th>
               <th class="px-4 py-3 w-1/12">Aksi</th>
             </tr>
@@ -53,10 +53,25 @@
                   </a>
                 </td>
                 <td class="px-4 py-3 text-sm">
-                  {{ $order->stok }}
+                  {{ $order->total_harga }}
                 </td>
                 <td class="px-4 py-3 text-sm">
-                  {{ $order->harga }}
+                    @if ($order->status == "belum_bayar")
+                      @include('components.user.icons.tag-unpaid')
+                    @elseif ($order->status == "selesai")
+                      @include('components.user.icons.tag-done')
+                    @elseif ($order->status == "dibatalkan")
+                      @include('components.user.icons.tag-canceled')
+                    @elseif ($order->status == "sedang_dikirim")
+                      @include('components.user.icons.tag-send')
+                    @elseif ($order->status == "sedang_dikemas")
+                      @include('components.user.icons.tag-pack')
+                    @else
+                      @include('components.user.icons.tag-wait')
+                    @endif
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  {{ $order->tgl_dipesan }}
                 </td>
                 <td class="px-4 py-3 text-sm flex gap-3">
                   <button

@@ -20,5 +20,6 @@ Route::name('user.')->middleware('auth:user')->group(function () {
   Route::post('/keranjang/tambah', [TrolleyController::class, 'store'])->name('trolley.store');
   Route::delete('/keranjang/{id}/hapus/{from}', [TrolleyController::class, 'destroy'])->name('trolley.delete');
 
+  Route::get('/pesanan', [OrderController::class, 'index'])->name('orders');
   Route::post('/pesanan/tambah', [OrderController::class, 'store'])->name('order.store');
 });
