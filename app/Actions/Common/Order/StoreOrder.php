@@ -22,6 +22,7 @@ class StoreOrder
         'user_id' => $fill['user_id'],
         'total_harga' => $fill['total_harga'],
         'tgl_dipesan' => $fill['tgl_dipesan'],
+        'status' => $fill['status'],
       ]);
 
       if (!$order) {

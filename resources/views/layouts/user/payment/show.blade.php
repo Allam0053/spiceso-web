@@ -12,7 +12,6 @@
         <div class="bg-white py-2 px-5 rounded lg:col-span-3">
           <table class="w-full whitespace-no-wrap">
             <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-              {{-- @foreach ($orders as $order) --}}
               <tr class="my-3">
                 <td class="px-1 py-3 text-sm">
                   <div class="font-bold grid grid-cols-1">
@@ -25,6 +24,7 @@
                       <label class="block text-sm">
                         <select name="deliver_method_id" id="deliver-selector"
                           class="block w-full text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                          <option>Pilih Metode Pengiriman</option>
                           @foreach ($delivers as $deliver)
                             <option value="{{ $deliver->deliver_method_id }}"
                               id="deliver-item-{{ $deliver->deliver_method_id }}"
@@ -50,9 +50,11 @@
                       <label class="block text-sm">
                         <select name="payment_method_id" id="payment-selector"
                           class="block w-full text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                          <option>Pilih Metode Pembayaran</option>
                           @foreach ($payments as $payment)
                             <option id="payment-item-{{ $payment->payment_method_id }}"
-                              data-record="{{ $payment->rekening }}" value="{{ $payment->payment_method_id }}">
+                              data-record="{{ $payment->rekening }}" data-bank="{{ $payment->bank }}"
+                              data-name="{{ $payment->nama }}" value="{{ $payment->payment_method_id }}">
                               Transfer {{ $payment->bank }}</option>
                           @endforeach
                         </select>
@@ -88,6 +90,7 @@
                   </div>
                 </td>
               </tr>
+
               @foreach ($order->products as $product)
                 <tr class="text-gray-700 dark:text-gray-400">
                   <td class="px-4 py-3">
@@ -119,28 +122,27 @@
                   </td>
                 </tr>
               @endforeach
-              {{-- @endforeach --}}
             </tbody>
           </table>
         </div>
 
         <!-- Filters -->
-        <form class="bg-white py-5 px-5 rounded block">
+        <div class="bg-white py-5 px-5 rounded block">
           <div class="border-b border-gray-200 mb-3 pb-3 grid grid-rows-3">
             <div class="font-medium">Harga Order</div>
             <div id="order-price" data-price="{{ $order->total_harga }}">Rp {{ $order->total_harga }}</div>
             <div class="font-medium">Biaya Pengiriman</div>
             <div id="deliver-price">Rp 000.000</div>
             <div class="font-medium">Subtotal Diskon</div>
-            <div>Rp 000.000</div>
+            <div>Rp 0.00</div>
           </div>
           <h3 class="my font-bold text-md">Total Tagihan</h3>
           <div class="mt-1">
             <h2 id="total-price" class="text-2xl text-sp-primary-100 font-semibold">Rp {{ $order->total_harga }}</h2>
           </div>
-          <button type="submit"
+          <button type="button" id="modal-payment-btn"
             class="mt-10 w-full bg-sp-primary-200 focus:bg-sp-primary-400 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">Bayar</button>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -177,18 +179,19 @@
         </div>
 
         <footer class="flex flex-col items-center justify-center gap-2 sm:flex-row bg-gray-50 dark:bg-gray-800">
-          <button id="modal-close-button" data-id="{{ $product->product_id }}"
+          <button id="modal-close-button"
             class="w-full px-5 py-3 text-sm font-medium leading-5 text-gray-700 transition-colors duration-150 border border-gray-300 rounded-lg dark:text-gray-400 sm:px-4 sm:py-2 sm:w-auto active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500 focus:outline-none focus:shadow-outline-gray">
             Batal
           </button>
 
-          <form method="POST"
-            action={{ route('user.trolley.delete', ['id' => $product->product_id, 'from' => $trolley->trolley_id]) }}>
+          <form method="POST" action={{ route('user.order.payment.update', ['id' => $order->order_id]) }}>
             @csrf
-            @method('DELETE')
+            @method('PUT')
+            
+            <input name="status" value="menunggu-konfirmasi" class="form-control hidden">
 
             <button
-              class="w-full px-5 py-3 text-sm font-medium leading-5 bg-sp-primary-200 focus:bg-sp-primary-400 border border-transparent rounded-mdflex items-center justify-center text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">
+              class="w-full px-5 py-3 text-sm font-medium leading-5 bg-sp-primary-200 focus:bg-sp-primary-400 border border-transparent rounded items-center justify-center text-white hover:bg-sp-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sp-primary-100">
               Selesaikan Pembayaran
             </button>
           </form>
@@ -212,15 +215,25 @@
     });
 
     $("body").on('change', "#payment-selector", function(e) {
+      var deliverId = $("select[id='deliver-selector']").val();
+      var deliverPrice = parseFloat($(`#deliver-item-${deliverId}`).data("price"));
+      var orderPrice = parseFloat($("#order-price").data("price"));
       var paymentId = $("select[id='payment-selector']").val();
-      var paymentRec = parseFloat($(`#payment-item-${paymentId}`).data("price"));
+      var paymentRec = $(`#payment-item-${paymentId}`).data("record");
+      var paymentBank = $(`#payment-item-${paymentId}`).data("bank");
+      var paymentName = $(`#payment-item-${paymentId}`).data("name");
 
-      $('#payment-record').html(`Rp. ${paymentRec}`);
+      $('#modal-payment-description').html(
+        `Silahkan melakukan pembayaran dengan transfer uang sejumlah Rp. ${deliverPrice + orderPrice} pada nomor rekening ${paymentBank}: ${paymentRec} atas nama ${paymentName}`
+      );
+    });
+
+    $("body").on('click', "#modal-payment-btn", function(e) {
+      $(`#modal-payment`).removeClass('hidden').addClass('flex');
     });
 
     $("body").on('click', "#modal-close-button", function(e) {
-      var orderId = $(this).data(("id"));
-      $(`#modal-delete-order-${orderId}`).removeClass('flex').addClass('hidden');
+      $(`#modal-payment`).removeClass('flex').addClass('hidden');
     });
   });
 </script>

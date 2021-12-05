@@ -7,8 +7,8 @@ use App\Actions\Admin\PaymentMethod\GetPaymentMethods;
 use App\Actions\Common\Order\GetOrder;
 use App\Actions\Common\Order\UpdateOrder;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\User\Order\StoreOrderRequest;
 use Exception;
+use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
@@ -33,13 +33,13 @@ class PaymentController extends Controller
     }
   }
 
-  public function update(StoreOrderRequest $request, $id)
+  public function update(Request $request, $id)
   {
     try {
       $response = UpdateOrder::run($request->except(['_method', '_token']), $id);
 
       if ($response) {
-        return redirect()->back()->with('success', $response . ' behasil diperbarui');
+        return redirect()->route('user.orders');
       } else {
         return redirect()->back()->with('error', 'Coba masukkan ulang!');
       }
