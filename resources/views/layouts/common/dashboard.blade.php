@@ -7,7 +7,7 @@
   @endif
   <div class="block bg-white overflow-hidden">
     <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+      <div class="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static items-center gap-12 justify-center">
         <div class="sm:max-w-lg">
           <h1 class="text-4xl font font-bold tracking-tight text-gray-900 sm:text-6xl">
             Temukan Bumbu Masakan Rahasia Terbaikmu
@@ -15,44 +15,35 @@
           <p class="mt-4 text-xl text-gray-500">Dari bumbu kuliner hingga rempah-rempah dan rempah-rempah,
             Spiceso memiliki bahan-bahan organik tanpa pengawet untuk meningkatkan cita rasa masakan Anda.
           </p>
-        </div>
-        <div>
           <div class="mt-10">
-            <!-- Decorative image grid -->
-            <div aria-hidden="true"
-              class="overflow-hidden pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full">
-              <div
-                class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                <div class="flex items-center space-x-6 lg:space-x-8">
-                  <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                    <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                      <img src="{{ asset('/img/sp/1.jpg') }}" alt="" class="w-full h-full object-center object-cover">
-                    </div>
-                  </div>
-                  <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                    <div class="w-44 h-64 rounded-lg overflow-hidden">
-                      <img src="{{ asset('/img/sp/4.jpg') }}" alt="" class="w-full h-full object-center object-cover">
-                    </div>
-                    <div class="w-44 h-64 rounded-lg overflow-hidden">
-                      <img src="{{ asset('/img/sp/5.jpg') }}" alt="" class="w-full h-full object-center object-cover">
-                    </div>
-                  </div>
-                  <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                    <div class="w-44 h-64 rounded-lg overflow-hidden">
-                      <img src="{{ asset('/img/sp/6.jpg') }}" alt="" class="w-full h-full object-center object-cover">
-                    </div>
-                    <div class="w-44 h-64 rounded-lg overflow-hidden">
-                      <img src="{{ asset('/img/sp/7.jpg') }}" alt="" class="w-full h-full object-center object-cover">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <a href="{{ route('products') }}"
               class="inline-block text-center bg-sp-primary-100 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-sp-primary-300">Belanja
               Sekarang
             </a>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-6 lg:space-x-8">
+          <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+            <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+              <img src="{{ asset('/img/sp/1.jpg') }}" alt="" class="w-full h-full object-center object-cover">
+            </div>
+          </div>
+          <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+            <div class="w-44 h-64 rounded-lg overflow-hidden">
+              <img src="{{ asset('/img/sp/4.jpg') }}" alt="" class="w-full h-full object-center object-cover">
+            </div>
+            <div class="w-44 h-64 rounded-lg overflow-hidden">
+              <img src="{{ asset('/img/sp/5.jpg') }}" alt="" class="w-full h-full object-center object-cover">
+            </div>
+          </div>
+          <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+            <div class="w-44 h-64 rounded-lg overflow-hidden">
+              <img src="{{ asset('/img/sp/6.jpg') }}" alt="" class="w-full h-full object-center object-cover">
+            </div>
+            <div class="w-44 h-64 rounded-lg overflow-hidden">
+              <img src="{{ asset('/img/sp/7.jpg') }}" alt="" class="w-full h-full object-center object-cover">
+            </div>
           </div>
         </div>
       </div>
@@ -66,35 +57,35 @@
         <h2 class="text-3xl font-bold text-gray-900">Temukan Produk dari Kategori</h2>
 
         <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
-          <div class="group relative">
-            <div
-              class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="{{ asset('/img/sp/category-1.png') }}"
-                alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                class="w-full h-full object-center object-cover">
+          @foreach ($categories as $category)
+            @php
+              $is_has_image = false;
+              $image_link = '';
+              
+              if (count($category->products) > 0) {
+                if (count($category->products[0]->images) > 0) {
+                  $is_has_image = true;
+          
+                  $image_link = $category->products[0]->images[0]->link;
+                }
+              }
+            @endphp
+            <div class="group relative">
+              <div
+                class="relative mb-4 w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                @if ($is_has_image)
+                  <img src="{{ asset($image_link) }}"
+                    alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                    class="w-full h-full object-center object-cover">
+                @else
+                  <img src="{{ asset('/img/sp/category-1.png') }}"
+                    alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                    class="w-full h-full object-center object-cover">
+                @endif
+              </div>
+              <p class="text-lg font-semibold text-gray-900">{{ $category->nama }}</p>
             </div>
-            <p class="text-base font-semibold text-gray-900">Rempah-rempah dan Bumbu</p>
-          </div>
-
-          <div class="group relative">
-            <div
-              class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="{{ asset('/img/sp/category-2.png') }}"
-                alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
-                class="w-full h-full object-center object-cover">
-            </div>
-            <p class="text-base font-semibold text-gray-900">Penyedap</p>
-          </div>
-
-          <div class="group relative">
-            <div
-              class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="{{ asset('/img/sp/category-3.png') }}"
-                alt="Collection of four insulated travel bottles on wooden shelf."
-                class="w-full h-full object-center object-cover">
-            </div>
-            <p class="text-base font-semibold text-gray-900">Bumbu Masakan</p>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
@@ -107,31 +98,31 @@
 
       <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         @foreach ($products as $product)
-        <div class="group relative">
-          <div
-            class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-            @if (count($product->images) > 0)
-            <img src="{{ asset($product->images[0]->link) }}" alt="Front of men&#039;s Basic Tee in black."
-              class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-            @else
-            <img src="{{ asset('/img/sp/category-3.png') }}" alt="Front of men&#039;s Basic Tee in black."
-            class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-            @endif
-          </div>
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  {{ $product->category->nama }}
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">{{ $product->nama }}</p>
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+              @if (count($product->images) > 0)
+                <img src="{{ asset($product->images[0]->link) }}" alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              @else
+                <img src="{{ asset('/img/sp/category-3.png') }}" alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              @endif
             </div>
-            <p class="text-sm font-medium text-gray-900">{{ $product->harga }}</p>
-          </div>
-          <a href="{{ route('product.show', ['id' => $product->product_id ]) }}"
-            class="
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    {{ $product->category->nama }}
+                  </a>
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">{{ $product->nama }}</p>
+              </div>
+              <p class="text-sm font-medium text-gray-900">{{ $product->harga }}</p>
+            </div>
+            <a href="{{ route('product.show', ['id' => $product->product_id]) }}"
+              class="
               mt-4
               w-full
               bg-transparent
@@ -149,9 +140,9 @@
               hover:bg-sp-primary-50
               md:px-10
             ">
-            Lihat
-          </a>
-        </div>
+              Lihat
+            </a>
+          </div>
         @endforeach
 
         <!-- More products... -->
@@ -228,7 +219,7 @@
                 dijamin enak, praktis dan tanpa 3P (Pengawet, Pewarna dan Perasa Buatan)
               </p>
               <div class="mt-6">
-                <a href="{{ route('user.register') }}"
+                <a href="{{ route('products') }}"
                   class="
                     inline-flex
                     px-4
@@ -445,7 +436,7 @@
           <a href="#">
             <img class="w-full mt-2" src="{{ asset('/img/sp/pack.png') }}" alt="" />
           </a>
-          <a href="{{ route('user.register') }}"
+          <a href="{{ route('products') }}"
             class="
               w-full
               bg-white
@@ -465,13 +456,14 @@
             ">
             Mulai Belanja
           </a>
-          <a href="{{ route('user.register') }}"
+          <a href="#"
             class="
               block
               text-center text-base
               font-medium
               text-sp-primary-50
               hover:text-white
+              cursor-default
             ">
             Paket Lengkap Masakan Enak & Sehat
           </a>

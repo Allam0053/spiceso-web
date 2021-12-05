@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\User\Product\ProductController;
-use App\Http\Controllers\Common\DashboardController;
+use App\Http\Controllers\Common\Dashboard\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 // Route::view('/', 'layouts.common.dashboard')->name('dashboard');

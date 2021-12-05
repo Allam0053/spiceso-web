@@ -95,7 +95,7 @@
                 </td>
                 <td class="px-4 py-3 text-sm">
                   @if ($order->status == 'belum-bayar')
-                    <a href="#" class="font-medium">
+                    <a href="{{ route('user.order.payment', ['id' => $order->order_id]) }}" class="font-medium">
                       <p>Lakukan Pembayaran &#8631;</p>
                     </a>
                   @else
