@@ -23,6 +23,7 @@
               <th class="px-1 py-3">Jumlah Produk</th>
               <th class="px-4 py-3">Total Harga</th>
               <th class="px-4 py-3">Status</th>
+              <th class="px-4 py-3">Aksi</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -34,18 +35,18 @@
                 $image_link = '';
                 
                 for ($i = 0; $i < count($order->products); $i++) {
-                  if ($i != 0) {
-                    $produks .= ', ';
-                  }
-              
-                  $produks .= $order->products[$i]->nama;
-                  $total_harga += $order->products[$i]->pivot->jumlah * $order->products[$i]->harga;
-              
-                  if (count($order->products[$i]->images) > 0) {
-                    $image_link = $order->products[$i]->images[0]->link;
-
-                    $is_has_image = true;
-                  }
+                    if ($i != 0) {
+                        $produks .= ', ';
+                    }
+                
+                    $produks .= $order->products[$i]->nama;
+                    $total_harga += $order->products[$i]->pivot->jumlah * $order->products[$i]->harga;
+                
+                    if (count($order->products[$i]->images) > 0) {
+                        $image_link = $order->products[$i]->images[0]->link;
+                
+                        $is_has_image = true;
+                    }
                 }
               @endphp
 
@@ -78,9 +79,30 @@
                   {{ $total_harga }}
                 </td>
                 <td class="px-4 py-3 text-sm">
-                  <div class="mt-3">
+                  @if ($order->status == 'belum-bayar')
+                    @include('components.user.icons.tag-unpaid')
+                  @elseif ($order->status == "selesai")
+                    @include('components.user.icons.tag-done')
+                  @elseif ($order->status == "dibatalkan")
+                    @include('components.user.icons.tag-canceled')
+                  @elseif ($order->status == "sedang-dikirim")
                     @include('components.user.icons.tag-send')
-                  </div>
+                  @elseif ($order->status == "sedang-dikemas")
+                    @include('components.user.icons.tag-pack')
+                  @else
+                    @include('components.user.icons.tag-wait')
+                  @endif
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  @if ($order->status == 'belum-bayar')
+                    <a href="#" class="font-medium">
+                      <p>Lakukan Pembayaran &#8631;</p>
+                    </a>
+                  @else
+                    <a href="{{ route('user.order.show', ['id' => $order->order_id]) }}" class="font-medium">
+                      <p>Lihat Detail &rarr;</p>
+                    </a>
+                  @endif
                 </td>
               </tr>
             @endforeach
