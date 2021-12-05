@@ -1,10 +1,13 @@
+<head>
+  <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
+</head>
 <x-admin-layout>
   <div class="container px-6 mx-auto grid">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+    <h2 class="mt-6 text-3xl font-bold text-gray-900">
       Ubah Produk: {{ $product->nama }}
     </h2>
 
-    <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="mt-6 px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
       <form method="POST" action="{{ route('admin.product.update', ['id' => $product->product_id]) }}"
         enctype="multipart/form-data">
         @csrf
@@ -20,7 +23,7 @@
 
           <div class="mt-2" id="image-control">
             <button
-              class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
+              class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg active:bg-sp-primary-100 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
               type="button" id="add-image">
               @include('components.admin.icons.plus')
               <p>Tambah Gambar</p>
@@ -47,7 +50,7 @@
                 src="{{ asset($image->link) }}">
 
               <button
-                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg active:bg-sp-primary-100 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                 id="insert-image" type="button" data-id="{{ $counter }}">
                 Ubah Gambar
               </button>
@@ -144,7 +147,7 @@
             Batal
           </button>
           <button
-            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg active:bg-sp-primary-100 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             type="submit">
             Simpan
           </button>
@@ -173,7 +176,7 @@
                 <img class="w-full object-cover mt-1 mb-2" id="image-preview-${marker + 1}" src="">
 
                 <button
-                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg active:bg-sp-primary-100 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                   id="insert-image" type="button" data-id="${marker + 1}">
                   Upload Gambar
                 </button>

@@ -1,10 +1,13 @@
+<head>
+  <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
+</head>
 <x-admin-layout>
   <div class="container px-6 mx-auto grid">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+    <h2 class="mt-6 text-3xl font-bold text-gray-900">
       Data Metode Pembayaran
     </h2>
     <!-- CTA -->
-    <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+    <a class="mt-6 flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
       href="#" id="add-payment">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.credit-card')
@@ -183,7 +186,7 @@
               </button>
 
               <button type="submit"
-                class="w-full px-5 py-3 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg sm:w-auto sm:px-4 sm:py-2 active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple m-0">
+                class="w-full px-5 py-3 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg sm:w-auto sm:px-4 sm:py-2 active:bg-sp-primary-100 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple m-0">
                 Tambah
               </button>
             </footer>

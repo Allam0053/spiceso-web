@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\User\Order;
 
 use App\Actions\Common\Order\GetOrder;
-use App\Actions\Common\Order\GetOrders;
+use App\Actions\User\Order\GetOrders;
 use App\Actions\Common\Order\StoreOrder;
 use App\Actions\Common\Order\UpdateOrder;
 use App\Http\Controllers\Controller;
@@ -54,7 +54,7 @@ class OrderController extends Controller
       $response = GetOrder::run($id);
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return view('layouts.user.order.show', ['order' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

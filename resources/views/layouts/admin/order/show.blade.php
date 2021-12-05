@@ -1,71 +1,83 @@
 <x-admin-layout>
   <div class="container px-6 mx-auto grid">
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-      Detail Produk: {{ $product->nama }}
+      Detail Pesanan: {{ $order->user->nama }}
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+
+      @foreach ($products as $product)
       <label class="block mt-4 text-sm">
-        <span class="text-gray-700 dark:text-gray-400">
-          Gambar Produk: {{ count($product->images) }}
-        </span>
-
-        @foreach ($product->images as $image)
-          <label class="block mt-4 text-sm w-1/2">
-            <span class="text-gray-700 dark:text-gray-400">
-              {{ $image->nama }}
-            </span>
-
-            <img class="w-full object-cover mt-1 mb-2" src="{{ asset($image->link) }}">
-          </label>
-        @endforeach
+        <p class="dark:text-gray-400 text-lg">
+          {{ $product->name }}
+        </p>
       </label>
-
+      @endforeach
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
-          Nama
+          Total Harga
         </span>
 
         <p class="dark:text-gray-400 text-lg">
-          {{ $product->nama ?? '' }}
+          {{ $order->total_harga ?? '' }}
         </p>
       </label>
 
       <label class="block mt-4 text-sm">
-        <span class="text-gray-700 dark:text-gray-400">Deskripsi</span>
+        <span class="text-gray-700 dark:text-gray-400">Tanggal Dipesan</span>
 
         <p class="dark:text-gray-400 text-base">
-          {{ $product->deskripsi ?? '' }}
+          {{ $order->tgl_dipesan ?? '' }}
+        </p>
+      </label>
+
+      <label class="block mt-4 text-sm">
+        <span class="text-gray-700 dark:text-gray-400">Tanggal Diterima</span>
+
+        <p class="dark:text-gray-400 text-base">
+          {{ $order->tgl_diterima ?? 'Belum di terima' }}
         </p>
       </label>
 
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
-          Harga
+          Status
         </span>
 
         <p class="dark:text-gray-400 text-lg">
-          {{ $product->harga ?? '' }}
+          @if ($order->status == "belum_bayar")
+            @include('components.user.icons.tag-unpaid')
+          @elseif ($order->status == "selesai")
+            @include('components.user.icons.tag-done')
+          @elseif ($order->status == "dibatalkan")
+            @include('components.user.icons.tag-canceled')
+          @elseif ($order->status == "sedang_dikirim")
+            @include('components.user.icons.tag-send')
+          @elseif ($order->status == "sedang_dikemas")
+            @include('components.user.icons.tag-pack')
+          @else
+            @include('components.user.icons.tag-wait')
+          @endif
         </p>
       </label>
 
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
-          Stok
+          Metode Pembayaran
         </span>
 
         <p class="dark:text-gray-400 text-lg">
-          {{ $product->stok ?? '' }}
+          {{ $order->payment->nama ?? '' }}
         </p>
       </label>
 
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
-          Jumlah Pesanan
+          Metode Pengiriman
         </span>
 
         <p class="dark:text-gray-400 text-lg">
-          {{ count($product->orders) ?? '' }}
+          {{ $order->deliver->nama ?? '' }}
         </p>
       </label>
     </div>
