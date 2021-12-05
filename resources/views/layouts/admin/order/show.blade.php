@@ -5,13 +5,26 @@
     </h2>
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-
       @foreach ($order->products as $product)
-      <label class="block mt-4 text-sm">
-        <p class="dark:text-gray-400 text-lg">
-          {{ $product->name }}
-        </p>
-      </label>
+      <div class="flex items-center text-sm cursor-pointer mt-2">
+        @if ($product->images != null && $product->images != '')
+          <div class="relative hidden w-16 h-16 mr-3 rounded md:block text-center">
+            <img class="object-cover w-full h-full rounded"
+              src="{{ asset($product->images[0]->link) }}" alt="" loading="lazy" />
+            <div class="absolute inset-0 rounded shadow-inner" aria-hidden="true"></div>
+          </div>
+        @else
+          <div class="flex items-center justify-center w-16 h-16 mr-3">
+            @include('components.admin.icons.shop-bag')
+          </div>
+        @endif
+        <div>
+          <p class="text-md font-semibold">{{ $product->nama }}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 overflow-ellipsis">
+            {{ $product->pivot->jumlah }}
+          </p>
+        </div>
+      </div>
       @endforeach
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
