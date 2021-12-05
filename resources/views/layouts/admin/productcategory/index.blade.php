@@ -145,7 +145,7 @@
               </span>
               <input
                 class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-                name="nama" placeholder="Nama Ketahanan" required />
+                name="nama" placeholder="Kategori Produk" required />
             </label>
 
             <footer class="flex flex-col items-center justify-end gap-2 sm:flex-row bg-white dark:bg-gray-800 mt-6">

@@ -51,25 +51,16 @@
             text-gray-500
             hover:text-gray-900
           ">
-          FAQs
-        </a>
-        <a href="#"
-          class="
-            text-base
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-          ">
           Kontak Kami
         </a>
-        <a href="#"
+        <a href="{{ route('products') }}"
           class="
             text-base
             font-medium
             text-gray-500
             hover:text-gray-900
           ">
-          Tentang
+          List Produk
         </a>
       </nav>
 

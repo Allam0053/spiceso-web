@@ -21,7 +21,7 @@
 
           <div class="mt-2" id="image-control">
             <button
-              class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
+              class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
               type="button" id="add-image">
               @include('components.admin.icons.plus')
               <p>Tambah Gambar</p>
@@ -98,12 +98,12 @@
 
         <div class="flex items-center gap-2 mt-4 text-sm justify-end">
           <button
-            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-600 border border-transparent rounded-lg active:bg-gray-600 hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray"
+            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-400 border border-transparent rounded active:bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray"
             type="button" onclick="window.history.back();">
             Batal
           </button>
           <button
-            class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             type="submit">
             Tambah
           </button>
@@ -129,7 +129,7 @@
                 </span>
 
                 <input id="image-place-${marker + 1}" type="file" name="gambars[]" class="form-control hidden" data-id="${marker + 1}">
-                <img class="w-full object-cover mt-1 mb-2" id="image-preview-${marker + 1}" src="">
+                <img class="mt-1 mb-2" id="image-preview-${marker + 1}" src="">
 
                 <button
                   class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"

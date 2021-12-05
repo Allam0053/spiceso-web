@@ -15,6 +15,9 @@
           clip-rule="evenodd"></path>
       </svg>
     </button>
+    <a href="{{ route('products') }}" class="flex mx-16 text-base font-medium text-gray-500 hover:text-gray-900">
+      Daftar Produk
+    </a>
     <!-- Search input -->
     <div class="flex justify-center flex-1 lg:mr-32">
       <div class="relative w-full max-w-xl mr-6 focus-within:text-sp-primary-300">
