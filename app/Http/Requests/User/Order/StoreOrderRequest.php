@@ -18,6 +18,7 @@ class StoreOrderRequest extends FormRequest
       'total_harga' => ['nullable', 'numeric'],
       'tgl_dipesan' => ['nullable', 'date'],
       'tgl_diterima' => ['nullable', 'date'],
+      'status' => ['nullable', 'string'],
     ];
   }
 }

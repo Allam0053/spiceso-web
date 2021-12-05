@@ -25,4 +25,5 @@ Route::name('user.')->middleware('auth:user')->group(function () {
   Route::post('/pesanan/tambah', [OrderController::class, 'store'])->name('order.store');
 
   Route::get('/pesanan/{id}/pembayaran', [PaymentController::class, 'show'])->name('order.payment');
+  Route::put('/pesanan/{id}/pembayaran', [PaymentController::class, 'update'])->name('order.payment.update');
 });

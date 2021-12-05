@@ -163,6 +163,8 @@
             @endphp
             <input class="hidden" type="text" value="{{ $date }}" name="tgl_dipesan">
 
+            <input class="hidden" type="text" value="belum-bayar" name="status">
+
             <button
               class="bg-sp-primary-200 text-white hover:text-white hover:bg-sp-primary-400 h-12 w-full rounded cursor-pointer"
               type="submit">
