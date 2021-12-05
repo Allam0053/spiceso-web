@@ -54,7 +54,7 @@ class OrderController extends Controller
       $response = GetOrder::run($id);
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return view('layouts.user.order.show', ['order' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

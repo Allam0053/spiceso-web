@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Order;
 
 use App\Actions\Admin\Order\DeleteOrder;
 use App\Actions\Common\Order\GetOrder;
+use App\Actions\Common\Product\GetProduct;
 use App\Actions\Admin\Order\GetOrders;
 use App\Actions\Common\Order\StoreOrder;
 use App\Actions\Common\Order\UpdateOrder;
@@ -17,7 +18,7 @@ class OrderController extends Controller
   {
     try {
       $response = GetOrders::run(10, true);
-
+      
       if ($response) {
         return view('layouts.admin.order.index', ['orders' => $response]);
       } else {
@@ -52,9 +53,10 @@ class OrderController extends Controller
   {
     try {
       $response = GetOrder::run($id);
-
+      $products = GetProduct::where('product_id', $response->order_id)->get();
+      
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return view('layouts.admin.order.show', ['order' => $response, 'products' => $products]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
@@ -69,7 +71,7 @@ class OrderController extends Controller
       $response = GetOrder::run($id);
 
       if ($response) {
-        return redirect()->route('', ['order' => $response]);
+        return view('layouts.admin.order.edit', ['order' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
