@@ -4,7 +4,7 @@
       Ubah Pesanan: {{ $order->user->nama }} 
     </h2>
 
-    <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="px-4 py-3 mb-8 bg-white rounded shadow-md dark:bg-gray-800">
       <form method="POST" action="{{ route('admin.order.update', ['id' => $order->order_id]) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -42,21 +42,21 @@
             Total Harga
           </span>
   
-          <input class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" 
+          <input class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary dark:focus:shadow-outline-gray form-input" 
            name="total_harga" value="{{ $order->total_harga ?? '' }}"/>
         </label>
   
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Tanggal Dipesan</span>
   
-          <input type="date" class="rounded border-gray-200 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" 
+          <input type="date" class="rounded border-gray-200 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary dark:focus:shadow-outline-gray form-input" 
            name="tgl_dipesan" value="{{ $order->tgl_dipesan ?? '' }}" />
         </label>
   
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Tanggal Diterima</span>
   
-          <input type="date" class="rounded border-gray-200 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" 
+          <input type="date" class="rounded border-gray-200 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary dark:focus:shadow-outline-gray form-input" 
            name="tgl_diterima" value="{{ $order->tgl_diterima ?? '' }}" />
         </label>
   
@@ -65,7 +65,7 @@
             Ubah Status
           </span>
           <select name="status"
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary dark:focus:shadow-outline-gray">
             <option value="belum_bayar">Belum Dibayar</option>
             <option value="selesai">Selesai</option>
             <option value="dibatalkan">Dibatalkan</option>
@@ -77,12 +77,12 @@
 
         <div class="flex items-center gap-2 mt-4 text-sm justify-end">
           <button
-            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-600 border border-transparent rounded-lg active:bg-gray-600 hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray"
+            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-500 border border-transparent rounded active:bg-gray-600 hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray"
             type="button" onclick="window.history.back();">
             Batal
           </button>
           <button
-            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded active:bg-sp-primary-100 hover:bg-sp-primary-400 focus:outline-none focus:shadow-outline-sp-primary"
             type="submit">
             Simpan
           </button>

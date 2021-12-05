@@ -7,7 +7,7 @@
       Data Pelanggan
     </h2>
     <!-- CTA -->
-    <a class="bg-sp-primary-100 flex items-center justify-between cursor-default p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+    <a class="bg-sp-primary-100 flex items-center justify-between cursor-default p-4 mb-8 text-sm font-semibold text-sp-primary-50 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
       href="#">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.client')

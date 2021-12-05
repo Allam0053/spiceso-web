@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Admin\Dashboard;
 use App\Actions\Admin\Product\DeleteProduct;
 use App\Actions\Admin\Product\GetProduct;
 use App\Actions\Admin\Product\GetProducts;
+use App\Actions\Admin\Order\GetOrders;
+use App\Actions\Admin\User\GetUsers;
 use App\Actions\Admin\Product\StoreProduct;
 use App\Actions\Admin\Product\UpdateProduct;
+use App\Actions\Admin\ProductCategory\GetProductCategories;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
 use Exception;
@@ -15,7 +18,12 @@ class DashboardController extends Controller
 {
   public function index()
   {
-    return view('layouts.admin.dashboard');
+    $users = GetUsers::run(10000, false);
+    $products = GetProducts::run(10000, false);
+    $orders = GetOrders::run(10000, false);
+    $categories = GetProductCategories::run(10, true);
+
+    return view('layouts.admin.dashboard', ['users' => $users, 'products' => $products ,'orders' => $orders, 'categories' => $categories]);
   }
 
   public function store(StoreProductRequest $request)
