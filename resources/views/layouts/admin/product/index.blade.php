@@ -7,7 +7,7 @@
       Data Produk
     </h2>
     <!-- CTA -->
-    <a class="mt-6 bg-sp-primary-100 flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+    <a class="mt-6 bg-sp-primary-100 flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-50 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
       href="{{ route('admin.products.create') }}">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.shop-bag')

@@ -7,7 +7,7 @@
       Data Ketahanan Produk
     </h2>
     <!-- CTA -->
-    <a class="mt-6 flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+    <a class="mt-6 flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-50 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
       href="#" id="add-durability">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.liquid')

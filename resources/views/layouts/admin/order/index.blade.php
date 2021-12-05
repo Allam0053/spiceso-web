@@ -4,7 +4,7 @@
       Data Pesanan
     </h2>
     <!-- CTA -->
-    <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+    <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-100 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary"
       href="#">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.shop-cart')
@@ -75,7 +75,7 @@
                 </td>
                 <td class="px-4 py-3 text-sm flex gap-3">
                   <button
-                    class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                    class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded-lg active:bg-sp-primary-100 hover:bg-sp-primary-200 focus:outline-none focus:shadow-outline-sp-primary"
                     type="button">
                     <a href="{{ route('admin.order.edit', ['id' => $order->order_id]) }}">
                       @include('components.admin.icons.edit')
