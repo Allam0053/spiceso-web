@@ -1,10 +1,13 @@
+<head>
+  <link rel="stylesheet" href="{{ asset('/css/app.css') }}" />
+</head>
 <x-admin-layout>
   <div class="container px-6 mx-auto grid">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+    <h2 class="mt-6 text-3xl font-bold text-gray-900">
       Tambah Produk
     </h2>
 
-    <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="mt-6 px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
       <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
         @csrf
 
@@ -18,7 +21,7 @@
 
           <div class="mt-2" id="image-control">
             <button
-              class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
+              class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
               type="button" id="add-image">
               @include('components.admin.icons.plus')
               <p>Tambah Gambar</p>
@@ -100,7 +103,7 @@
             Batal
           </button>
           <button
-            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             type="submit">
             Tambah
           </button>
