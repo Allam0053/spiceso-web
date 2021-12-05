@@ -56,19 +56,19 @@
                   {{ $order->total_harga }}
                 </td>
                 <td class="px-4 py-3 text-sm">
-                    @if ($order->status == "belum-bayar")
-                      @include('components.user.icons.tag-unpaid')
-                    @elseif ($order->status == "selesai")
-                      @include('components.user.icons.tag-done')
-                    @elseif ($order->status == "dibatalkan")
-                      @include('components.user.icons.tag-canceled')
-                    @elseif ($order->status == "sedang-dikirim")
-                      @include('components.user.icons.tag-send')
-                    @elseif ($order->status == "sedang-dikemas")
-                      @include('components.user.icons.tag-pack')
-                    @else
-                      @include('components.user.icons.tag-wait')
-                    @endif
+                  @if ($order->status == 'belum-bayar')
+                    @include('components.user.icons.tag-unpaid')
+                  @elseif ($order->status == "selesai")
+                    @include('components.user.icons.tag-done')
+                  @elseif ($order->status == "dibatalkan")
+                    @include('components.user.icons.tag-canceled')
+                  @elseif ($order->status == "sedang-dikirim")
+                    @include('components.user.icons.tag-send')
+                  @elseif ($order->status == "sedang-dikemas")
+                    @include('components.user.icons.tag-pack')
+                  @else
+                    @include('components.user.icons.tag-wait')
+                  @endif
                 </td>
                 <td class="px-4 py-3 text-sm">
                   {{ $order->tgl_dipesan }}

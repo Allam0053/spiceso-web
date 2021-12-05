@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\Dashboard\DashboardController;
 use App\Http\Controllers\User\Order\OrderController;
 use App\Http\Controllers\User\Order\PaymentController;
 use App\Http\Controllers\User\Product\ProductController;
@@ -23,7 +22,8 @@ Route::name('user.')->middleware('auth:user')->group(function () {
 
   Route::get('/pesanan', [OrderController::class, 'index'])->name('orders');
   Route::post('/pesanan/tambah', [OrderController::class, 'store'])->name('order.store');
-
-  Route::get('/pesanan/{id}/pembayaran', [PaymentController::class, 'show'])->name('order.payment');
-  Route::put('/pesanan/{id}/pembayaran', [PaymentController::class, 'update'])->name('order.payment.update');
+  
+  Route::get('/detail-pesanan/{id}', [OrderController::class, 'show'])->name('order.show');
+  Route::get('/detail-pesanan/{id}/pembayaran', [PaymentController::class, 'show'])->name('order.payment');
+  Route::put('/detail-pesanan/{id}/pembayaran', [PaymentController::class, 'update'])->name('order.payment.update');
 });

@@ -51,10 +51,10 @@ class OrderController extends Controller
   public function show($id)
   {
     try {
-      $response = GetOrder::run($id);
+      $order = GetOrder::run($id);
 
-      if ($response) {
-        return view('layouts.user.order.show', ['order' => $response]);
+      if ($order) {
+        return view('layouts.user.order.show', compact(['order']));
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }
