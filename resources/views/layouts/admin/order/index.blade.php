@@ -4,7 +4,7 @@
       Data Pesanan
     </h2>
     <!-- CTA -->
-    <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-100 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary"
+    <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-sp-primary-50 bg-sp-primary-100 rounded-lg shadow-md focus:outline-none focus:shadow-outline-sp-primary"
       href="#">
       <div class="flex items-center gap-2">
         @include('components.admin.icons.shop-cart')
@@ -56,15 +56,15 @@
                   {{ $order->total_harga }}
                 </td>
                 <td class="px-4 py-3 text-sm">
-                    @if ($order->status == "belum_bayar")
+                    @if ($order->status == "belum-bayar")
                       @include('components.user.icons.tag-unpaid')
                     @elseif ($order->status == "selesai")
                       @include('components.user.icons.tag-done')
                     @elseif ($order->status == "dibatalkan")
                       @include('components.user.icons.tag-canceled')
-                    @elseif ($order->status == "sedang_dikirim")
+                    @elseif ($order->status == "sedang-dikirim")
                       @include('components.user.icons.tag-send')
-                    @elseif ($order->status == "sedang_dikemas")
+                    @elseif ($order->status == "sedang-dikemas")
                       @include('components.user.icons.tag-pack')
                     @else
                       @include('components.user.icons.tag-wait')

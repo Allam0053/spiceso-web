@@ -53,10 +53,9 @@ class OrderController extends Controller
   {
     try {
       $response = GetOrder::run($id);
-      $products = GetProduct::where('product_id', $response->order_id)->get();
       
       if ($response) {
-        return view('layouts.admin.order.show', ['order' => $response, 'products' => $products]);
+        return view('layouts.admin.order.show', ['order' => $response]);
       } else {
         return redirect()->back()->with('error', 'Coba muat ulang!');
       }

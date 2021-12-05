@@ -66,12 +66,12 @@
           </span>
           <select name="status"
             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-sp-primary-100 focus:outline-none focus:shadow-outline-sp-primary dark:focus:shadow-outline-gray">
-            <option value="belum_bayar">Belum Dibayar</option>
+            <option value="belum-bayar">Belum Bayar</option>
             <option value="selesai">Selesai</option>
             <option value="dibatalkan">Dibatalkan</option>
-            <option value="sedang_dikirim">Sedang Dikirim</option>
-            <option value="sedang_dikemas">Sedang Dikemas</option>
-            <option value="menunggu_konfirmasi">Menunggu Konfirmasi</option>
+            <option value="sedang-dikirim">Sedang Dikirim</option>
+            <option value="sedang-dikemas">Sedang Dikemas</option>
+            <option value="menunggu-konfirmasi">Menunggu Konfirmasi</option>
           </select>
         </label>
 

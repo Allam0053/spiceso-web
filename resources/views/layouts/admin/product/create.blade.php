@@ -57,7 +57,7 @@
             Harga
           </span>
           <input
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+            class="rounded border-gray-300 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
             name="harga" type="number" placeholder="Rp 0.00,-" />
         </label>
 
@@ -66,7 +66,7 @@
             Stok
           </span>
           <input
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+            class="rounded border-gray-300 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
             name="stok" type="number" placeholder="Jumlah Produk" />
         </label>
 
@@ -76,7 +76,7 @@
           </span>
 
           <select name="product_category_id"
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            class="rounded border-gray-300 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
             @foreach ($categories as $category)
               <option value="{{ $category->product_category_id }}">{{ $category->nama }}</option>
             @endforeach
@@ -89,7 +89,7 @@
           </span>
 
           <select name="product_durability_id"
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            class="rounded border-gray-300 block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
             @foreach ($durabilities as $durability)
               <option value="{{ $durability->product_durability_id }}">{{ $durability->nama }}</option>
             @endforeach

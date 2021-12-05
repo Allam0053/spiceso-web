@@ -6,7 +6,7 @@
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
 
-      @foreach ($products as $product)
+      @foreach ($order->products as $product)
       <label class="block mt-4 text-sm">
         <p class="dark:text-gray-400 text-lg">
           {{ $product->name }}
@@ -45,15 +45,15 @@
         </span>
 
         <p class="dark:text-gray-400 text-lg">
-          @if ($order->status == "belum_bayar")
+          @if ($order->status == "belum-bayar")
             @include('components.user.icons.tag-unpaid')
           @elseif ($order->status == "selesai")
             @include('components.user.icons.tag-done')
           @elseif ($order->status == "dibatalkan")
             @include('components.user.icons.tag-canceled')
-          @elseif ($order->status == "sedang_dikirim")
+          @elseif ($order->status == "sedang-dikirim")
             @include('components.user.icons.tag-send')
-          @elseif ($order->status == "sedang_dikemas")
+          @elseif ($order->status == "sedang-dikemas")
             @include('components.user.icons.tag-pack')
           @else
             @include('components.user.icons.tag-wait')

@@ -119,7 +119,7 @@
                     Konfirmasi password
                   </span>
                   <div class="mt-1">
-                    <input id="password" name="password" type="password" required
+                    <input id="password_confirmation" name="password_confirmation" type="password" required
                       class="
                         appearance-none
                         block
