@@ -30,7 +30,7 @@
         <button class="align-middle rounded-full focus:shadow-outline-sp-primary focus:outline-none"
           @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
           <img class="object-cover w-8 h-8 rounded-full"
-            src="https://i.postimg.cc/xdD1MYq2/97525693-907760279672631-9052418669109880687-n.jpg"
+            src="https://cdn1-production-images-kly.akamaized.net/NpSkxEAUZsogHK1-HG4KlurfdSM=/0x248:2423x1613/640x360/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3412481/original/055674500_1616773504-115383249_m.jpeg"
             alt="" aria-hidden="true" />
         </button>
         <template x-if="isProfileMenuOpen">

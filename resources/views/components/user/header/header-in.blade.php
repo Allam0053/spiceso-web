@@ -17,7 +17,7 @@
     </button>
     <a href="{{ route('products') }}" class="flex mx-16 text-sm font-medium text-gray-500 hover:text-gray-900 gap-2">
       @include('components.admin.icons.shop-bag')
-      Daftar Produk
+      Produk
     </a>
     <!-- Search input -->
     <div class="flex justify-center flex-1 lg:mr-32">
