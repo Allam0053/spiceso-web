@@ -172,7 +172,7 @@
                   text-gray-500
                 ">
                 Sudah pernah daftar?
-                <a href="{{ route('user.login') }}" class="text-sp-primary-100"> Masuk </a>
+                <a href="{{ route('admin.login') }}" class="text-sp-primary-100"> Masuk </a>
               </p>
             </div>
           </div>

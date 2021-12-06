@@ -1,4 +1,4 @@
-<header>
+<header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
   <div x-data="{ mobileMenuOpen: false }" class="bg-white">
     <div
       class="
@@ -8,7 +8,7 @@
         max-w-7xl
         mx-auto
         px-4
-        py-6
+        py-2
         sm:px-6
         md:justify-start md:space-x-10
         lg:px-8
@@ -44,23 +44,9 @@
         </button>
       </div>
       <nav class="hidden md:flex space-x-10">
-        <a href="#"
-          class="
-            text-base
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-          ">
-          Kontak Kami
-        </a>
-        <a href="{{ route('products') }}"
-          class="
-            text-base
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-          ">
-          List Produk
+        <a href="{{ route('products') }}" class="flex mx-16 text-sm font-medium text-gray-500 hover:text-gray-900 gap-2">
+          @include('components.admin.icons.shop-bag')
+          Produk
         </a>
       </nav>
 
@@ -221,9 +207,10 @@
                       </path>
                     </svg>
                   </div>
-                  <div class="ml-4 text-base font-medium text-gray-900">
-                    Daftar Produk
-                  </div>
+                  <a href="{{ route('products') }}" class="flex mx-16 text-sm font-medium text-gray-500 hover:text-gray-900 gap-2">
+                    @include('components.admin.icons.shop-bag')
+                    Produk
+                  </a>
                 </a>
               </nav>
             </div>

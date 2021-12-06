@@ -18,7 +18,7 @@
 
           <div class="mt-2" id="image-control">
             <button
-              class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple flex items-center gap-2"
+              class="bg-sp-primary-100 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-100 border border-transparent rounded active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-sp-primary flex items-center gap-2"
               type="button" id="add-image">
               @include('components.admin.icons.plus')
               <p>Tambah Gambar</p>
@@ -129,12 +129,12 @@
                 <img class="mt-1 mb-2" id="image-preview-${marker + 1}" src="">
 
                 <button
-                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-sp-primary-400 border border-transparent rounded active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                   id="insert-image" type="button" data-id="${marker + 1}">
                   Upload Gambar
                 </button>
                 <button
-                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                  class="px-2 py-1 text-xs font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
                   id="delete-image" type="button" data-id="${marker + 1}">
                   Hapus
                 </button>

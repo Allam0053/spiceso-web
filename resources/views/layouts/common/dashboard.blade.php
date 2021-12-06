@@ -117,7 +117,7 @@
                     {{ $product->category->nama }}
                   </a>
                 </h3>
-                <p class="mt-1 text-sm text-gray-500">{{ $product->nama }}</p>
+                <p class="mt-1 text-xl font-medium text-gray-700">{{ $product->nama }}</p>
               </div>
               <p class="text-sm font-medium text-gray-900">{{ $product->harga }}</p>
             </div>
