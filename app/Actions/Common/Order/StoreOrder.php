@@ -4,6 +4,7 @@ namespace App\Actions\Common\Order;
 
 use App\Models\Order;
 use App\Models\OrderProduct;
+use App\Models\Product;
 use App\Models\TrolleyProduct;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Illuminate\Support\Facades\DB;
@@ -45,6 +46,12 @@ class StoreOrder
           DB::rollBack();
           return false;
         }
+
+        $product = Product::findOrFail($fill['idproduks'][$i]);
+        $newProductNum = $product->stok - $fill['jumlahproduks'][$i];
+
+        Product::where('product_id', $product->product_id)
+          ->update(['stok' => $newProductNum]);
       }
 
       DB::commit();
