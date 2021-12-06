@@ -32,19 +32,21 @@ class UpdateProduct
       }
 
       $images = [];
-      foreach ($request->file('gambars') as $image) {
-        $name = $image->getClientOriginalName();
-        $path = '/img/products/' . $id . "/";
-        $image->move(public_path() . $path, $name);
+      if ($request->hasFile('gambars')) {
+        foreach ($request->file('gambars') as $image) {
+          $name = $image->getClientOriginalName();
+          $path = '/img/products/' . $id . "/";
+          $image->move(public_path() . $path, $name);
 
-        array_push(
-          $images,
-          ProductImage::create([
-            'product_id' => $id,
-            'nama' => $name,
-            'link' => $path . $name,
-          ])
-        );
+          array_push(
+            $images,
+            ProductImage::create([
+              'product_id' => $id,
+              'nama' => $name,
+              'link' => $path . $name,
+            ])
+          );
+        }
       }
 
       $product->images()->saveMany($images);
