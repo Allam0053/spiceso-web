@@ -39,8 +39,10 @@
                           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
                       @else
-                        <div class="flex items-center justify-center w-8 h-8 mr-3">
-                          @include('components.admin.icons.person')
+                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block text-center">
+                          <img class="object-cover w-full h-full rounded-full"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" loading="lazy" />
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                         </div>
                       @endif
                       <div>
