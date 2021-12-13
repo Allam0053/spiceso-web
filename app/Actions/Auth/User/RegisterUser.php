@@ -8,6 +8,7 @@ use Lorisleiva\Actions\Concerns\AsAction;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
+use App\CustomFacade\MailFacade;
 
 class RegisterUser
 {
@@ -20,6 +21,8 @@ class RegisterUser
       'password' => Hash::make($credentials['password']),
       'role' => 'user',
     ]);
+
+
 
     if (!$account) {
       return false;

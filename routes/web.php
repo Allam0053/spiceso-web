@@ -4,7 +4,9 @@ use App\Http\Controllers\User\Product\ProductController;
 use App\Http\Controllers\Common\Dashboard\DashboardController;
 use App\Http\Controllers\Factory\FactoryController;
 use Illuminate\Support\Facades\Route;
+use App\CustomFacade\MailFacade;
 
+// Route::get('/', MailFacade::test("Erik Coba Facade"))
 // Route::view('/', 'layouts.common.dashboard')->name('dashboard');
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
