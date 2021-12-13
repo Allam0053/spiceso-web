@@ -10,11 +10,11 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class FactoryController extends Controller
 {
-    public $factory;
+    private $factory;
 
-    public $dashboard;
-    public $order;
-    public $product;
+    private Common $dashboard;
+    private Common $order;
+    private Common $product;
 
     public function __construct()
     {
@@ -23,16 +23,6 @@ class FactoryController extends Controller
         $this->order        = $this->factory->getController('order');
         $this->product      = $this->factory->getController('product');
     }
-
-    public function show($path, $id)
-    {
-        if (strcasecmp($path, 'detail-produk') == 0) {
-            return $this->product->show($id);
-        } else {
-            abort(404);
-        }
-    }
-
 
     public function indexDashboard()
     {
