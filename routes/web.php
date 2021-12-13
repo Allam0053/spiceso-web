@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User\Product\ProductController;
 use App\Http\Controllers\Common\Dashboard\DashboardController;
+use App\Http\Controllers\Factory\FactoryController;
 use Illuminate\Support\Facades\Route;
 
 // Route::view('/', 'layouts.common.dashboard')->name('dashboard');
@@ -32,8 +33,11 @@ Route::prefix('/admin')->group(function () {
 //     Route::view('/profile/edit-password', 'layouts.user.profile.edit-password');
 // });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-require __DIR__.'/user.php';
+require __DIR__ . '/user.php';
 
-require __DIR__.'/admin.php';
+require __DIR__ . '/admin.php';
+
+
+Route::get('/test', [FactoryController::class, 'indexProduct'])->name('factory.product.all');
