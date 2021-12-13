@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Requests\Admin\Product\StoreProductRequest;
 use App\Models\ProductImage;
 use Illuminate\Support\Facades\DB;
+use App\Repositories\ProductRepository;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Exception;
 
@@ -13,20 +14,27 @@ class UpdateProduct
 {
   use AsAction;
 
+  private $productRepository;
+
+  public function __construct(ProductRepository $productRepository)
+  {
+    $this->productRepository = $productRepository;
+  }
+
   public function handle(StoreProductRequest $request, $id)
   {
     DB::beginTransaction();
 
     try {
-      $product = Product::findOrFail($id);
-
-      $result = $product->update($request->except([
+      $data = $request->except([
         '_method',
         '_token',
         'gambars'
-      ]));
+      ]);
 
-      if (!$result) {
+      $product = $this->productRepository->update($data, $id);
+
+      if (!$product) {
         DB::rollback();
         return false;
       }
